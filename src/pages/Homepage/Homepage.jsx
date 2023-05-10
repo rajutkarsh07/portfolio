@@ -1,7 +1,7 @@
 import React from "react";
 import "./Homepage.scss";
 import utkarsh from "../../assets/utkarsh.png";
-import { Navbar } from "../../components";
+import { Navbar, Footer } from "../../components";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
@@ -26,6 +26,7 @@ const Homepage = () => {
           Hire Me
         </Link>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.scss";
 import { MajorProjectCard, OtherProjectCard } from "../../components";
-import { Navbar } from "../../components";
+import { Navbar, Footer } from "../../components";
 
 const Projects = () => {
   return (
@@ -26,6 +26,8 @@ const Projects = () => {
           <OtherProjectCard />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

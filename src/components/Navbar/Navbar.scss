@@ -6,7 +6,6 @@
   width: 1140px;
   margin: 0 auto;
   margin-top: 20px;
-  // border: 2px solid white;
 
   img {
     height: 50px;
@@ -19,7 +18,7 @@
     padding: 0px;
     gap: 30px;
     font-family: consolas;
-    font-size: 18px;
+    font-size: 15px;
 
     .items {
       display: flex;
@@ -67,5 +66,15 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  .navbar {
+    width: 80%;
+
+    .menu {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
 }
