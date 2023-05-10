@@ -3,11 +3,17 @@ import "./Experience.scss";
 import data from "./data";
 import { Navbar } from "../../components";
 import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   // console.log(data);
   return (
-    <div className="projects">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="projects"
+    >
       <Navbar />
 
       <h1 className="gradient__text heading-experience">Experience</h1>
@@ -30,7 +36,7 @@ const Experience = () => {
           <div></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

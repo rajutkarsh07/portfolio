@@ -3,10 +3,17 @@ import "./Homepage.scss";
 import utkarsh from "../../assets/utkarsh.png";
 import { Navbar, Footer } from "../../components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import MovingText from "../../components/MovingText/MovingText";
 
 const Homepage = () => {
   return (
-    <div className="homepage">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="homepage"
+    >
       <Navbar />
 
       <div className="contents">
@@ -26,8 +33,10 @@ const Homepage = () => {
           Hire Me
         </Link>
       </div>
+
+      <MovingText text="Utkarsh Raj" />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

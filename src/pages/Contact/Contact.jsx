@@ -3,10 +3,16 @@ import "./Contact.scss";
 import { Navbar, Footer } from "../../components";
 import phone from "../../assets/phone.svg";
 import mail from "../../assets/email.svg";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="contact"
+    >
       <Navbar />
       <div className="contents">
         <div className="content-left">
@@ -62,7 +68,7 @@ const Contact = () => {
         </form>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

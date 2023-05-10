@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .contents {
+    margin-top: 80px;
+    width: 70%;
+    // border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .main-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 90%;
+      gap: 24px;
+      justify-content: space-between;
+
+      p {
+        max-width: 550px;
+      }
+    }
+
+    .tech {
+      .tech-items {
+        display: flex;
+        flex-direction: row;
+        .item {
+          // border: 2px solid white;
+        }
+      }
+    }
+  }
+}

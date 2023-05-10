@@ -17,7 +17,7 @@ const Menu = () => {
         <p>Projects</p>
         <div></div>
       </NavLink>
-      <NavLink className="items">
+      <NavLink to="/about" className="items">
         <p className="item-num">03.</p>
         <p>About</p>
         <div></div>

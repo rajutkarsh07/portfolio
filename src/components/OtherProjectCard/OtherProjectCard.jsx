@@ -2,10 +2,17 @@ import React from "react";
 import "./OtherProjectCard.scss";
 import { AiOutlineFolder, AiOutlineGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const OtherProjectCard = () => {
   return (
-    <div className="otherprojects">
+    <motion.div
+      className="otherprojects"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1.1 }}
+      drag="x"
+      dragConstraints={{ left: -100, right: 100 }}
+    >
       <AiOutlineFolder className="gradient__text icons" />
 
       <div className="description">
@@ -33,7 +40,7 @@ const OtherProjectCard = () => {
           <BiLinkExternal className="icon" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
