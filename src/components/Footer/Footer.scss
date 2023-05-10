@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 120px 0 20px 0;
+  font-family: consolas;
+  color: #d8d8d8;
+
+  p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+
+    span {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      gap: 5px;
+      // border: 2px solid white;
+
+      .icon {
+        font-size: 16px;
+      }
+    }
+  }
+}
