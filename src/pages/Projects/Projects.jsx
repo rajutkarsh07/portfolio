@@ -11,9 +11,9 @@ const Projects = () => {
       <div className="major-projects">
         <h1 className="gradient__text">Major Projects</h1>
         <div className="other-projects-card">
-          <MajorProjectCard />
-          <MajorProjectCard />
-          <MajorProjectCard />
+          <MajorProjectCard direction={"row-reverse"} />
+          <MajorProjectCard direction={"row"} />
+          <MajorProjectCard direction="row-reverse" />
         </div>
       </div>
 
