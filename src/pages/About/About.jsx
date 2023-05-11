@@ -30,6 +30,7 @@ const About = () => {
     >
       <Navbar />
       <div className="contents">
+        <h1 className="gradient__text">About</h1>
         <div className="main-info">
           <p>
             Hi, I'm Utkarsh Raj a fullstack web developer , UI/UX Designer and

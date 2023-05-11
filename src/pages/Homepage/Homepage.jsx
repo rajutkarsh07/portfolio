@@ -5,6 +5,7 @@ import { Navbar, Footer } from "../../components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import MovingText from "../../components/MovingText/MovingText";
+import Typewriter from "typewriter-effect";
 
 const Homepage = () => {
   return (
@@ -21,7 +22,19 @@ const Homepage = () => {
 
         <p>My name is </p>
         <div className="name">
-          <h1 className="gradient__text">Utkarsh Raj</h1>
+          <h1 className="gradient__text">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Utkarsh Raj")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("Utkarsh Raj")
+                  .pauseFor(1000)
+                  .start();
+              }}
+            />
+          </h1>
           <h3>I build things for the web.</h3>
         </div>
         <p className="details">
