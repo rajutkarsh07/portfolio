@@ -53,6 +53,10 @@ const data = [
         heading: "Job Role Recommendation Model",
         content: "Done with K-neighbours, nltk",
       },
+      {
+        heading: "Job Role Recommendation Model",
+        content: "Done with K-neighbours, nltk",
+      },
     ],
   },
 ];
