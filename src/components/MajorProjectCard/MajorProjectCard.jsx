@@ -4,12 +4,9 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 import tempimg from "../../assets/tempimage.png";
 
-const MajorProjectCard = ({ direction }) => {
+const MajorProjectCard = ({ classNa }) => {
   return (
-    <div
-      className="majorprojectcard"
-      style={{ display: "flex", flexDirection: `${direction}` }}
-    >
+    <div className={`majorprojectcard ${classNa}`}>
       <div className="contents">
         <p>Featured Project</p>
         <h2 className="gradient__text">CodeNova</h2>

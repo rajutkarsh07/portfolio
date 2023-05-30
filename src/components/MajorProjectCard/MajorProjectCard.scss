@@ -54,9 +54,25 @@
       }
     }
   }
+}
+
+.majorprojectcard-normal {
+  display: flex;
+  flex-direction: row;
 
   .image {
     margin-left: -100px;
     z-index: -1;
+  }
+}
+
+.majorprojectcard-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .contents {
+    align-items: flex-end;
+    margin-left: -100px;
+    z-index: 1;
   }
 }

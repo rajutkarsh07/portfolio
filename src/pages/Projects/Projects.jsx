@@ -3,6 +3,7 @@ import "./Projects.scss";
 import { MajorProjectCard, OtherProjectCard } from "../../components";
 import { Navbar, Footer } from "../../components";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const Projects = () => {
   return (
@@ -17,9 +18,9 @@ const Projects = () => {
       <div className="major-projects">
         <h1 className="gradient__text">Major Projects</h1>
         <div className="other-projects-card">
-          <MajorProjectCard direction={"row"} />
-          <MajorProjectCard direction={"row-reverse"} />
-          <MajorProjectCard direction={"row"} />
+          <MajorProjectCard classNa={"majorprojectcard-normal"} />
+          <MajorProjectCard classNa={"majorprojectcard-reverse"} />
+          <MajorProjectCard classNa={"majorprojectcard-normal"} />
         </div>
       </div>
 
@@ -30,6 +31,10 @@ const Projects = () => {
           <OtherProjectCard />
           <OtherProjectCard />
           <OtherProjectCard />
+          <OtherProjectCard />
+          <Tilt>
+            <OtherProjectCard />
+          </Tilt>
         </div>
       </div>
 
