@@ -6,6 +6,7 @@ import utkarshimg from "../../assets/utkarshimg.png";
 import Clang from "../../assets/Clang.png";
 import reactIcon from "../../assets/react.png";
 import cpp from "../../assets/cpp.png";
+import Tilt from "react-parallax-tilt";
 
 const About = () => {
   const [rotate, setRotate] = useState({
@@ -47,7 +48,9 @@ const About = () => {
             and connect with their audience, and I work tirelessly to make that
             a reality for every client I work with.
           </p>
-          <img src={utkarshimg} alt="Utkarsh Raj" />
+          <Tilt>
+            <img src={utkarshimg} alt="Utkarsh Raj" />
+          </Tilt>
         </div>
 
         <div className="tech">
