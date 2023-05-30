@@ -11,6 +11,16 @@
     width: 250px;
     border-radius: 50%;
     margin-top: 70px;
+    transition: all 0.2s;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   h1 {

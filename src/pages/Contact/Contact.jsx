@@ -26,19 +26,26 @@ const Contact = () => {
     const budget = budgetRef.current.value;
     const description = descriptionRef.current.value;
 
-    addDoc(collectionRef, {
-      name,
-      email,
-      budget,
-      description,
-    })
-      .then(() => {
-        toast.success("data added");
-      })
-      .catch((err) => {
-        toast.error(err.message);
+    if (!name || !email || !budget || !description) {
+      toast.error("Enter all the field", {
+        autoClose: 1000,
       });
+    } else {
+      addDoc(collectionRef, {
+        name,
+        email,
+        budget,
+        description,
+      })
+        .then(() => {
+          toast.success("data added");
+        })
+        .catch((err) => {
+          toast.error(err.message);
+        });
+    }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

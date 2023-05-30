@@ -18,7 +18,9 @@ const Homepage = () => {
       <Navbar />
 
       <div className="contents">
-        <img src={utkarsh} alt="Utkarsh Raj" className="image" />
+        <div>
+          <img src={utkarsh} alt="Utkarsh Raj" className="image" />
+        </div>
 
         <p>My name is </p>
         <div className="name">
