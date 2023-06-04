@@ -34,7 +34,12 @@ const About = () => {
         <h1 className="gradient__text">About</h1>
         <div className="main-info">
           <p>
-            Hi, I'm Utkarsh Raj a fullstack web developer , UI/UX Designer and
+            Hi, I'm Utkarsh Raj from IIITDM Jabalpur a{" "}
+            <span style={{ fontStyle: "italic" }}>
+              {" "}
+              fullstack web developer{" "}
+            </span>{" "}
+            ,<span style={{ fontStyle: "italic" }}> UI/UX designer</span> and
             freelancer with a passion for crafting beautiful, responsive
             websites that make a difference for my clients. With years of
             experience and a love for all things tech, I'm always looking for
@@ -49,7 +54,9 @@ const About = () => {
             a reality for every client I work with.
           </p>
           <Tilt>
-            <img src={utkarshimg} alt="Utkarsh Raj" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <img src={utkarshimg} alt="Utkarsh Raj" />
+            </motion.div>
           </Tilt>
         </div>
 

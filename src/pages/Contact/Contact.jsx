@@ -4,6 +4,7 @@ import { Navbar, Footer } from "../../components";
 import phone from "../../assets/phone.svg";
 import mail from "../../assets/email.svg";
 import { motion } from "framer-motion";
+
 import { app, database } from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 

@@ -11,7 +11,7 @@ const OtherProjectCard = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 1.1 }}
       drag
-      dragConstraints={{ left: -100, right: 100 }}
+      dragConstraints={{ left: -20, right: 20, top: -20, bottom: 20 }}
     >
       <AiOutlineFolder className="gradient__text icons" />
 

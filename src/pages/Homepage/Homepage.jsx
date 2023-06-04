@@ -40,11 +40,18 @@ const Homepage = () => {
           <h3>I build things for the web.</h3>
         </div>
         <p className="details">
-          I’m a Full Stack developer specializing in building (and occasionally
-          designing) exceptional websites.
+          I'm a
+          <span className="gradient__text">
+            <strong> Full Stack Web Developer </strong>
+          </span>
+          and{" "}
+          <span className="gradient__text">
+            <strong> UI/UX designer </strong>
+          </span>
+          specializing in building exceptional websites.
         </p>
 
-        <Link to="/" className="cta-btn">
+        <Link to="/Contact" className="cta-btn">
           Hire Me
         </Link>
       </div>
