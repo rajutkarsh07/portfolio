@@ -1,13 +1,17 @@
-.rectangle{
-    position: absolute;
-        width: 5px;
-        height: 1515px;
-        left: 50vw;
-        top: 199px;
-    
-        background: #737373;
-}
-.heading-experience{
-    justify-content: center;
-}
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .heading {
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+}
