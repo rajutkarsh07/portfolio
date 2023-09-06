@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.scss";
+import data from "../../data";
 import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/rajutkarsh07/portfolio-updated")
+    fetch("https://api.github.com/repos/Shubh942/portfolio-updated")
       .then((response) => response.json())
       .then((json) => {
         const { stargazers_count, forks_count } = json;
@@ -23,11 +24,11 @@ const Footer = () => {
 
   return (
     <a
-      href="https://github.com/rajutkarsh07/portfolio-updated"
+      href="https://github.com/Shubh942/portfolio-updated"
       target="_blank"
       className="footer"
     >
-      <p>Designed & Built with 💖 by Utkarsh Raj</p>
+      <p>Designed & Built with 💖 by {data.name}</p>
       {githubInfo.stars && githubInfo.forks && (
         <p>
           <span>

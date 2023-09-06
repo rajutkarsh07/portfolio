@@ -4,7 +4,7 @@ import { AiOutlineFolder, AiOutlineGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-const OtherProjectCard = () => {
+const OtherProjectCard = ({ item }) => {
   return (
     <motion.div
       className="otherprojects"
@@ -16,27 +16,21 @@ const OtherProjectCard = () => {
       <AiOutlineFolder className="gradient__text icons" />
 
       <div className="description">
-        <h3>Google News Clone</h3>
-        <p>
-          Social media platform exclusively designed for programmers, where
-          users receive personalized problem recommendations based on their
-          skill ratings and rankings.
-        </p>
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
       </div>
 
       <div className="techstack">
-        <span>react</span>
-        <span>node</span>
-        <span>firebase</span>
-        <span>axios</span>
-        <span>mongoDB</span>
+        {item.techstackUsed.map((inneritem) => (
+          <span>{inneritem}</span>
+        ))}
       </div>
 
       <div className="links">
-        <a href="https://github.com/rajutkarsh07" target="blank">
+        <a href={item.githubLink} target="blank">
           <AiOutlineGithub className="icon" />
         </a>
-        <a href="#">
+        <a href={item.hostedLink}>
           <BiLinkExternal className="icon" />
         </a>
       </div>

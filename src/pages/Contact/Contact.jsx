@@ -4,6 +4,7 @@ import { Navbar, Footer } from "../../components";
 import phone from "../../assets/phone.svg";
 import mail from "../../assets/email.svg";
 import { motion } from "framer-motion";
+import data from "../../data";
 
 import { app, database } from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
@@ -67,14 +68,12 @@ const Contact = () => {
           <div className="text">
             <span>
               <img src={mail} alt="" />
-              <a href="mailto:utkarshraj1306@gmail.com">
-                utkarshraj1306@gmail.com
-              </a>
+              <a href="mailto:utkarshraj1306@gmail.com">{data.emailId}</a>
               <div></div>
             </span>
             <span>
               <img src={phone} alt="" />
-              <p>9693501629</p>
+              <p>{data.phoneNo}</p>
               <div></div>
             </span>
           </div>
@@ -82,19 +81,19 @@ const Contact = () => {
         <form className="content-right">
           <div className="input-items">
             <label>Your Name</label>
-            <input ref={nameRef} placeholder="Utkarsh Raj" type="text" />
+            <input ref={nameRef} placeholder={data.name} type="text" />
           </div>
           <div className="input-items">
             <label>Your Email</label>
-            <input
-              ref={emailRef}
-              placeholder="utkarsh@gmail.com"
-              type="email"
-            />
+            <input ref={emailRef} placeholder={data.emailId} type="email" />
           </div>
           <div className="input-items">
             <label>Your approximate budget (USD $)</label>
-            <input ref={budgetRef} placeholder="$300" type="number" />
+            <input
+              ref={budgetRef}
+              placeholder={data.approximateBudget}
+              type="number"
+            />
           </div>
           <div className="input-items">
             <label>Tell more what you are looking for?</label>
