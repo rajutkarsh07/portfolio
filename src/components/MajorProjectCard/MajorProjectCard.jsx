@@ -38,7 +38,7 @@ const MajorProjectCard = ({ classNa, item }) => {
         </div>
       </div>
       <div className="image">
-        <img src={tempimg} alt="" />
+        <img src={item.imageLink} alt="" />
       </div>
     </div>
   );

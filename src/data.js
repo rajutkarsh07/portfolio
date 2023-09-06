@@ -1,7 +1,9 @@
 const data = {
   name: "Shubh Mehta",
-  imageHome: "",
-  imageAbout: "",
+  imageHome:
+    "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694022706/bicxpccilt2wxtyk4x7h.jpg",
+  imageAbout:
+    "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694022568/z24o5ar6zkmhc2ngdrcr.jpg",
   contentBelowName: "I build things for the web.",
   majorSkill1: "Full Stack Web Developer",
   majorSkill2: "Cyber security Resercher",
@@ -23,7 +25,8 @@ const data = {
       ],
       githubLink: "https://github.com/Shubh942/CodePro",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
-      imageLink: "",
+      imageLink:
+        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
     },
     {
       name: "ResumeRise",
@@ -39,7 +42,8 @@ const data = {
       ],
       githubLink: "https://github.com/Shubh942/CodePro",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
-      imageLink: "",
+      imageLink:
+        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694024404/jalb35pokjuotpsms77l.jpg",
     },
     {
       name: "CodeNova",
@@ -48,7 +52,8 @@ const data = {
       techstackUsed: ["React JS", "Node JS"],
       githubLink: "https://github.com/Shubh942/CodePro",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
-      imageLink: "",
+      imageLink:
+        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
     },
   ],
   otherProjects: [

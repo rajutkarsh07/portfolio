@@ -20,7 +20,7 @@ const Homepage = () => {
 
       <div className="contents">
         <div>
-          <img src={utkarsh} alt="Shubh Mehta" className="image" />
+          <img src={data.imageHome} alt="Shubh Mehta" className="image" />
         </div>
 
         <p>My name is </p>

@@ -13,6 +13,7 @@ import {
 import { Navbar, Footer } from "./components/index";
 
 import { AnimatePresence } from "framer-motion";
+import CustomCursor from "./components/CustomCursor/CustomCursor";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <AnimatePresence mode="wait">
         <BrowserRouter>
           <div>{/* <Navbar /> */}</div>
+          <CustomCursor />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/Projects" element={<Projects />} />

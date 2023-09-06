@@ -42,7 +42,12 @@ const About = () => {
           </p>
           <Tilt>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <img src={utkarshimg} alt="Utkarsh Raj" />
+              <img
+                src={data.imageAbout}
+                alt={data.name}
+                height={400}
+                width={350}
+              />
             </motion.div>
           </Tilt>
         </div>
