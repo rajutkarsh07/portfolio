@@ -6,7 +6,9 @@
   gap: 15px;
   width: 330px;
   background: #1c1c22;
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(-45deg, #373737, #212121, #373737) 1;
   border-radius: 5px;
 
   .icons {
