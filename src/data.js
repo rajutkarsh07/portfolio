@@ -29,14 +29,14 @@ const data = {
         "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
     },
     {
-      name: "ResumeRise",
+      name: "Bus Ticket Managment",
       projDescription:
-        "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings. Users can also engage in stimulating discussions like Stack Overflow, exchanging ideas and knowledge. This platform facilitates private user communication via chat, promoting collaborative learning and networking.",
+        "The college bus facility is designed to provide safe and convenient transportation for students and staff to and from campus. Our fleet of buses is regularly maintained and ensures timely and reliable service. The bus schedules and routes are available on our website. We encourage all students and staff to take advantage of this service to plan their schedules and easily book tickets. In case of any issues or concerns.",
       techstackUsed: [
         "React JS",
         "Node JS",
         "Express JS",
-        "MongoDB",
+        "MySql",
         "SCSS",
         "Axios",
       ],
@@ -46,25 +46,30 @@ const data = {
         "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694024404/jalb35pokjuotpsms77l.jpg",
     },
     {
-      name: "CodeNova",
+      name: "FlagRush",
       projDescription:
-        "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings. Users can also engage in stimulating discussions like Stack Overflow, exchanging ideas and knowledge. This platform facilitates private user communication via chat, promoting collaborative learning and networking.",
-      techstackUsed: ["React JS", "Node JS"],
+        "This is the website in which a person can practice their bug-finding skills and capture the flags from the website which are made intentionally with a bug. The website also provides you with a community where you can discuss your findings or may ask for help. The website also consists of a Leaderboard with the Top performers of the website. Our future aim was to integrate the functionality of Contest on the website due to which our algorithm rate the person's skills.",
+      techstackUsed: [
+        "React JS",
+        "Node JS",
+        "Burpsuite",
+        "Penteresting testing",
+      ],
       githubLink: "https://github.com/Shubh942/CodePro",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
       imageLink:
-        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
+        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694032468/twaluamtttv8dcgk54kk.jpg",
     },
   ],
   otherProjects: [
     {
-      name: "Google News Clone",
+      name: "ResumeRise",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      techstackUsed: ["Latex", "Mern Stack", "SCSS"],
+      githubLink: "https://github.com/Shubh942/ResumeRise",
+      hostedLink: "",
     },
     {
       name: "Google News Clone",
@@ -76,40 +81,40 @@ const data = {
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
     },
     {
-      name: "Google News Clone",
+      name: "Date-a-Thon",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      techstackUsed: ["Socket IO", "ML model"],
+      githubLink: "https://github.com/Shubh942/cutie",
+      hostedLink: "",
     },
     {
-      name: "Google News Clone",
+      name: "Ecommerse-Recommender",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      techstackUsed: ["nltk", "ML Model"],
+      githubLink: "https://github.com/Shubh942/Ecommerce-Recommeder",
+      hostedLink: "https://flipkart-product-recommendation.netlify.app/",
     },
     {
-      name: "Google News Clone",
+      name: "Natours Tour & Travel",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
       techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      githubLink: "https://github.com/Shubh942/mongoose-node",
+      hostedLink: "",
     },
     {
-      name: "TodoList",
+      name: "Web scrapper",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      techstackUsed: ["Node JS", "Express JS", "cherio", "axios"],
+      githubLink: "https://github.com/Shubh942/web-scrapping",
+      hostedLink: "",
     },
   ],
   aboutYourself:
