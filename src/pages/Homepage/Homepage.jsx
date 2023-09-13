@@ -4,6 +4,7 @@ import utkarsh from "../../assets/utkarsh.png";
 import { Navbar, Footer } from "../../components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import data from "../../data";
 import MovingText from "../../components/MovingText/MovingText";
 import Typewriter from "typewriter-effect";
 
@@ -19,7 +20,7 @@ const Homepage = () => {
 
       <div className="contents">
         <div>
-          <img src={utkarsh} alt="Utkarsh Raj" className="image" />
+          <img src={data.imageHome} alt="Shubh Mehta" className="image" />
         </div>
 
         <p>My name is </p>
@@ -28,25 +29,25 @@ const Homepage = () => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Utkarsh Raj")
+                  .typeString(`${data.name}`)
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Utkarsh Raj")
+                  .typeString(`${data.name}`)
                   .pauseFor(1000)
                   .start();
               }}
             />
           </h1>
-          <h3>I build things for the web.</h3>
+          <h3>{data.contentBelowName}</h3>
         </div>
         <p className="details">
           I'm a
           <span className="gradient__text">
-            <strong> Full Stack Web Developer </strong>
+            <strong> {data.majorSkill1} </strong>
           </span>
           and{" "}
           <span className="gradient__text">
-            <strong> UI/UX designer </strong>
+            <strong> {data.majorSkill2} </strong>
           </span>
           specializing in building exceptional websites.
         </p>
@@ -56,7 +57,7 @@ const Homepage = () => {
         </Link>
       </div>
 
-      <MovingText text="Utkarsh Raj" />
+      <MovingText text={data.name} />
       <Footer />
     </motion.div>
   );

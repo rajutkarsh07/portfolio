@@ -1,6 +1,7 @@
 import React from "react";
 import "./Projects.scss";
 import { MajorProjectCard, OtherProjectCard } from "../../components";
+import data from "../../data";
 import { Navbar, Footer } from "../../components";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
@@ -18,23 +19,23 @@ const Projects = () => {
       <div className="major-projects">
         <h1 className="gradient__text">Major Projects</h1>
         <div className="other-projects-card">
-          <MajorProjectCard classNa={"majorprojectcard-normal"} />
-          <MajorProjectCard classNa={"majorprojectcard-reverse"} />
-          <MajorProjectCard classNa={"majorprojectcard-normal"} />
+          {data.majorProject?.map((item, i) => (
+            <MajorProjectCard
+              classNa={`majorprojectcard-${i % 2 == 0 ? "normal" : "reverse"}`}
+              item={item}
+            />
+          ))}
+          {/* <MajorProjectCard classNa={"majorprojectcard-reverse"} />
+          <MajorProjectCard classNa={"majorprojectcard-normal"} /> */}
         </div>
       </div>
 
       <div className="other-projects">
         <h1 className="gradient__text">Other Projects</h1>
         <div className="other-projects-card">
-          <OtherProjectCard />
-          <OtherProjectCard />
-          <OtherProjectCard />
-          <OtherProjectCard />
-          <OtherProjectCard />
-          <Tilt>
-            <OtherProjectCard />
-          </Tilt>
+          {data.otherProjects.map((item) => (
+            <OtherProjectCard item={item} />
+          ))}
         </div>
       </div>
 
