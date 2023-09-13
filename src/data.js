@@ -1,49 +1,53 @@
 const data = {
-  name: "Shubh Mehta",
+  name: "Utkarsh Raj",
   imageHome:
-    "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694022706/bicxpccilt2wxtyk4x7h.jpg",
+    "https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Fhome.png?alt=media&token=2688b288-b1d6-4a7e-b131-694d775b9684",
   imageAbout:
-    "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694022568/z24o5ar6zkmhc2ngdrcr.jpg",
+    "https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Futkarsh_raj.png?alt=media&token=faa78944-603f-48f3-9eb3-2a5a259ab27c",
   contentBelowName: "I build things for the web.",
   majorSkill1: "Full Stack Web Developer",
-  majorSkill2: "Cyber security Resercher",
-  majorSkill3: "Bug Bounty Hunter",
+  majorSkill2: "UI/UX designer",
+  majorSkill3: "Competitive Programmer",
   majorProject: [
     {
       name: "CodeNova",
       projDescription:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings. Users can also engage in stimulating discussions like Stack Overflow, exchanging ideas and knowledge. This platform facilitates private user communication via chat, promoting collaborative learning and networking.",
       techstackUsed: [
-        "React JS",
-        "Node JS",
-        "Express JS",
+        "React",
+        "Express",
+        "Node",
         "MongoDB",
-        "SCSS",
+        "Material-UI",
+        "Socket.io",
+        "Chart.js",
         "Axios",
-        "React JS",
-        "React JS",
+        "NLTK",
+        "Cloudinary",
       ],
-      githubLink: "https://github.com/Shubh942/CodePro",
+      githubLink: "https://github.com/rajutkarsh07/CodeNova",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
       imageLink:
         "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
     },
     {
-      name: "Bus Ticket Managment",
+      name: "Fiverr Clone",
       projDescription:
-        "The college bus facility is designed to provide safe and convenient transportation for students and staff to and from campus. Our fleet of buses is regularly maintained and ensures timely and reliable service. The bus schedules and routes are available on our website. We encourage all students and staff to take advantage of this service to plan their schedules and easily book tickets. In case of any issues or concerns.",
+        "Freelancing platform designed to connect talented freelancers with discerning clients seamlessly. On this platform, freelancers can effortlessly showcase their unique skills and expertise by posting captivating gigs. At the same time, clients can browse through an array of exceptional gigs to find the perfect freelancer for their specific needs.",
       techstackUsed: [
         "React JS",
         "Node JS",
         "Express JS",
-        "MySql",
-        "SCSS",
+        "MongoDB",
+        "React Query",
         "Axios",
+        "Firebase",
+        "SCSS",
       ],
-      githubLink: "https://github.com/Shubh942/CodePro",
-      hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
+      githubLink: "https://github.com/rajutkarsh07/Fiverr-clone",
+      hostedLink: "",
       imageLink:
-        "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694024404/jalb35pokjuotpsms77l.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Ffiverr.png?alt=media&token=8c23436f-9a04-438d-a2ce-a9ddf13f9def",
     },
     {
       name: "FlagRush",
@@ -55,7 +59,7 @@ const data = {
         "Burpsuite",
         "Penteresting testing",
       ],
-      githubLink: "https://github.com/Shubh942/CodePro",
+      githubLink: "https://github.com/rajutkarsh07/CodeNova",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
       imageLink:
         "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694032468/twaluamtttv8dcgk54kk.jpg",
@@ -63,13 +67,36 @@ const data = {
   ],
   otherProjects: [
     {
-      name: "ResumeRise",
+      name: "crwn-clothing",
+      description:
+        "An e-commerce website that enables users to create accounts, log in or sign up, and seamlessly add products to their shopping carts. ",
+      //max 5
+      techstackUsed: [
+        "React js",
+        "Context API",
+        "firebase",
+        "styled components",
+      ],
+      githubLink: "https://github.com/rajutkarsh07/crwn-clothing",
+      hostedLink: "https://crwn-clothing-utkarsh.netlify.app/",
+    },
+    {
+      name: "Job-Hunt",
+      description:
+        "A job search platform for job seekers, and a talent search platform for employers seeking office professionals.",
+      //max 5
+      techstackUsed: ["React", "Firebase", "SCSS"],
+      githubLink: "https://github.com/rajutkarsh07/Job-Hunt",
+      hostedLink: "https://jobhunt-utkarsh.netlify.app/",
+    },
+    {
+      name: "Flipkart-Recommendation",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["Latex", "Mern Stack", "SCSS"],
-      githubLink: "https://github.com/Shubh942/ResumeRise",
-      hostedLink: "",
+      techstackUsed: ["React.js", "Redux", "NLTK", "ML Model"],
+      githubLink: "https://github.com/rajutkarsh07/Flipkart",
+      hostedLink: "https://flipkart-product-recommendation.netlify.app/",
     },
     {
       name: "Google News Clone",
@@ -77,44 +104,35 @@ const data = {
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
       techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/CodePro",
+      githubLink: "https://github.com/rajutkarsh07/google_news",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
     },
     {
-      name: "Date-a-Thon",
+      name: "monkepox-vaccination-portal",
       description:
         "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
       //max 5
-      techstackUsed: ["Socket IO", "ML model"],
-      githubLink: "https://github.com/Shubh942/cutie",
+      techstackUsed: ["React JS", "Node JS", "Express JS", "MySQL", "CSS"],
+      githubLink: "https://github.com/rajutkarsh07/monkepox-vaccination-portal",
       hostedLink: "",
     },
     {
-      name: "Ecommerse-Recommender",
+      name: "GPT-3",
       description:
-        "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
+        "A responsive homepage providing comprehensive information about OpenAI's GPT-3, offering insights and details about this groundbreaking AI language model.",
       //max 5
-      techstackUsed: ["nltk", "ML Model"],
-      githubLink: "https://github.com/Shubh942/Ecommerce-Recommeder",
-      hostedLink: "https://flipkart-product-recommendation.netlify.app/",
+      techstackUsed: ["React JS"],
+      githubLink: "https://github.com/rajutkarsh07/gpt_3",
+      hostedLink: "https://gpt3-utkarsh.netlify.app/",
     },
     {
-      name: "Natours Tour & Travel",
+      name: "Movie",
       description:
-        "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
+        "A responsive homepage providing comprehensive information about any mmovie, offering insights and details about movies",
       //max 5
-      techstackUsed: ["React JS", "Node JS", "Express JS", "MongoDB", "SCSS"],
-      githubLink: "https://github.com/Shubh942/mongoose-node",
-      hostedLink: "",
-    },
-    {
-      name: "Web scrapper",
-      description:
-        "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings",
-      //max 5
-      techstackUsed: ["Node JS", "Express JS", "cherio", "axios"],
-      githubLink: "https://github.com/Shubh942/web-scrapping",
-      hostedLink: "",
+      techstackUsed: ["React JS"],
+      githubLink: "https://github.com/rajutkarsh07/movie",
+      hostedLink: "https://gpt3-utkarsh.netlify.app/",
     },
   ],
   aboutYourself:
@@ -191,8 +209,8 @@ const data = {
       ],
     },
   ],
-  emailId: "shubhmehta942@gmail.com",
-  phoneNo: "8370040207",
+  emailId: "utkarshraj1306@gmail.com",
+  phoneNo: "9693501629",
   approximateBudget: "$300",
 };
 

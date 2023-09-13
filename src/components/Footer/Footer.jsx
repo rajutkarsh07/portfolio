@@ -10,7 +10,7 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/Shubh942/portfolio-updated")
+    fetch("https://api.github.com/repos/rajutkarsh07/portfolio-updated")
       .then((response) => response.json())
       .then((json) => {
         const { stargazers_count, forks_count } = json;
