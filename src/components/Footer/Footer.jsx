@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <a
-      href="https://github.com/Shubh942/portfolio-updated"
+      href="https://github.com/rajutkarsh07/portfolio-updated"
       target="_blank"
       className="footer"
     >
