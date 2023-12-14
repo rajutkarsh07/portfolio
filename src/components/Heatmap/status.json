@@ -1,0 +1,347 @@
+{
+  "status": "OK",
+  "result": [
+    {
+      "id": 237045081,
+      "contestId": 1487,
+      "creationTimeSeconds": 1702472711,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1487,
+        "index": "C",
+        "name": "Minimum Ties",
+        "type": "PROGRAMMING",
+        "rating": 1500,
+        "tags": [
+          "brute force",
+          "constructive algorithms",
+          "dfs and similar",
+          "graphs",
+          "greedy",
+          "implementation",
+          "math"
+        ]
+      },
+      "author": {
+        "contestId": 1487,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1613399700
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 6,
+      "timeConsumedMillis": 46,
+      "memoryConsumedBytes": 0
+    },
+    {
+      "id": 236953450,
+      "contestId": 1742,
+      "creationTimeSeconds": 1702420000,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1742,
+        "index": "F",
+        "name": "Smaller",
+        "type": "PROGRAMMING",
+        "rating": 1500,
+        "tags": ["constructive algorithms", "greedy", "strings"]
+      },
+      "author": {
+        "contestId": 1742,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1665671700
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "TIME_LIMIT_EXCEEDED",
+      "testset": "TESTS",
+      "passedTestCount": 2,
+      "timeConsumedMillis": 2000,
+      "memoryConsumedBytes": 60825600
+    },
+    {
+      "id": 236951533,
+      "contestId": 1800,
+      "creationTimeSeconds": 1702416958,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1800,
+        "index": "E1",
+        "name": "Unforgivable Curse (easy version)",
+        "type": "PROGRAMMING",
+        "rating": 1400,
+        "tags": [
+          "brute force",
+          "constructive algorithms",
+          "dsu",
+          "graphs",
+          "greedy",
+          "strings"
+        ]
+      },
+      "author": {
+        "contestId": 1800,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1677767700
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 23,
+      "timeConsumedMillis": 93,
+      "memoryConsumedBytes": 716800
+    },
+    {
+      "id": 236951504,
+      "contestId": 1800,
+      "creationTimeSeconds": 1702416930,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1800,
+        "index": "E2",
+        "name": "Unforgivable Curse (hard version)",
+        "type": "PROGRAMMING",
+        "rating": 1500,
+        "tags": [
+          "brute force",
+          "constructive algorithms",
+          "dfs and similar",
+          "dsu",
+          "graphs",
+          "greedy",
+          "strings"
+        ]
+      },
+      "author": {
+        "contestId": 1800,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1677767700
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 52,
+      "timeConsumedMillis": 109,
+      "memoryConsumedBytes": 1024000
+    },
+    {
+      "id": 236934067,
+      "contestId": 1881,
+      "creationTimeSeconds": 1702403478,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1881,
+        "index": "F",
+        "name": "Minimum Maximum Distance",
+        "type": "PROGRAMMING",
+        "rating": 1700,
+        "tags": ["dfs and similar", "dp", "graphs", "shortest paths", "trees"]
+      },
+      "author": {
+        "contestId": 1881,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1697121300
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "TIME_LIMIT_EXCEEDED",
+      "testset": "TESTS",
+      "passedTestCount": 4,
+      "timeConsumedMillis": 2000,
+      "memoryConsumedBytes": 409600
+    },
+    {
+      "id": 236901716,
+      "contestId": 580,
+      "creationTimeSeconds": 1702386857,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 580,
+        "index": "C",
+        "name": "Kefa and Park",
+        "type": "PROGRAMMING",
+        "points": 1500.0,
+        "rating": 1500,
+        "tags": ["dfs and similar", "graphs", "trees"]
+      },
+      "author": {
+        "contestId": 580,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1442939400
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 40,
+      "timeConsumedMillis": 109,
+      "memoryConsumedBytes": 14848000
+    },
+    {
+      "id": 236813814,
+      "contestId": 1881,
+      "creationTimeSeconds": 1702314398,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1881,
+        "index": "F",
+        "name": "Minimum Maximum Distance",
+        "type": "PROGRAMMING",
+        "rating": 1700,
+        "tags": ["dfs and similar", "dp", "graphs", "shortest paths", "trees"]
+      },
+      "author": {
+        "contestId": 1881,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1697121300
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "RUNTIME_ERROR",
+      "testset": "TESTS",
+      "passedTestCount": 0,
+      "timeConsumedMillis": 15,
+      "memoryConsumedBytes": 0
+    },
+    {
+      "id": 236672991,
+      "contestId": 1278,
+      "creationTimeSeconds": 1702221677,
+      "relativeTimeSeconds": 2147483647,
+      "problem": {
+        "contestId": 1278,
+        "index": "B",
+        "name": "A and B",
+        "type": "PROGRAMMING",
+        "rating": 1500,
+        "tags": ["greedy", "math"]
+      },
+      "author": {
+        "contestId": 1278,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "PRACTICE",
+        "ghost": false,
+        "startTimeSeconds": 1576766100
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 11,
+      "timeConsumedMillis": 46,
+      "memoryConsumedBytes": 0
+    },
+    {
+      "id": 236569618,
+      "contestId": 1904,
+      "creationTimeSeconds": 1702144838,
+      "relativeTimeSeconds": 6938,
+      "problem": {
+        "contestId": 1904,
+        "index": "C",
+        "name": "Array Game",
+        "type": "PROGRAMMING",
+        "points": 1000.0,
+        "tags": [
+          "binary search",
+          "brute force",
+          "data structures",
+          "sortings",
+          "two pointers"
+        ]
+      },
+      "author": {
+        "contestId": 1904,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "CONTESTANT",
+        "ghost": false,
+        "room": 397,
+        "startTimeSeconds": 1702137900
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 8,
+      "timeConsumedMillis": 78,
+      "memoryConsumedBytes": 0
+    },
+    {
+      "id": 236563285,
+      "contestId": 1904,
+      "creationTimeSeconds": 1702143828,
+      "relativeTimeSeconds": 5928,
+      "problem": {
+        "contestId": 1904,
+        "index": "A",
+        "name": "Forked!",
+        "type": "PROGRAMMING",
+        "points": 500.0,
+        "tags": ["brute force", "implementation"]
+      },
+      "author": {
+        "contestId": 1904,
+        "members": [
+          {
+            "handle": "utkarsh_raj_13"
+          }
+        ],
+        "participantType": "CONTESTANT",
+        "ghost": false,
+        "room": 397,
+        "startTimeSeconds": 1702137900
+      },
+      "programmingLanguage": "GNU C++17",
+      "verdict": "OK",
+      "testset": "TESTS",
+      "passedTestCount": 6,
+      "timeConsumedMillis": 15,
+      "memoryConsumedBytes": 102400
+    }
+  ]
+}

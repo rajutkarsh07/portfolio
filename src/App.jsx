@@ -10,7 +10,7 @@ import {
   Error,
 } from "./pages/index";
 
-import { Navbar, Footer } from "./components/index";
+import { Navbar, Footer, SocialHandle } from "./components/index";
 
 import { AnimatePresence } from "framer-motion";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
@@ -30,9 +30,11 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="*" element={<Error />} />
           </Routes>
+          <div></div>
           {/* <Footer /> */}
         </BrowserRouter>
       </AnimatePresence>
+      <SocialHandle />
     </div>
   );
 }

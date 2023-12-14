@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@uiw/react-heat-map": "^2.2.1",
     "firebase": "^9.22.1",
     "framer-motion": "^10.12.9",
     "netlify-cli": "^15.2.0",

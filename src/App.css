@@ -12,6 +12,7 @@
   align-items: center; */
   /* font-size: 50px; */
   cursor: url(assets/cursor.png), auto;
+  position: relative;
 }
 
 .gradient__text {

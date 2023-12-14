@@ -1,0 +1,19 @@
+.socialhandle {
+  position: absolute;
+  top: 240px;
+  left: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: #a7a7a7;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+      // border: 2px solid blue;
+    }
+  }
+}
