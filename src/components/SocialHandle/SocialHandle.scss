@@ -9,11 +9,16 @@
   a {
     text-decoration: none;
     color: #a7a7a7;
+    transition: all 0.2s;
 
     .icon {
       font-size: 28px;
       margin-bottom: 10px;
       // border: 2px solid blue;
     }
+  }
+
+  a:hover {
+    color: #fff;
   }
 }
