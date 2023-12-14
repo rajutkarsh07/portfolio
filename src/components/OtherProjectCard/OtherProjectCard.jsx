@@ -27,10 +27,10 @@ const OtherProjectCard = ({ item }) => {
       </div>
 
       <div className="links">
-        <a href={item.githubLink} target="blank">
+        <a href={item.githubLink} target="_blank">
           <AiOutlineGithub className="icon" />
         </a>
-        <a href={item.hostedLink}>
+        <a href={item.hostedLink} target="_blank">
           <BiLinkExternal className="icon" />
         </a>
       </div>
