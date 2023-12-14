@@ -40,5 +40,44 @@
         }
       }
     }
+
+    .codeforces {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 40px;
+      background: #1c1c22;
+      border-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(-45deg, #373737, #212121, #373737) 1;
+      border-radius: 5px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          text-decoration: none;
+          list-style: none;
+          // border: 1px solid #fff;
+          padding: 16px 12px;
+        }
+      }
+
+      a {
+        color: #fff;
+        transition: all 0.15s;
+      }
+      a:hover {
+        scale: 1.1;
+      }
+
+      img {
+        height: 60px;
+        border-radius: 5px;
+      }
+    }
   }
 }

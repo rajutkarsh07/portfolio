@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./About.scss";
 import { Navbar, Footer } from "../../components";
 import { motion } from "framer-motion";
@@ -8,6 +8,7 @@ import Clang from "../../assets/Clang.png";
 import reactIcon from "../../assets/react.png";
 import cpp from "../../assets/cpp.png";
 import Tilt from "react-parallax-tilt";
+import cf from "./../../assets/codeforces.jpg";
 
 const About = () => {
   const [rotate, setRotate] = useState({
@@ -15,6 +16,20 @@ const About = () => {
     cpp: false,
     react: false,
   });
+
+  const [codeforces, setCodeforceUser] = useState({});
+
+  useEffect(() => {
+    fetch("https://codeforces.com/api/user.info?handles=utkarsh_raj_13")
+      .then((response) => response.json())
+      .then((json) => {
+        let data = json.result[0];
+        setCodeforceUser(data);
+
+        // console.log(data.handle);
+      })
+      .catch((e) => console.error(e));
+  }, []);
 
   const toggleRotate = (key) => {
     setRotate((prevState) => ({
@@ -84,6 +99,31 @@ const About = () => {
               <img src={reactIcon} alt="" />
             </motion.div>
           </div>
+        </div>
+
+        <div className="codeforces">
+          <img src={cf} alt="codeforces" />
+          <ul>
+            <li>
+              <a
+                href="https://codeforces.com/profile/utkarsh_raj_13"
+                target="_blank"
+                className="handle"
+              >
+                {codeforces.handle}
+              </a>
+            </li>
+            <li>
+              <p>
+                rating : {codeforces.rating} ({codeforces.rank})
+              </p>
+            </li>
+            <li>
+              <p>
+                max rating : {codeforces.maxRating} ({codeforces.maxRank})
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
       <Footer />
