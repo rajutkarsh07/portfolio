@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 const Menu = () => {
   return (
@@ -48,7 +49,12 @@ const Navbar = () => {
         <Menu />
       </div>
       <div className="hamburger">
-        <HiMenuAlt3 className="ham-icon" onClick={openFunc} />
+        {open ? (
+          <IoClose className="ham-icon" onClick={openFunc} />
+        ) : (
+          <HiMenuAlt3 className="ham-icon" onClick={openFunc} />
+        )}
+
         {open && (
           <div className="ham-menu">
             <Menu />
