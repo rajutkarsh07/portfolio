@@ -23,10 +23,18 @@
   }
 
   @media (max-width: 1300px) {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 100%;
     a {
       .icon {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
+
+    flex-direction: row;
+    justify-content: center;
+    // border: 2px solid white;
   }
 }
