@@ -4,7 +4,7 @@ import "./ExppartCard.scss";
 
 const ExppartCard = ({ item }) => {
   return (
-    <div className="expCard">
+    <div className="exxpCard">
       <div className="img">
         <img src={item.companyLogo} alt="" />
       </div>
@@ -17,9 +17,6 @@ const ExppartCard = ({ item }) => {
             <a>{item2.content}</a>
           </p>
         ))}
-        {/* <p>
-          {data.started} - {data.end}
-        </p> */}
       </div>
       <div></div>
     </div>

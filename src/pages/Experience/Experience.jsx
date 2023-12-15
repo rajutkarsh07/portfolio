@@ -39,27 +39,6 @@ const Experience = () => {
             <ExppartCard item={item} />
           </VerticalTimelineElement>
         ))}
-
-        {/* <VerticalTimelineElement
-          contentStyle={{ background: "transparent" }}
-          iconStyle={{
-            background:
-              "linear-gradient(89.98deg, #b16cea 0.02%, #fe5f68 51.52%, #ff9452 99.98%)",
-          }}
-          date="2011 - present"
-        >
-          <ExpCard />
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          contentStyle={{ background: "transparent" }}
-          iconStyle={{
-            background:
-              "linear-gradient(89.98deg, #b16cea 0.02%, #fe5f68 51.52%, #ff9452 99.98%)",
-          }}
-          date="2011 - present"
-        >
-          <ExpCard />
-        </VerticalTimelineElement> */}
       </VerticalTimeline>
 
       <Footer />
