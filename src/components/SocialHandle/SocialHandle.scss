@@ -21,4 +21,12 @@
   a:hover {
     color: #fff;
   }
+
+  @media (max-width: 1300px) {
+    a {
+      .icon {
+        font-size: 24px;
+      }
+    }
+  }
 }

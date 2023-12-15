@@ -97,4 +97,54 @@
       }
     }
   }
+
+  @media (max-width: 1300px) {
+    .contents {
+      align-items: center;
+      flex-direction: column;
+      gap: 80px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contents {
+      .content-left {
+        .text {
+          h1 {
+            font-size: 48px;
+          }
+          a,
+          p {
+            font-size: 16px;
+            max-width: 300px;
+          }
+        }
+      }
+      .content-right {
+        .input-items {
+          input {
+            padding: 15px 20px;
+            width: 300px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .contents {
+      .content-left {
+        .text {
+          h1 {
+            font-size: 40px;
+          }
+          a,
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
 }

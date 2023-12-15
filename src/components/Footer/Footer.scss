@@ -5,11 +5,13 @@
   align-items: center;
   gap: 5px;
   margin: 120px 0 20px 0;
+  padding: 0 16px;
   font-family: consolas;
   color: #d8d8d8;
 
   p {
     display: flex;
+    text-align: center;
     align-content: center;
     justify-content: center;
     gap: 10px;
@@ -25,5 +27,8 @@
         font-size: 16px;
       }
     }
+  }
+
+  @media (max-width: 800px) {
   }
 }
