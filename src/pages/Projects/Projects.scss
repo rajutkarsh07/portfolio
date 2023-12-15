@@ -33,4 +33,41 @@
       column-gap: 20px;
     }
   }
+
+  @media (max-width: 1150px) {
+    .other-projects {
+      .other-projects-card {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    .other-projects {
+      align-items: center;
+
+      .other-projects-card {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 48px;
+      margin: 0 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 }
