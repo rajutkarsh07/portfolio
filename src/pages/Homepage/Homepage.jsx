@@ -57,7 +57,9 @@ const Homepage = () => {
         </Link>
       </div>
 
-      <MovingText text={data.name} />
+      <div className="moving">
+        <MovingText text={data.name} />
+      </div>
       <Footer />
     </motion.div>
   );

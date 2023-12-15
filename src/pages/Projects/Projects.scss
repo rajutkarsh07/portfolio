@@ -60,6 +60,16 @@
     p {
       font-size: 16px;
     }
+
+    .major-projects,
+    .other-projects {
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        text-align: center;
+      }
+    }
   }
 
   @media (max-width: 420px) {
