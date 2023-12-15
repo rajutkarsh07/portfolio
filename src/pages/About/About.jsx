@@ -134,79 +134,65 @@ const About = () => {
         <div className="codingprofile">
           <h2 className="gradient__text">Coding Profiles</h2>
 
-          <div className="codeforces">
-            <img src={cf} alt="codeforces" />
-            <ul>
-              <li>
-                <a
-                  href="https://codeforces.com/profile/utkarsh_raj_13"
-                  target="_blank"
-                  className="handle"
-                >
-                  {codeforces.handle}
-                </a>
-              </li>
-              <li>
-                <p>
-                  rating : {codeforces.rating} ({codeforces.rank})
-                </p>
-              </li>
-              <li>
-                <p>
-                  max rating : {codeforces.maxRating} ({codeforces.maxRank})
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div className="leetcode">
-            <img src={lc} alt="leetcode" />
-            <ul>
-              <li>
-                <a
-                  href="https://leetcode.com/utkarsh_raj_13/"
-                  target="_blank"
-                  className="handle"
-                >
-                  {codeforces.handle}
-                </a>
-              </li>
+          <div className="coding-site">
+            <div className="coding-profile-details">
+              <img src={cf} alt="codeforces" />
+              <a
+                href="https://codeforces.com/profile/utkarsh_raj_13"
+                target="_blank"
+                className="handle"
+              >
+                {codeforces.handle}
+              </a>
+            </div>
 
-              <li className="leetcode-data">{leetcode.totalSolved} Solved</li>
-
-              {/* "totalSolved easySolved mediumSolved": 205, hardSolved*/}
-              <li>
-                <p>easy : {leetcode.easySolved}</p>
-              </li>
-              <li>
-                <p>medium : {leetcode.mediumSolved}</p>
-              </li>
-              <li>
-                <p>hard : {leetcode.hardSolved}</p>
-              </li>
-            </ul>
+            <div className="coding-profile-data codeforces">
+              <p>
+                rating : {codeforces.rating} ({codeforces.rank})
+              </p>
+              <p>
+                max rating : {codeforces.maxRating} ({codeforces.maxRank})
+              </p>
+            </div>
           </div>
-          <div className="codeforces">
-            <img src={gh} alt="codeforces" />
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/rajutkarsh07"
-                  target="_blank"
-                  className="handle"
-                >
-                  {github.login}
-                </a>
-              </li>
-              <li>
-                <p>{github.public_repos} repository</p>
-              </li>
-              <li>
-                <p>{github.followers} followers</p>
-              </li>
-              <li>
-                <p>{github.following} following</p>
-              </li>
-            </ul>
+
+          <div className="coding-site">
+            <div className="coding-profile-details">
+              <img src={lc} alt="leetcode" />
+              <a
+                href="https://leetcode.com/utkarsh_raj_13/"
+                target="_blank"
+                className="handle"
+              >
+                {codeforces.handle}
+              </a>
+              <p className="leetcode-data">{leetcode.totalSolved} Solved</p>
+            </div>
+
+            <div className="coding-profile-data">
+              <p>easy : {leetcode.easySolved}</p>
+              <p>medium : {leetcode.mediumSolved}</p>
+              <p>hard : {leetcode.hardSolved}</p>
+            </div>
+          </div>
+
+          <div className="coding-site">
+            <div className="coding-profile-details">
+              <img src={gh} alt="codeforces" />
+              <a
+                href="https://github.com/rajutkarsh07"
+                target="_blank"
+                className="handle"
+              >
+                {github.login}
+              </a>
+            </div>
+
+            <div className="coding-profile-data">
+              <p>{github.public_repos} repository</p>
+              <p>{github.followers} followers</p>
+              <p>{github.following} following</p>
+            </div>
           </div>
         </div>
         <CFmap />
