@@ -61,7 +61,7 @@ const data = {
         "Burpsuite",
         "Penteresting testing",
       ],
-      githubLink: "https://github.com/rajutkarsh07/CodeNova",
+      githubLink: "https://github.com/rajutkarsh07/FlagRush",
       hostedLink: "https://nutritiouswhimsicalcache.shubh-mehta.repl.co/",
       imageLink:
         "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694032468/twaluamtttv8dcgk54kk.jpg",

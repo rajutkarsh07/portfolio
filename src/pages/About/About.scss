@@ -32,12 +32,39 @@
     }
 
     .tech {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+
+      gap: 20px;
+
+      p {
+        text-align: center;
+      }
+
       .tech-items {
+        // display: grid;
+        // grid-template-columns: repeat(10, 1fr);
+        // justify-content: center;
+        // align-items: center;
+
         display: flex;
-        flex-direction: row;
-        // .item {
-        // border: 2px solid white;
-        // }
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        max-width: 800px;
+
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: 60px;
+            width: 60px;
+          }
+        }
       }
     }
 

@@ -4,20 +4,50 @@ import { Navbar, Footer } from "../../components";
 import { motion } from "framer-motion";
 import utkarshimg from "../../assets/utkarshimg.png";
 import data from "../../data";
-import Clang from "../../assets/Clang.png";
-import reactIcon from "../../assets/react.png";
-import cpp from "../../assets/cpp.png";
+
 import Tilt from "react-parallax-tilt";
 import cf from "./../../assets/codeforces.jpg";
 import lc from "./../../assets/leetcode.jpg";
 import gh from "./../../assets/github.jpg";
 import CFmap from "../../components/Heatmap/CFmap";
 
+import Clang from "../../assets/Clang.png";
+import reactIcon from "../../assets/react.png";
+import redux from "../../assets/redux.png";
+import cpp from "../../assets/cpp.png";
+import html from "../../assets/html.png";
+import css from "../../assets/css.png";
+import scss from "../../assets/scss.png";
+import js from "../../assets/js.png";
+import ts from "../../assets/ts.png";
+import node from "../../assets/node.png";
+import mongodb from "../../assets/mongodb.png";
+import mysql from "../../assets/mysql.png";
+import express from "../../assets/express.png";
+import figma from "../../assets/figma.png";
+import ps from "../../assets/ps.png";
+import ai from "../../assets/ai.png";
+import xd from "../../assets/xd.png";
+
 const About = () => {
   const [rotate, setRotate] = useState({
     c: false,
+    html: false,
     cpp: false,
+    scss: false,
+    js: false,
+    ts: false,
     react: false,
+    redux: false,
+    css: false,
+    node: false,
+    mongodb: false,
+    mysql: false,
+    express: false,
+    figma: false,
+    ps: false,
+    ai: false,
+    xd: false,
   });
 
   const [codeforces, setCodeforceUser] = useState({});
@@ -108,7 +138,6 @@ const About = () => {
             >
               <img src={Clang} alt="" />
             </motion.div>
-
             <motion.div
               className="item"
               animate={{ rotate: rotate.cpp ? 360 : 0 }}
@@ -117,6 +146,51 @@ const About = () => {
               }}
             >
               <img src={cpp} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.html ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("html");
+              }}
+            >
+              <img src={html} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.css ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("css");
+              }}
+            >
+              <img src={css} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.scss ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("scss");
+              }}
+            >
+              <img src={scss} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.js ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("js");
+              }}
+            >
+              <img src={js} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.ts ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("ts");
+              }}
+            >
+              <img src={ts} alt="" />
             </motion.div>
 
             <motion.div
@@ -127,6 +201,88 @@ const About = () => {
               }}
             >
               <img src={reactIcon} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.redux ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("redux");
+              }}
+            >
+              <img src={redux} alt="" />
+            </motion.div>
+
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.node ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("node");
+              }}
+            >
+              <img src={node} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.express ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("express");
+              }}
+            >
+              <img src={express} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.mongodb ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("mongodb");
+              }}
+            >
+              <img src={mongodb} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.mysql ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("mysql");
+              }}
+            >
+              <img src={mysql} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.figma ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("figma");
+              }}
+            >
+              <img src={figma} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.ps ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("ps");
+              }}
+            >
+              <img src={ps} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.ai ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("ai");
+              }}
+            >
+              <img src={ai} alt="" />
+            </motion.div>
+            <motion.div
+              className="item"
+              animate={{ rotate: rotate.xd ? 360 : 0 }}
+              onClick={() => {
+                toggleRotate("xd");
+              }}
+            >
+              <img src={xd} alt="" />
             </motion.div>
           </div>
         </div>

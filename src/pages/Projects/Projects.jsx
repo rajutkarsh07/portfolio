@@ -23,6 +23,7 @@ const Projects = () => {
             <MajorProjectCard
               classNa={`majorprojectcard-${i % 2 == 0 ? "normal" : "reverse"}`}
               item={item}
+              key={i}
             />
           ))}
           {/* <MajorProjectCard classNa={"majorprojectcard-reverse"} />
@@ -33,8 +34,8 @@ const Projects = () => {
       <div className="other-projects">
         <h1 className="gradient__text">Other Projects</h1>
         <div className="other-projects-card">
-          {data.otherProjects.map((item) => (
-            <OtherProjectCard item={item} />
+          {data.otherProjects.map((item, i) => (
+            <OtherProjectCard item={item} key={i} />
           ))}
         </div>
       </div>
