@@ -1,6 +1,6 @@
-import { React } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { React } from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   Homepage,
   Projects,
@@ -8,12 +8,12 @@ import {
   Contact,
   About,
   Error,
-} from "./pages/index";
+} from './pages/index';
 
-import { Navbar, Footer, SocialHandle } from "./components/index";
+import { Navbar, Footer, SocialHandle } from './components/index';
 
-import { AnimatePresence } from "framer-motion";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
+import { AnimatePresence } from 'framer-motion';
+import CustomCursor from './components/CustomCursor/CustomCursor';
 
 function App() {
   return (

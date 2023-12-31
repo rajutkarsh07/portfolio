@@ -1,12 +1,15 @@
-import React from "react";
-import "./Homepage.scss";
-import utkarsh from "../../assets/utkarsh.png";
-import { Navbar, Footer } from "../../components";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import data from "../../data";
-import MovingText from "../../components/MovingText/MovingText";
-import Typewriter from "typewriter-effect";
+import React from 'react';
+import './Homepage.scss';
+import utkarsh from '../../assets/utkarsh.png';
+import { Navbar, Footer } from '../../components';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import data from '../../data';
+import MovingText from '../../components/MovingText/MovingText';
+import Typewriter from 'typewriter-effect';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import '../../background.css';
 
 const Homepage = () => {
   return (
@@ -20,7 +23,12 @@ const Homepage = () => {
 
       <div className="contents">
         <div>
-          <img src={data.imageHome} alt="Shubh Mehta" className="image" />
+          <LazyLoadImage
+            src={data.imageHome}
+            alt="Utkarsh Raj"
+            className="image"
+            effect="blur"
+          />
         </div>
 
         <p>My name is </p>
@@ -45,7 +53,7 @@ const Homepage = () => {
           <span className="gradient__text">
             <strong> {data.majorSkill1} </strong>
           </span>
-          and{" "}
+          and{' '}
           <span className="gradient__text">
             <strong> {data.majorSkill2} </strong>
           </span>
@@ -61,6 +69,20 @@ const Homepage = () => {
         <MovingText text={data.name} />
       </div>
       <Footer />
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </motion.div>
   );
 };

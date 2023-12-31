@@ -1,9 +1,9 @@
-import "./SocialHandle.scss";
-import { FaGithub } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import { SiCodeforces } from "react-icons/si";
-import { SiGeeksforgeeks } from "react-icons/si";
-import { FaLinkedin, FaTwitter } from "react-icons/fa";
+import './SocialHandle.scss';
+import { FaGithub } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
+import { SiCodeforces } from 'react-icons/si';
+import { SiGeeksforgeeks } from 'react-icons/si';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const SocialHandle = () => {
   return (

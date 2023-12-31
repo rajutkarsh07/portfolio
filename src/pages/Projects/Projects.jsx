@@ -1,10 +1,12 @@
-import React from "react";
-import "./Projects.scss";
-import { MajorProjectCard, OtherProjectCard } from "../../components";
-import data from "../../data";
-import { Navbar, Footer } from "../../components";
-import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
+import React from 'react';
+import './Projects.scss';
+import { MajorProjectCard, OtherProjectCard } from '../../components';
+import data from '../../data';
+import { Navbar, Footer } from '../../components';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
+
+import '../../background.css';
 
 const Projects = () => {
   return (
@@ -21,7 +23,7 @@ const Projects = () => {
         <div className="other-projects-card">
           {data.majorProject?.map((item, i) => (
             <MajorProjectCard
-              classNa={`majorprojectcard-${i % 2 == 0 ? "normal" : "reverse"}`}
+              classNa={`majorprojectcard-${i % 2 == 0 ? 'normal' : 'reverse'}`}
               item={item}
               key={i}
             />
@@ -41,6 +43,20 @@ const Projects = () => {
       </div>
 
       <Footer />
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </motion.div>
   );
 };

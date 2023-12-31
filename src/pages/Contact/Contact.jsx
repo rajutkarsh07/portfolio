@@ -1,19 +1,20 @@
-import React, { useRef } from "react";
-import "./Contact.scss";
-import { Navbar, Footer } from "../../components";
-import phone from "../../assets/phone.svg";
-import mail from "../../assets/email.svg";
-import { motion } from "framer-motion";
-import data from "../../data";
+import React, { useRef } from 'react';
+import './Contact.scss';
+import { Navbar, Footer } from '../../components';
+import phone from '../../assets/phone.svg';
+import mail from '../../assets/email.svg';
+import { motion } from 'framer-motion';
+import data from '../../data';
 
-import { app, database } from "../../firebaseConfig";
-import { collection, addDoc } from "firebase/firestore";
+import { app, database } from '../../firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../../background.css';
 
 const Contact = () => {
-  const collectionRef = collection(database, "users");
+  const collectionRef = collection(database, 'users');
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -29,7 +30,7 @@ const Contact = () => {
     const description = descriptionRef.current.value;
 
     if (!name || !email || !budget || !description) {
-      toast.error("Enter all the field", {
+      toast.error('Enter all the field', {
         autoClose: 1000,
       });
     } else {
@@ -40,7 +41,7 @@ const Contact = () => {
         description,
       })
         .then(() => {
-          toast.success("data added");
+          toast.success('data added');
         })
         .catch((err) => {
           toast.error(err.message);
@@ -109,6 +110,20 @@ const Contact = () => {
         </form>
       </div>
       <Footer />
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <ToastContainer
         position="bottom-right"
         autoClose={1000}

@@ -1,33 +1,36 @@
-import React, { useState, useEffect } from "react";
-import "./About.scss";
-import { Navbar, Footer } from "../../components";
-import { motion } from "framer-motion";
-import utkarshimg from "../../assets/utkarshimg.png";
-import data from "../../data";
+import React, { useState, useEffect } from 'react';
+import './About.scss';
+import { Navbar, Footer } from '../../components';
+import { motion } from 'framer-motion';
+import utkarshimg from '../../assets/utkarshimg.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import data from '../../data';
 
-import Tilt from "react-parallax-tilt";
-import cf from "./../../assets/codeforces.jpg";
-import lc from "./../../assets/leetcode.jpg";
-import gh from "./../../assets/github.jpg";
-import CFmap from "../../components/Heatmap/CFmap";
+import Tilt from 'react-parallax-tilt';
+import cf from './../../assets/codeforces.jpg';
+import lc from './../../assets/leetcode.jpg';
+import gh from './../../assets/github.jpg';
+import CFmap from '../../components/Heatmap/CFmap';
 
-import Clang from "../../assets/Clang.png";
-import reactIcon from "../../assets/react.png";
-import redux from "../../assets/redux.png";
-import cpp from "../../assets/cpp.png";
-import html from "../../assets/html.png";
-import css from "../../assets/css.png";
-import scss from "../../assets/scss.png";
-import js from "../../assets/js.png";
-import ts from "../../assets/ts.png";
-import node from "../../assets/node.png";
-import mongodb from "../../assets/mongodb.png";
-import mysql from "../../assets/mysql.png";
-import express from "../../assets/express.png";
-import figma from "../../assets/figma.png";
-import ps from "../../assets/ps.png";
-import ai from "../../assets/ai.png";
-import xd from "../../assets/xd.png";
+import Clang from '../../assets/Clang.png';
+import reactIcon from '../../assets/react.png';
+import redux from '../../assets/redux.png';
+import cpp from '../../assets/cpp.png';
+import html from '../../assets/html.png';
+import css from '../../assets/css.png';
+import scss from '../../assets/scss.png';
+import js from '../../assets/js.png';
+import ts from '../../assets/ts.png';
+import node from '../../assets/node.png';
+import mongodb from '../../assets/mongodb.png';
+import mysql from '../../assets/mysql.png';
+import express from '../../assets/express.png';
+import figma from '../../assets/figma.png';
+import ps from '../../assets/ps.png';
+import ai from '../../assets/ai.png';
+import xd from '../../assets/xd.png';
+
+import '../../background.css';
 
 const About = () => {
   const [rotate, setRotate] = useState({
@@ -55,7 +58,7 @@ const About = () => {
   const [github, setGitHub] = useState({});
 
   useEffect(() => {
-    fetch("https://codeforces.com/api/user.info?handles=utkarsh_raj_13")
+    fetch('https://codeforces.com/api/user.info?handles=utkarsh_raj_13')
       .then((response) => response.json())
       .then((json) => {
         let data = json.result[0];
@@ -67,7 +70,7 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://leetcode-stats-api.herokuapp.com/utkarsh_raj_13")
+    fetch('https://leetcode-stats-api.herokuapp.com/utkarsh_raj_13')
       .then((response) => response.json())
       .then((json) => {
         let data = json;
@@ -79,7 +82,7 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/rajutkarsh07")
+    fetch('https://api.github.com/users/rajutkarsh07')
       .then((response) => response.json())
       .then((json) => {
         let data = json;
@@ -110,14 +113,15 @@ const About = () => {
         <h1 className="gradient__text">About</h1>
         <div className="main-info">
           <p>
-            Hi, I'm {data.name} from {data.instituteName}. A{" "}
-            <span style={{ fontStyle: "italic" }}> {data.majorSkill1} </span> ,
-            <span style={{ fontStyle: "italic" }}> {data.majorSkill2} </span>{" "}
+            Hi, I'm {data.name} from {data.instituteName}. A{' '}
+            <span style={{ fontStyle: 'italic' }}> {data.majorSkill1} </span> ,
+            <span style={{ fontStyle: 'italic' }}> {data.majorSkill2} </span>{' '}
             and {data.majorSkill3} {data.aboutYourself}
           </p>
           <Tilt>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <img src={data.imageAbout} alt={data.name} />
+              {/* <img src={data.imageAbout} alt={data.name} /> */}
+              <LazyLoadImage src={data.imageAbout} alt={data.name} />
             </motion.div>
           </Tilt>
         </div>
@@ -133,7 +137,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.c ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("c");
+                toggleRotate('c');
               }}
             >
               <img src={Clang} alt="" />
@@ -142,7 +146,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.cpp ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("cpp");
+                toggleRotate('cpp');
               }}
             >
               <img src={cpp} alt="" />
@@ -151,7 +155,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.html ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("html");
+                toggleRotate('html');
               }}
             >
               <img src={html} alt="" />
@@ -160,7 +164,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.css ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("css");
+                toggleRotate('css');
               }}
             >
               <img src={css} alt="" />
@@ -169,7 +173,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.scss ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("scss");
+                toggleRotate('scss');
               }}
             >
               <img src={scss} alt="" />
@@ -178,7 +182,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.js ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("js");
+                toggleRotate('js');
               }}
             >
               <img src={js} alt="" />
@@ -187,7 +191,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.ts ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("ts");
+                toggleRotate('ts');
               }}
             >
               <img src={ts} alt="" />
@@ -197,7 +201,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.react ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("react");
+                toggleRotate('react');
               }}
             >
               <img src={reactIcon} alt="" />
@@ -206,7 +210,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.redux ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("redux");
+                toggleRotate('redux');
               }}
             >
               <img src={redux} alt="" />
@@ -216,7 +220,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.node ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("node");
+                toggleRotate('node');
               }}
             >
               <img src={node} alt="" />
@@ -225,7 +229,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.express ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("express");
+                toggleRotate('express');
               }}
             >
               <img src={express} alt="" />
@@ -234,7 +238,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.mongodb ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("mongodb");
+                toggleRotate('mongodb');
               }}
             >
               <img src={mongodb} alt="" />
@@ -243,7 +247,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.mysql ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("mysql");
+                toggleRotate('mysql');
               }}
             >
               <img src={mysql} alt="" />
@@ -252,7 +256,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.figma ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("figma");
+                toggleRotate('figma');
               }}
             >
               <img src={figma} alt="" />
@@ -261,7 +265,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.ps ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("ps");
+                toggleRotate('ps');
               }}
             >
               <img src={ps} alt="" />
@@ -270,7 +274,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.ai ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("ai");
+                toggleRotate('ai');
               }}
             >
               <img src={ai} alt="" />
@@ -279,7 +283,7 @@ const About = () => {
               className="item"
               animate={{ rotate: rotate.xd ? 360 : 0 }}
               onClick={() => {
-                toggleRotate("xd");
+                toggleRotate('xd');
               }}
             >
               <img src={xd} alt="" />
@@ -354,6 +358,20 @@ const About = () => {
         <CFmap />
       </div>
       <Footer />
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </motion.div>
   );
 };
