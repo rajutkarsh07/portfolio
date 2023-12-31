@@ -9,6 +9,7 @@ import MovingText from '../../components/MovingText/MovingText';
 import Typewriter from 'typewriter-effect';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import placeholderutkarsh from '../../assets/placeholderutkarsh.png';
 import '../../background.css';
 
 const Homepage = () => {
@@ -28,6 +29,9 @@ const Homepage = () => {
             alt="Utkarsh Raj"
             className="image"
             effect="blur"
+            height={250}
+            width={250}
+            placeholderSrc={placeholderutkarsh}
           />
         </div>
 

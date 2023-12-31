@@ -1,9 +1,9 @@
 const data = {
   name: 'Utkarsh Raj',
   imageHome:
-    'https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Fhome.png?alt=media&token=2688b288-b1d6-4a7e-b131-694d775b9684',
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarsh.png?alt=media&token=7f7cb8a0-5141-4be7-a4c0-e3e8127be433',
   imageAbout:
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarsh_raj.png?alt=media&token=b1ae29fa-1210-4d13-87d6-6f48157c0a10',
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarshimg.png?alt=media&token=a46b9e8b-c74d-4b2d-b010-d7a4dee585cc',
   contentBelowName: 'I build things for the web.',
   majorSkill1: 'Full Stack Web Developer',
   majorSkill2: 'UI/UX designer',

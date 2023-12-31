@@ -1,11 +1,5 @@
-@font-face {
-  font-family: consolas;
-  src: url(./font/CONSOLA.TTF);
-}
-
 .App {
-  /* font-family: consolas; */
-  font-family: "Bai Jamjuree", sans-serif;
+  font-family: 'Bai Jamjuree', sans-serif;
   display: flex;
   /* justify-content: center;
   height: 95vh;

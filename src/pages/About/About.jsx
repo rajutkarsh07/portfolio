@@ -4,6 +4,8 @@ import { Navbar, Footer } from '../../components';
 import { motion } from 'framer-motion';
 import utkarshimg from '../../assets/utkarshimg.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import placeholderutkarshimg from '../../assets/placeholderutkarshimg.png';
+
 import data from '../../data';
 
 import Tilt from 'react-parallax-tilt';
@@ -119,10 +121,12 @@ const About = () => {
             and {data.majorSkill3} {data.aboutYourself}
           </p>
           <Tilt>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              {/* <img src={data.imageAbout} alt={data.name} /> */}
-              <LazyLoadImage src={data.imageAbout} alt={data.name} />
-            </motion.div>
+            {/* <img src={data.imageAbout} alt={data.name} /> */}
+            <LazyLoadImage
+              src={data.imageAbout}
+              alt={data.name}
+              PlaceholderSrc={placeholderutkarshimg}
+            />
           </Tilt>
         </div>
 
