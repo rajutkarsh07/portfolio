@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./Footer.scss";
-import data from "../../data";
-import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
+import React, { useState, useEffect } from 'react';
+import './Footer.scss';
+import data from '../../data';
+import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
@@ -10,7 +10,7 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/rajutkarsh07/portfolio-updated")
+    fetch('https://api.github.com/repos/rajutkarsh07/portfolio-updated')
       .then((response) => response.json())
       .then((json) => {
         const { stargazers_count, forks_count } = json;
@@ -28,15 +28,15 @@ const Footer = () => {
       target="_blank"
       className="footer"
     >
-      <p>Designed & Built with 💖 by {data.name}</p>
+      <p>Designed & Built with 💖 by Utkarsh Raj</p>
       {githubInfo.stars && githubInfo.forks && (
         <p>
           <span>
-            <AiOutlineStar className="icon" />{" "}
+            <AiOutlineStar className="icon" />{' '}
             {githubInfo.stars.toLocaleString()}
           </span>
           <span>
-            <AiOutlineFork className="icon" />{" "}
+            <AiOutlineFork className="icon" />{' '}
             {githubInfo.forks.toLocaleString()}
           </span>
         </p>
