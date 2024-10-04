@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { SiCodeforces } from 'react-icons/si';
 import { SiGeeksforgeeks } from 'react-icons/si';
-import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const SocialHandle = () => {
   return (
@@ -28,6 +28,9 @@ const SocialHandle = () => {
       </a>
       <a href="https://twitter.com/Utkarsh_raj_13" target="_blank">
         <FaTwitter className="icon" />
+      </a>
+      <a href="https://www.instagram.com/utkarsh_raj.random/" target="_blank">
+        <FaInstagram className="icon" />
       </a>
     </div>
   );

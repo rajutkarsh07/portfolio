@@ -64,9 +64,18 @@ const Homepage = () => {
           specialized in building exceptional websites.
         </p>
 
-        <Link to="/Contact" className="cta-btn">
-          Hire Me
-        </Link>
+        <div className="cta-buttons">
+          <Link to="/Contact" className="cta-btn">
+            Hire Me
+          </Link>
+          <a
+            href="https://buymeacoffee.com/utkarshraja"
+            target="_blank"
+            className="cta-btn-coffee"
+          >
+            Buy me a coffee 🍵
+          </a>
+        </div>
       </div>
 
       <div className="moving">

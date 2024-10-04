@@ -48,6 +48,30 @@
       margin: 16px;
     }
 
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+
+      .cta-btn-coffee {
+        padding: 12px 25px;
+        background: #434343;
+        border-radius: 120px;
+        font-size: 18px;
+        color: #fff;
+        font-family: inherit;
+        transition: all 0.2s;
+      }
+
+      .cta-btn-coffee:hover {
+        cursor: url(assets/whitepointer.png), pointer;
+        background: #5f5f5f;
+      }
+    }
+
     .name {
       display: flex;
       flex-direction: column;

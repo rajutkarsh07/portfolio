@@ -71,12 +71,12 @@ const Contact = () => {
               <img src={mail} alt="" />
               <a href="mailto:utkarshraj1306@gmail.com">{data.emailId}</a>
               <div></div>
-            </span>
-            <span>
-              <img src={phone} alt="" />
               <p>{data.phoneNo}</p>
-              <div></div>
             </span>
+            {/* <span>
+              <img src={phone} alt="" />
+              <div></div>
+            </span> */}
           </div>
         </div>
         <form className="content-right">
