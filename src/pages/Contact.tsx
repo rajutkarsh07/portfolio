@@ -3,21 +3,31 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { socials, contact, personal } from "@/data";
 
-const socials = [
-  { name: "GitHub", icon: Github, link: "https://github.com/rajutkarsh07", color: "hover:bg-[#333] hover:text-white" },
-  { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/utkarshraj1306/", color: "hover:bg-[#0077b5] hover:text-white" },
-  { name: "Twitter", icon: Twitter, link: "https://x.com/Utkarsh_raj_13", color: "hover:bg-[#1da1f2] hover:text-white" },
-  { name: "Instagram", icon: Instagram, link: "https://www.instagram.com/utkarsh_raj.random/", color: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:text-white" },
-];
+// Map icon names to actual icon components
+const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+};
+
+// Color mapping for social links
+const socialColors: Record<string, string> = {
+  GitHub: "hover:bg-[#333] hover:text-white",
+  LinkedIn: "hover:bg-[#0077b5] hover:text-white",
+  Twitter: "hover:bg-[#1da1f2] hover:text-white",
+  Instagram: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:text-white",
+};
 
 const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "utkarshraj1306@gmail.com",
+    value: contact.email,
     description: "Drop me an email anytime",
-    link: "mailto:utkarshraj1306@gmail.com",
+    link: `mailto:${contact.email}`,
     action: "Send Email",
   },
   {
@@ -25,7 +35,7 @@ const contactMethods = [
     title: "Buy Me a Coffee",
     value: "Support my work",
     description: "If you like what I do",
-    link: "https://buymeacoffee.com/utkarshraja",
+    link: contact.buyMeCoffee,
     action: "Buy Coffee",
   },
 ];
@@ -36,21 +46,21 @@ export default function Contact() {
       {/* Background grid - same as home */}
       <div className="fixed inset-0 bg-grid opacity-30 pointer-events-none" />
       <div className="fixed inset-0 bg-gradient-overlay pointer-events-none" />
-      
+
       <Navbar />
-      
+
       <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Header */}
           <div className="mb-16">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            
+
             <div className="stagger-children">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Contact
@@ -80,9 +90,9 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                
+
                 <Button size="lg" asChild className="gap-2 w-full sm:w-auto">
-                  <a href="mailto:utkarshraj1306@gmail.com">
+                  <a href={`mailto:${contact.email}`}>
                     <Send className="h-5 w-5" />
                     Send a Message
                     <ArrowUpRight className="h-4 w-4" />
@@ -125,9 +135,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground mb-2">Based in India, working remotely worldwide</p>
+                    <p className="text-muted-foreground mb-2">{contact.locationDescription}</p>
                     <p className="text-sm text-muted-foreground">
-                      Open to relocate for the right opportunity
+                      {contact.openToRelocate ? "Open to relocate for the right opportunity" : ""}
                     </p>
                   </div>
                 </div>
@@ -140,26 +150,30 @@ export default function Contact() {
                 <div className="bg-card border border-border rounded-2xl p-8">
                   <h3 className="font-bold text-xl mb-6">Follow Me</h3>
                   <div className="space-y-4">
-                    {socials.map((social) => (
-                      <a
-                        key={social.name}
-                        href={social.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center gap-4 p-4 rounded-xl bg-secondary border border-transparent transition-all duration-300 ${social.color}`}
-                      >
-                        <social.icon className="h-6 w-6" />
-                        <span className="font-medium">{social.name}</span>
-                        <ArrowUpRight className="h-4 w-4 ml-auto" />
-                      </a>
-                    ))}
+                    {socials.map((social) => {
+                      const Icon = iconComponents[social.icon] || Github;
+                      const color = socialColors[social.name] || "";
+                      return (
+                        <a
+                          key={social.name}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center gap-4 p-4 rounded-xl bg-secondary border border-transparent transition-all duration-300 ${color}`}
+                        >
+                          <Icon className="h-6 w-6" />
+                          <span className="font-medium">{social.name}</span>
+                          <ArrowUpRight className="h-4 w-4 ml-auto" />
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
 
                 {/* Fun Fact Card */}
                 <div className="bg-gradient-to-br from-secondary to-secondary/50 border border-border rounded-2xl p-6 mt-6">
                   <p className="text-sm text-muted-foreground mb-2">⚡ Fun Fact</p>
-                  <p className="font-medium">I sneeze whenever I see the sun! 🌞</p>
+                  <p className="font-medium">{personal.funFact}</p>
                 </div>
               </div>
             </div>

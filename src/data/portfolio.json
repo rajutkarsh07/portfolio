@@ -1,0 +1,372 @@
+{
+    "personal": {
+        "name": "Utkarsh Raj",
+        "firstName": "Utkarsh",
+        "lastName": "Raj",
+        "title": "Full Stack Web Developer",
+        "tagline": "I build things for the web.",
+        "roles": [
+            "Full Stack Web Developer",
+            "UI/UX Designer",
+            "Competitive Programmer"
+        ],
+        "bio": "I'm a Full Stack Web Developer and UI/UX Designer specialized in building exceptional websites.",
+        "currentCompany": "Palo Alto Networks",
+        "profileImage": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarsh.png?alt=media&token=7f7cb8a0-5141-4be7-a4c0-e3e8127be433",
+        "aboutImage": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarshimg.png?alt=media&token=a46b9e8b-c74d-4b2d-b010-d7a4dee585cc",
+        "funFact": "I sneeze whenever I see the sun! 🌞"
+    },
+    "contact": {
+        "email": "utkarshraj1306@gmail.com",
+        "emailSecondary": "utkarshraj.work@gmail.com",
+        "location": "India",
+        "locationDescription": "Based in India, working remotely worldwide",
+        "openToRelocate": true,
+        "buyMeCoffee": "https://buymeacoffee.com/utkarshraja"
+    },
+    "socials": [
+        {
+            "name": "GitHub",
+            "username": "rajutkarsh07",
+            "url": "https://github.com/rajutkarsh07",
+            "icon": "Github"
+        },
+        {
+            "name": "LinkedIn",
+            "username": "utkarshraj1306",
+            "url": "https://www.linkedin.com/in/utkarshraj1306/",
+            "icon": "Linkedin"
+        },
+        {
+            "name": "Twitter",
+            "username": "Utkarsh_raj_13",
+            "url": "https://x.com/Utkarsh_raj_13",
+            "icon": "Twitter"
+        },
+        {
+            "name": "Instagram",
+            "username": "utkarsh_raj.random",
+            "url": "https://www.instagram.com/utkarsh_raj.random/",
+            "icon": "Instagram"
+        }
+    ],
+    "education": {
+        "institution": "Indian Institute of Information Technology, Design and Manufacturing, Jabalpur",
+        "degree": "B.Tech in Computer Science and Engineering",
+        "duration": "Dec 2021 - June 2025",
+        "location": "Jabalpur, India",
+        "description": "Focusing on Data Structures, Algorithms, Web Development, and Software Engineering principles."
+    },
+    "experiences": [
+        {
+            "company": "Palo Alto Networks",
+            "role": "Software Engineer Intern",
+            "duration": "Mar 2025 - Present",
+            "location": "Remote",
+            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "current": true,
+            "url": "https://www.paloaltonetworks.com/",
+            "description": [
+                "Working on enterprise security solutions",
+                "Contributing to core product development"
+            ]
+        },
+        {
+            "company": "Oxyzo",
+            "role": "Software Developer Intern",
+            "duration": "Dec 2024 - Feb 2025",
+            "location": "Gurugram, India",
+            "logo": "https://play-lh.googleusercontent.com/Qln4yru4U2TQWalgWZ-6YW4OXebWPzLr121AWKjYq629TmPaloazDyRE7H_D0vzoX_0=w240-h480-rw",
+            "current": false,
+            "url": "https://www.oxyzo.in/",
+            "description": [
+                "Developed and maintained fintech web applications",
+                "Collaborated with cross-functional teams"
+            ]
+        },
+        {
+            "company": "Google Summer of Code 2024",
+            "role": "Open Source Contributor @C2SI",
+            "duration": "May 2024 - Aug 2024",
+            "location": "Remote",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/768px-GSoC-icon.svg.png",
+            "current": false,
+            "url": "https://summerofcode.withgoogle.com/",
+            "description": [
+                "Contributed to Webiu - a website builder project",
+                "Implemented new features and improved documentation"
+            ]
+        },
+        {
+            "company": "Deepvue.tech",
+            "role": "Frontend Developer Intern",
+            "duration": "May 2024 - July 2024",
+            "location": "Remote",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/deepvue.png?alt=media&token=554954e0-d115-4635-b868-0e32b8ec2d3b",
+            "current": false,
+            "url": "https://deepvue.tech/",
+            "description": [
+                "Built responsive UI components using React",
+                "Improved user experience and performance"
+            ]
+        },
+        {
+            "company": "The Linux Foundation",
+            "role": "LFX Mentee'23 @Hyperledger",
+            "duration": "Oct 2023 - Dec 2023",
+            "location": "Remote",
+            "logo": "https://pbs.twimg.com/profile_images/1546569468473745411/e-ZDBesX_400x400.jpg",
+            "current": false,
+            "url": "https://www.linuxfoundation.org/",
+            "description": [
+                "Worked on Hyperledger blockchain projects",
+                "Contributed to open-source development"
+            ]
+        }
+    ],
+    "skills": {
+        "categories": {
+            "Frontend": [
+                "React JS",
+                "Next JS",
+                "TypeScript",
+                "Tailwind CSS",
+                "Redux",
+                "HTML/CSS"
+            ],
+            "Backend": [
+                "Node JS",
+                "Express JS",
+                "MongoDB",
+                "PostgreSQL",
+                "REST APIs",
+                "GraphQL"
+            ],
+            "Tools & Others": [
+                "Git",
+                "Docker",
+                "AWS",
+                "Firebase",
+                "Linux",
+                "Burpsuite"
+            ]
+        },
+        "simple": [
+            {
+                "name": "React",
+                "category": "Frontend"
+            },
+            {
+                "name": "TypeScript",
+                "category": "Language"
+            },
+            {
+                "name": "Node.js",
+                "category": "Backend"
+            },
+            {
+                "name": "Express",
+                "category": "Backend"
+            },
+            {
+                "name": "MongoDB",
+                "category": "Database"
+            },
+            {
+                "name": "PostgreSQL",
+                "category": "Database"
+            },
+            {
+                "name": "Redux",
+                "category": "Frontend"
+            },
+            {
+                "name": "Next.js",
+                "category": "Framework"
+            },
+            {
+                "name": "Tailwind CSS",
+                "category": "Styling"
+            },
+            {
+                "name": "Figma",
+                "category": "Design"
+            },
+            {
+                "name": "Git",
+                "category": "Tools"
+            },
+            {
+                "name": "Docker",
+                "category": "DevOps"
+            }
+        ]
+    },
+    "codingProfiles": [
+        {
+            "name": "LeetCode",
+            "username": "rajutkarsh07",
+            "rating": "1850+",
+            "url": "https://leetcode.com/rajutkarsh07/"
+        },
+        {
+            "name": "CodeChef",
+            "username": "rajutkarsh07",
+            "rating": "1700+",
+            "url": "https://www.codechef.com/users/rajutkarsh07"
+        },
+        {
+            "name": "Codeforces",
+            "username": "utkarsh_raj_13",
+            "rating": "1609 (Expert)",
+            "url": "https://codeforces.com/profile/rajutkarsh07"
+        }
+    ],
+    "stats": {
+        "yearsOfExperience": "3+",
+        "projectsCompleted": "15+",
+        "leetCodeRating": "1850+",
+        "problemsSolved": "500+"
+    },
+    "projects": {
+        "major": [
+            {
+                "title": "CodeNova",
+                "description": "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings. Users can also engage in stimulating discussions like Stack Overflow.",
+                "tech": [
+                    "React",
+                    "Express",
+                    "Node",
+                    "MongoDB",
+                    "Socket.io",
+                    "Chart.js"
+                ],
+                "image": "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
+                "github": "https://github.com/rajutkarsh07/CodeNova",
+                "live": "#",
+                "featured": true
+            },
+            {
+                "title": "Fiverr Clone",
+                "description": "Freelancing platform designed to connect talented freelancers with discerning clients seamlessly. Freelancers can showcase their unique skills and expertise by posting captivating gigs.",
+                "tech": [
+                    "React JS",
+                    "Node JS",
+                    "Express JS",
+                    "MongoDB",
+                    "React Query",
+                    "Firebase"
+                ],
+                "image": "https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Ffiverr.png?alt=media&token=8c23436f-9a04-438d-a2ce-a9ddf13f9def",
+                "github": "https://github.com/rajutkarsh07/Fiverr-clone",
+                "live": "#",
+                "featured": true
+            },
+            {
+                "title": "FlagRush",
+                "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages. Features community discussions and a leaderboard for top performers.",
+                "tech": [
+                    "React JS",
+                    "Node JS",
+                    "Express JS",
+                    "MongoDB",
+                    "Burpsuite"
+                ],
+                "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800",
+                "github": "https://github.com/rajutkarsh07/FlagRush",
+                "live": "#",
+                "featured": false
+            }
+        ],
+        "pinned": [
+            {
+                "title": "Webiu",
+                "description": "Building and maintaining a website is an essential task for any business or organization. This project aims to ease the workflow of getting a website up and running by developing a generalized web component library.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/Webiu",
+                "stars": 0,
+                "forks": 0,
+                "isForked": true,
+                "forkedFrom": "c2siorg/Webiu"
+            },
+            {
+                "title": "FlagRush",
+                "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/FlagRush",
+                "stars": 0,
+                "forks": 4,
+                "isForked": false
+            },
+            {
+                "title": "stdlib",
+                "description": "Standard library for JavaScript and Node.js. A comprehensive library for numerical computing.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/stdlib",
+                "stars": 0,
+                "forks": 0,
+                "isForked": true,
+                "forkedFrom": "stdlib-js/stdlib"
+            },
+            {
+                "title": "CodeNova",
+                "description": "Social media platform for programmers with personalized problem recommendations based on skill ratings.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/CodeNova",
+                "stars": 0,
+                "forks": 0,
+                "isForked": false
+            },
+            {
+                "title": "portfolio-updated",
+                "description": "My personal portfolio website showcasing my projects, skills, and experience as a developer.",
+                "language": "SCSS",
+                "github": "https://github.com/rajutkarsh07/portfolio-updated",
+                "stars": 4,
+                "forks": 4,
+                "isForked": false
+            },
+            {
+                "title": "Fiverr-clone",
+                "description": "Freelancing platform to connect freelancers with clients. Features gig posting and discovery.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/Fiverr-clone",
+                "stars": 0,
+                "forks": 0,
+                "isForked": false
+            }
+        ]
+    },
+    "about": {
+        "intro": "Hi, I'm Utkarsh Raj from Indian Institute of Information Technology, Design and Manufacturing, Jabalpur.",
+        "shortBio": "A Full Stack Web Developer, UI/UX Designer and Competitive Programmer with a passion for crafting beautiful, responsive websites that make a difference.",
+        "longBio": "With years of experience and a love for all things tech, I'm always looking for new and innovative ways to improve my skills and create cutting-edge designs. I understand that the key to a successful website is not just how it looks, but also how it functions.",
+        "paragraphs": [
+            "I'm a final year student at IIITDM Jabalpur, pursuing a degree in Computer Science. I'm passionate about web development and enjoy creating elegant solutions to complex problems.",
+            "My journey in programming started with competitive programming, where I developed strong problem-solving skills. This foundation has been invaluable in my transition to full-stack development.",
+            "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or participating in hackathons."
+        ]
+    },
+    "navigation": [
+        {
+            "label": "Home",
+            "href": "/"
+        },
+        {
+            "label": "Projects",
+            "href": "/projects"
+        },
+        {
+            "label": "About",
+            "href": "/about"
+        },
+        {
+            "label": "Experience",
+            "href": "/experience"
+        },
+        {
+            "label": "Contact",
+            "href": "/contact"
+        }
+    ]
+}

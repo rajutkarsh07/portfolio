@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee } from "lucide-react";
+import { personal, contact } from "@/data";
 
 export function HeroSection() {
   return (
@@ -20,7 +21,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground hover:bg-secondary/80 transition-colors duration-200 mb-8 group"
           >
             <span className="text-primary">✨</span>
-            <span>Currently at Palo Alto Networks</span>
+            <span>Currently at {personal.currentCompany}</span>
             <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
           </Link>
 
@@ -28,8 +29,8 @@ export function HeroSection() {
           <div className="relative mb-8">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-background shadow-elevated">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarsh.png?alt=media&token=7f7cb8a0-5141-4be7-a4c0-e3e8127be433"
-                alt="Utkarsh Raj"
+                src={personal.profileImage}
+                alt={personal.name}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -41,19 +42,17 @@ export function HeroSection() {
           {/* Main headline */}
           <p className="text-sm text-muted-foreground mb-2">My name is</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4">
-            Utkarsh <span className="text-primary">Raj</span>
+            {personal.firstName} <span className="text-primary">{personal.lastName}</span>
           </h1>
 
           {/* Subtitle */}
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6">
-            I build things for the web.
+            {personal.tagline}
           </h2>
 
           {/* Description */}
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-            I'm a <span className="text-foreground font-medium">Full Stack Web Developer</span> and{" "}
-            <span className="text-foreground font-medium">UI/UX Designer</span> specialized in
-            building exceptional websites.
+            {personal.bio}
           </p>
 
           {/* CTA Buttons */}
@@ -65,7 +64,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="https://buymeacoffee.com/utkarshraja" target="_blank" rel="noopener noreferrer">
+              <a href={contact.buyMeCoffee} target="_blank" rel="noopener noreferrer">
                 <Coffee className="h-4 w-4" />
                 Buy me a coffee
               </a>

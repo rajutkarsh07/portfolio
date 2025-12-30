@@ -1,14 +1,26 @@
 import { Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { socials, contact } from "@/data";
 
-const socialLinks = [
-  { icon: Github, href: "https://github.com/rajutkarsh07", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/utkarsh-raj-a73612202/", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/utkarsh_raj_07", label: "Twitter" },
-  { icon: Instagram, href: "https://instagram.com/utkarshhh__", label: "Instagram" },
-  { icon: Mail, href: "mailto:contact@utkarshraj.dev", label: "Email" },
-];
+// Map icon names to actual icon components
+const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Mail,
+};
 
 export function SocialSidebar() {
+  // Create social links array with icon components
+  const socialLinks = [
+    ...socials.map(social => ({
+      icon: iconComponents[social.icon] || Github,
+      href: social.url,
+      label: social.name,
+    })),
+    { icon: Mail, href: `mailto:${contact.email}`, label: "Email" },
+  ];
+
   return (
     <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4">
       {socialLinks.map((link, index) => (
