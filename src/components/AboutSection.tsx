@@ -1,22 +1,4 @@
-const skills = [
-  { name: "React", category: "Frontend" },
-  { name: "TypeScript", category: "Language" },
-  { name: "Node.js", category: "Backend" },
-  { name: "Express", category: "Backend" },
-  { name: "MongoDB", category: "Database" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Redux", category: "Frontend" },
-  { name: "Next.js", category: "Framework" },
-  { name: "Tailwind CSS", category: "Styling" },
-  { name: "Figma", category: "Design" },
-  { name: "Git", category: "Tools" },
-  { name: "Docker", category: "DevOps" },
-];
-
-const codingProfiles = [
-  { name: "Codeforces", username: "utkarsh_raj_13", rating: "1609 (Expert)" },
-  { name: "LeetCode", username: "utkarsh_raj_13", rating: "1800+" },
-];
+import { personal, about, skills, codingProfiles } from "@/data";
 
 export function AboutSection() {
   return (
@@ -37,8 +19,8 @@ export function AboutSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden border border-border shadow-elevated">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarshimg.png?alt=media&token=a46b9e8b-c74d-4b2d-b010-d7a4dee585cc"
-                alt="Utkarsh Raj"
+                src={personal.aboutImage}
+                alt={personal.name}
                 className="w-full aspect-[4/5] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -51,24 +33,24 @@ export function AboutSection() {
           {/* Content */}
           <div className="space-y-8">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Hi, I'm <span className="text-foreground font-medium">Utkarsh Raj</span> from Indian
-              Institute of Information Technology, Design and Manufacturing, Jabalpur. A{" "}
-              <span className="text-primary font-medium">Full Stack Web Developer</span>,{" "}
-              <span className="text-primary font-medium">UI/UX Designer</span> and{" "}
-              <span className="text-primary font-medium">Competitive Programmer</span> with a passion
-              for crafting beautiful, responsive websites that make a difference.
+              {about.intro} A{" "}
+              {personal.roles.map((role, index) => (
+                <span key={role}>
+                  <span className="text-primary font-medium">{role}</span>
+                  {index < personal.roles.length - 1 && (index === personal.roles.length - 2 ? " and " : ", ")}
+                </span>
+              ))}{" "}
+              with a passion for crafting beautiful, responsive websites that make a difference.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With years of experience and a love for all things tech, I'm always looking for new and
-              innovative ways to improve my skills and create cutting-edge designs. I understand that
-              the key to a successful website is not just how it looks, but also how it functions.
+              {about.longBio}
             </p>
 
             {/* Skills */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Technologies & Tools</h3>
               <div className="flex flex-wrap gap-3">
-                {skills.map((skill) => (
+                {skills.simple.map((skill) => (
                   <span
                     key={skill.name}
                     className="px-4 py-2 bg-background border border-border rounded-lg text-sm font-medium hover:border-primary/50 hover:bg-primary/5 transition-colors duration-200 cursor-default"
@@ -83,7 +65,7 @@ export function AboutSection() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Coding Profiles</h3>
               <div className="grid grid-cols-2 gap-4">
-                {codingProfiles.map((profile) => (
+                {codingProfiles.slice(0, 2).map((profile) => (
                   <div
                     key={profile.name}
                     className="p-5 bg-background border border-border rounded-xl hover:border-primary/30 transition-colors"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, ArrowUpRight, ArrowRight } from "lucide-react";
+import { contact } from "@/data";
 
 export function ContactSection() {
   return (
@@ -22,18 +23,18 @@ export function ContactSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-muted-foreground">
               <Mail className="h-5 w-5" />
-              <span>utkarshraj.work@gmail.com</span>
+              <span>{contact.email}</span>
             </div>
             <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-border" />
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-5 w-5" />
-              <span>India</span>
+              <span>{contact.location}</span>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="mailto:utkarshraj.work@gmail.com">
+              <a href={`mailto:${contact.email}`}>
                 Say Hello
                 <ArrowUpRight className="h-4 w-4" />
               </a>

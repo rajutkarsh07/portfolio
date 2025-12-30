@@ -2,82 +2,7 @@ import { ArrowLeft, GraduationCap, Briefcase, Calendar, MapPin, ExternalLink } f
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-const education = {
-  institution: "Indian Institute of Information Technology, Design and Manufacturing, Jabalpur",
-  degree: "B.Tech in Computer Science and Engineering",
-  duration: "Dec 2021 - June 2025",
-  location: "Jabalpur, India",
-  description: "Focusing on Data Structures, Algorithms, Web Development, and Software Engineering principles.",
-};
-
-const experiences = [
-  {
-    company: "Palo Alto Networks",
-    role: "Software Engineer Intern",
-    duration: "Mar 2025 - Present",
-    location: "Remote",
-    logo: "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
-    current: true,
-    url: "https://www.paloaltonetworks.com/",
-    description: [
-      "Working on enterprise security solutions",
-      "Contributing to core product development",
-    ],
-  },
-  {
-    company: "Oxyzo",
-    role: "Software Developer Intern",
-    duration: "Dec 2024 - Feb 2025",
-    location: "Gurugram, India",
-    logo: "https://play-lh.googleusercontent.com/Qln4yru4U2TQWalgWZ-6YW4OXebWPzLr121AWKjYq629TmPaloazDyRE7H_D0vzoX_0=w240-h480-rw",
-    current: false,
-    url: "https://www.oxyzo.in/",
-    description: [
-      "Developed and maintained fintech web applications",
-      "Collaborated with cross-functional teams",
-    ],
-  },
-  {
-    company: "Google Summer of Code 2024",
-    role: "Open Source Contributor @C2SI",
-    duration: "May 2024 - Aug 2024",
-    location: "Remote",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/768px-GSoC-icon.svg.png",
-    current: false,
-    url: "https://summerofcode.withgoogle.com/",
-    description: [
-      "Contributed to Webiu - a website builder project",
-      "Implemented new features and improved documentation",
-    ],
-  },
-  {
-    company: "Deepvue.tech",
-    role: "Frontend Developer Intern",
-    duration: "May 2024 - July 2024",
-    location: "Remote",
-    logo: "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/deepvue.png?alt=media&token=554954e0-d115-4635-b868-0e32b8ec2d3b",
-    current: false,
-    url: "https://deepvue.tech/",
-    description: [
-      "Built responsive UI components using React",
-      "Improved user experience and performance",
-    ],
-  },
-  {
-    company: "The Linux Foundation",
-    role: "LFX Mentee'23 @Hyperledger",
-    duration: "Oct 2023 - Dec 2023",
-    location: "Remote",
-    logo: "https://pbs.twimg.com/profile_images/1546569468473745411/e-ZDBesX_400x400.jpg",
-    current: false,
-    url: "https://www.linuxfoundation.org/",
-    description: [
-      "Worked on Hyperledger blockchain projects",
-      "Contributed to open-source development",
-    ],
-  },
-];
+import { education, experiences } from "@/data";
 
 export default function Experience() {
   return (
@@ -85,21 +10,21 @@ export default function Experience() {
       {/* Background grid - same as home */}
       <div className="fixed inset-0 bg-grid opacity-30 pointer-events-none" />
       <div className="fixed inset-0 bg-gradient-overlay pointer-events-none" />
-      
+
       <Navbar />
-      
+
       <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Header */}
           <div className="mb-16">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            
+
             <div className="stagger-children">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Experience
@@ -121,7 +46,7 @@ export default function Experience() {
               </div>
               <h2 className="text-2xl font-bold">Education</h2>
             </div>
-            
+
             <div className="bg-card border border-border rounded-2xl p-8 card-hover">
               <div className="flex flex-col md:flex-row md:items-start gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
@@ -154,7 +79,7 @@ export default function Experience() {
               </div>
               <h2 className="text-2xl font-bold">Work Experience</h2>
             </div>
-            
+
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-border to-transparent hidden md:block" />
@@ -168,11 +93,10 @@ export default function Experience() {
                     {/* Timeline dot */}
                     <div className="absolute left-5 top-10 z-10 hidden md:block">
                       <div
-                        className={`w-7 h-7 rounded-full border-4 border-background ${
-                          exp.current 
-                            ? "bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]" 
+                        className={`w-7 h-7 rounded-full border-4 border-background ${exp.current
+                            ? "bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]"
                             : "bg-muted-foreground/30"
-                        } group-hover:scale-125 transition-transform duration-300`}
+                          } group-hover:scale-125 transition-transform duration-300`}
                       />
                     </div>
 
@@ -192,7 +116,7 @@ export default function Experience() {
                             className="w-full h-full object-contain p-2"
                           />
                         </div>
-                        
+
                         {/* Content */}
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
@@ -205,7 +129,7 @@ export default function Experience() {
                               </div>
                               <p className="text-muted-foreground font-medium">{exp.role}</p>
                             </div>
-                            
+
                             {exp.current && (
                               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium w-fit">
                                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -213,7 +137,7 @@ export default function Experience() {
                               </span>
                             )}
                           </div>
-                          
+
                           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
                             <span className="flex items-center gap-1.5">
                               <Calendar className="h-4 w-4" />

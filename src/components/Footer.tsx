@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { personal } from "@/data";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Designed & Built with <Heart className="h-3 w-3 text-primary fill-primary" /> by{" "}
-            <span className="text-foreground font-medium">Utkarsh Raj</span>
+            <span className="text-foreground font-medium">{personal.name}</span>
           </p>
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} All Rights Reserved
