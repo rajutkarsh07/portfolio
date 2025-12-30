@@ -127,78 +127,144 @@
     "skills": {
         "categories": {
             "Frontend": [
-                "React JS",
-                "Next JS",
-                "TypeScript",
-                "Tailwind CSS",
-                "Redux",
-                "HTML/CSS"
+                {
+                    "name": "React JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Next JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                },
+                {
+                    "name": "TypeScript",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                },
+                {
+                    "name": "Redux",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                },
+                {
+                    "name": "HTML/CSS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                }
             ],
             "Backend": [
-                "Node JS",
-                "Express JS",
-                "MongoDB",
-                "PostgreSQL",
-                "REST APIs",
-                "GraphQL"
+                {
+                    "name": "Node JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                },
+                {
+                    "name": "Express JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                },
+                {
+                    "name": "MongoDB",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                },
+                {
+                    "name": "REST APIs",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                },
+                {
+                    "name": "GraphQL",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                }
             ],
             "Tools & Others": [
-                "Git",
-                "Docker",
-                "AWS",
-                "Firebase",
-                "Linux",
-                "Burpsuite"
+                {
+                    "name": "Git",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                },
+                {
+                    "name": "Docker",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                },
+                {
+                    "name": "AWS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                },
+                {
+                    "name": "Firebase",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                },
+                {
+                    "name": "Linux",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                },
+                {
+                    "name": "Burpsuite",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                }
             ]
         },
         "simple": [
             {
                 "name": "React",
-                "category": "Frontend"
+                "category": "Frontend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
             },
             {
                 "name": "TypeScript",
-                "category": "Language"
+                "category": "Language",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
             },
             {
                 "name": "Node.js",
-                "category": "Backend"
+                "category": "Backend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             },
             {
                 "name": "Express",
-                "category": "Backend"
+                "category": "Backend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
             },
             {
                 "name": "MongoDB",
-                "category": "Database"
+                "category": "Database",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
             },
             {
                 "name": "PostgreSQL",
-                "category": "Database"
+                "category": "Database",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
             },
             {
                 "name": "Redux",
-                "category": "Frontend"
+                "category": "Frontend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
             },
             {
                 "name": "Next.js",
-                "category": "Framework"
+                "category": "Framework",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
             },
             {
                 "name": "Tailwind CSS",
-                "category": "Styling"
+                "category": "Styling",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
             },
             {
                 "name": "Figma",
-                "category": "Design"
+                "category": "Design",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
             },
             {
                 "name": "Git",
-                "category": "Tools"
+                "category": "Tools",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
             },
             {
                 "name": "Docker",
-                "category": "DevOps"
+                "category": "DevOps",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
             }
         ]
     },
