@@ -1,5 +1,7 @@
 import { personal, about, skills, codingProfiles } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useCodingProfiles } from "@/hooks/useCodingRatings";
+import { Loader2 } from "lucide-react";
 
 // Type for skill with icon
 interface SkillWithIcon {
@@ -9,6 +11,13 @@ interface SkillWithIcon {
 }
 
 export function AboutSection() {
+  // Fetch real-time data from APIs
+  const profiles = useCodingProfiles({
+    codeforces: 'utkarsh_raj_13',
+    leetcode: 'utkarsh_raj_13',
+    github: 'rajutkarsh07',
+  });
+
   return (
     <TooltipProvider delayDuration={0}>
       <section id="about" className="py-32 bg-secondary/30 relative">
@@ -81,23 +90,80 @@ export function AboutSection() {
                 </div>
               </div>
 
-              {/* Coding Profiles */}
+              {/* Coding Profiles - Premium Compact Design */}
               <div>
                 <h3 className="text-lg font-semibold mb-4">Coding Profiles</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {codingProfiles.slice(0, 2).map((profile) => (
-                    <a
-                      key={profile.name}
-                      href={profile.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-5 bg-background border border-border rounded-xl hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-                    >
-                      <p className="font-medium group-hover:text-primary transition-colors">{profile.name}</p>
-                      <p className="text-sm text-muted-foreground">@{profile.username}</p>
-                      <p className="text-primary font-semibold mt-2">{profile.rating}</p>
-                    </a>
-                  ))}
+                <div className="space-y-3">
+                  {/* Codeforces */}
+                  <a
+                    href={codingProfiles.find(p => p.name === 'Codeforces')?.url || '#'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block relative overflow-hidden rounded-xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative flex items-center gap-4 p-4">
+                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-yellow-500/20 to-red-500/20 flex items-center justify-center">
+                        <img
+                          src={codingProfiles.find(p => p.name === 'Codeforces')?.logo}
+                          alt="Codeforces"
+                          className="h-6 w-6 object-contain"
+                        />
+                      </div>
+                      <div className="flex-1 flex flex-wrap items-center gap-3">
+                        <span className="font-semibold group-hover:text-primary transition-colors">{profiles.codeforces.username}</span>
+                        {profiles.codeforces.loading ? (
+                          <Loader2 className="h-4 w-4 text-primary animate-spin" />
+                        ) : !profiles.codeforces.error && (
+                          <>
+                            <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-secondary/50">
+                              <span className="text-xs text-muted-foreground">Rating:</span>
+                              <span className="text-sm font-bold text-primary">{profiles.codeforces.rating}</span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-secondary/50">
+                              <span className="text-xs text-muted-foreground">Max:</span>
+                              <span className="text-sm font-bold">{profiles.codeforces.maxRating}</span>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* LeetCode */}
+                  <a
+                    href={codingProfiles.find(p => p.name === 'LeetCode')?.url || '#'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block relative overflow-hidden rounded-xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative flex items-center gap-4 p-4">
+                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
+                        <img
+                          src={codingProfiles.find(p => p.name === 'LeetCode')?.logo}
+                          alt="LeetCode"
+                          className="h-6 w-6 object-contain"
+                        />
+                      </div>
+                      <div className="flex-1 flex flex-wrap items-center gap-2">
+                        <span className="font-semibold group-hover:text-primary transition-colors">{profiles.leetcode.username}</span>
+                        {profiles.leetcode.loading ? (
+                          <Loader2 className="h-4 w-4 text-primary animate-spin" />
+                        ) : !profiles.leetcode.error && (
+                          <>
+                            <div className="px-2 py-1 rounded-lg bg-primary/10">
+                              <span className="text-sm font-bold text-primary">{profiles.leetcode.totalSolved}</span>
+                              <span className="text-xs text-muted-foreground ml-1">Solved</span>
+                            </div>
+                            <span className="text-xs px-2 py-1 rounded-lg bg-green-500/10 text-green-500 font-medium">E:{profiles.leetcode.easySolved}</span>
+                            <span className="text-xs px-2 py-1 rounded-lg bg-amber-500/10 text-amber-500 font-medium">M:{profiles.leetcode.mediumSolved}</span>
+                            <span className="text-xs px-2 py-1 rounded-lg bg-red-500/10 text-red-500 font-medium">H:{profiles.leetcode.hardSolved}</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>

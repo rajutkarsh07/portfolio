@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,17 +53,15 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button & Theme Toggle */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-2">
-            <ThemeToggle />
             <Button size="sm" asChild>
               <Link to="/contact">Let's Talk</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button & Theme Toggle */}
+          {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-1">
-            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-foreground"

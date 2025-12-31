@@ -1,9 +1,33 @@
-import { Github, ExternalLink, ArrowRight, Star, GitFork, Folder } from "lucide-react";
+import { Github, ExternalLink, ArrowRight, Star, GitFork, Folder, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
+import { useGitHubRepos } from "@/hooks/useGitHubRepos";
+
+// Language color mapping
+const languageColors: Record<string, string> = {
+  'JavaScript': 'bg-yellow-400',
+  'TypeScript': 'bg-blue-500',
+  'Python': 'bg-green-500',
+  'Java': 'bg-orange-500',
+  'C++': 'bg-pink-500',
+  'C': 'bg-gray-500',
+  'HTML': 'bg-red-500',
+  'CSS': 'bg-purple-500',
+  'SCSS': 'bg-pink-400',
+  'Vue': 'bg-emerald-500',
+  'Rust': 'bg-orange-600',
+  'Go': 'bg-cyan-500',
+  'Swift': 'bg-orange-400',
+  'Kotlin': 'bg-purple-400',
+  'Ruby': 'bg-red-600',
+  'PHP': 'bg-indigo-400',
+};
 
 export function ProjectsSection() {
+  // Fetch GitHub repos dynamically
+  const { repos: githubRepos, loading: reposLoading, error: reposError } = useGitHubRepos('rajutkarsh07', 4);
+
   return (
     <section id="projects" className="py-32 relative">
       <div className="absolute inset-0 bg-grid opacity-30" />
@@ -78,74 +102,138 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        {/* Pinned Projects from GitHub */}
+        {/* GitHub Repositories */}
         <div className="mb-12">
           <div className="flex items-center justify-center gap-3 mb-12">
             <Github className="h-6 w-6 text-primary" />
-            <h3 className="text-2xl font-bold">Pinned on GitHub</h3>
+            <h3 className="text-2xl font-bold">GitHub Repositories</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.pinned.slice(0, 4).map((project) => (
-              <a
-                key={project.title}
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-card border border-border rounded-2xl p-6 card-hover flex flex-col"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-secondary">
-                      <Folder className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
+          {reposLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <Loader2 className="h-6 w-6 text-primary animate-spin" />
+              <span className="ml-3 text-muted-foreground">Loading repositories...</span>
+            </div>
+          ) : reposError ? (
+            /* Fallback to static data */
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.pinned.slice(0, 4).map((project) => (
+                <a
+                  key={project.title}
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card border border-border rounded-2xl p-6 card-hover flex flex-col"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-secondary">
+                        <Folder className="h-5 w-5 text-primary" />
+                      </div>
                       <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
                         {project.title}
                       </h4>
-                      {project.isForked && (
-                        <p className="text-xs text-muted-foreground">
-                          Forked from {project.forkedFrom}
-                        </p>
-                      )}
                     </div>
+                    <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5">
-                      <span className={`w-3 h-3 rounded-full ${project.language === 'JavaScript' ? 'bg-yellow-400' :
-                          project.language === 'TypeScript' ? 'bg-blue-500' :
-                            project.language === 'SCSS' ? 'bg-pink-500' :
-                              'bg-muted-foreground'
-                        }`} />
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                      <span className={`w-3 h-3 rounded-full ${languageColors[project.language] || 'bg-muted-foreground'}`} />
                       {project.language}
                     </span>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    {project.stars > 0 && (
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <span className="flex items-center gap-1">
                         <Star className="h-4 w-4" />
                         {project.stars}
                       </span>
-                    )}
-                    {project.forks > 0 && (
                       <span className="flex items-center gap-1">
                         <GitFork className="h-4 w-4" />
                         {project.forks}
                       </span>
-                    )}
+                    </div>
                   </div>
-                </div>
-              </a>
-            ))}
-          </div>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-6">
+              {githubRepos.map((repo) => (
+                <a
+                  key={repo.title}
+                  href={repo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card border border-border rounded-2xl p-6 card-hover flex flex-col relative overflow-hidden"
+                >
+                  {/* Hover gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 rounded-lg bg-secondary group-hover:bg-primary/10 transition-colors">
+                          <Folder className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
+                            {repo.title}
+                          </h4>
+                          {repo.isForked && (
+                            <p className="text-xs text-muted-foreground">Forked</p>
+                          )}
+                        </div>
+                      </div>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4 line-clamp-2">
+                      {repo.description}
+                    </p>
+
+                    {/* Topics/Tags */}
+                    {repo.topics && repo.topics.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {repo.topics.slice(0, 3).map(topic => (
+                          <span
+                            key={topic}
+                            className="px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <span className="flex items-center gap-1.5">
+                          <span className={`w-3 h-3 rounded-full ${languageColors[repo.language] || 'bg-muted-foreground'}`} />
+                          {repo.language}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        {repo.stars > 0 && (
+                          <span className="flex items-center gap-1">
+                            <Star className="h-4 w-4" />
+                            {repo.stars}
+                          </span>
+                        )}
+                        {repo.forks > 0 && (
+                          <span className="flex items-center gap-1">
+                            <GitFork className="h-4 w-4" />
+                            {repo.forks}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* View All Projects Link */}
