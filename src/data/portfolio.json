@@ -270,22 +270,22 @@
     },
     "codingProfiles": [
         {
-            "name": "LeetCode",
-            "username": "rajutkarsh07",
-            "rating": "1850+",
-            "url": "https://leetcode.com/rajutkarsh07/"
-        },
-        {
-            "name": "CodeChef",
-            "username": "rajutkarsh07",
-            "rating": "1700+",
-            "url": "https://www.codechef.com/users/rajutkarsh07"
-        },
-        {
             "name": "Codeforces",
             "username": "utkarsh_raj_13",
-            "rating": "1609 (Expert)",
-            "url": "https://codeforces.com/profile/rajutkarsh07"
+            "url": "https://codeforces.com/profile/utkarsh_raj_13",
+            "logo": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcer3l19eex0wy900b101.jpg"
+        },
+        {
+            "name": "LeetCode",
+            "username": "utkarsh_raj_13",
+            "url": "https://leetcode.com/utkarsh_raj_13/",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+        },
+        {
+            "name": "GitHub",
+            "username": "rajutkarsh07",
+            "url": "https://github.com/rajutkarsh07",
+            "logo": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
         }
     ],
     "stats": {

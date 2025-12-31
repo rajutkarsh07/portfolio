@@ -62,8 +62,8 @@ export interface Skills {
 export interface CodingProfile {
     name: string;
     username: string;
-    rating: string;
     url: string;
+    logo?: string;
 }
 
 export interface Stats {
