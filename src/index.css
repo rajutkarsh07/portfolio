@@ -243,3 +243,138 @@
 .btn-glow:hover::before {
   @apply opacity-100;
 }
+
+/* ========================================
+   Skills Marquee Styles - Fullscreen
+   ======================================== */
+
+.skills-marquee-section-fullscreen {
+  @apply relative py-24 -mx-6 lg:-mx-12;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.skills-rows-fullscreen {
+  @apply space-y-8;
+}
+
+.skills-row-container {
+  @apply relative w-full;
+}
+
+.skills-marquee-wrapper {
+  @apply relative py-4 pt-12;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* Gradient fade edges */
+.skills-marquee-fade-left,
+.skills-marquee-fade-right {
+  @apply absolute top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none;
+}
+
+.skills-marquee-fade-left {
+  @apply left-0;
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.skills-marquee-fade-right {
+  @apply right-0;
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.dark .skills-marquee-fade-left {
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.dark .skills-marquee-fade-right {
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.skills-marquee-track {
+  @apply flex items-center gap-6 md:gap-8 px-8;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.skill-item {
+  @apply flex-shrink-0 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-2xl bg-secondary/30 border border-border/30 cursor-pointer transition-all duration-300 ease-out;
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item:hover {
+  @apply border-primary/50 bg-primary/10 scale-110;
+  box-shadow:
+    0 0 30px hsl(var(--primary) / 0.25),
+    0 0 60px hsl(var(--primary) / 0.15);
+  z-index: 20;
+}
+
+.skill-item-icon {
+  @apply w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain transition-transform duration-300;
+}
+
+.skill-item:hover .skill-item-icon {
+  @apply scale-110;
+}
+
+/* Auto-scroll animation when not scrolling */
+@keyframes skills-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes skills-scroll-right {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.skills-marquee-track.animate-left {
+  animation: skills-scroll-left 30s linear infinite;
+}
+
+.skills-marquee-track.animate-right {
+  animation: skills-scroll-right 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.skills-marquee-wrapper:hover .skills-marquee-track.animate-left,
+.skills-marquee-wrapper:hover .skills-marquee-track.animate-right {
+  animation-play-state: paused;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .skills-marquee-section-fullscreen {
+    @apply py-16;
+  }
+
+  .skills-marquee-fade-left,
+  .skills-marquee-fade-right {
+    @apply w-16;
+  }
+
+  .skills-marquee-track {
+    @apply gap-4 px-4;
+  }
+
+  .skills-rows-fullscreen {
+    @apply space-y-6;
+  }
+}

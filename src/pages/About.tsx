@@ -1,22 +1,13 @@
-import { ArrowLeft, Code, Database, Globe, Terminal, Loader2 } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { skills, codingProfiles, about, personal } from "@/data";
+import { SkillsMarquee } from "@/components/SkillsMarquee";
+import { codingProfiles, about, personal } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useCodingProfiles } from "@/hooks/useCodingRatings";
 
-const iconMap: Record<string, React.ElementType> = {
-  "Frontend": Globe,
-  "Backend": Database,
-  "Tools & Others": Terminal,
-};
 
-// Type for skill with icon
-interface SkillWithIcon {
-  name: string;
-  icon: string;
-}
 
 export default function About() {
   // Fetch real-time data from APIs
@@ -113,54 +104,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* Skills Section - Logo Grid */}
-            <div className="mb-24">
-              <div className="text-center mb-12">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                  Tech Stack
-                </span>
-                <h2 className="text-2xl md:text-3xl font-bold">Skills & Technologies</h2>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                {Object.entries(skills.categories).map(([category, skillList]) => {
-                  const Icon = iconMap[category] || Code;
-                  return (
-                    <div key={category} className="bg-card border border-border rounded-2xl p-8 card-hover">
-                      <div className="flex items-center gap-3 mb-8">
-                        <div className="p-3 rounded-xl bg-primary/10">
-                          <Icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <h3 className="text-lg font-semibold">{category}</h3>
-                      </div>
-
-                      {/* Logo Grid with Tooltips */}
-                      <div className="grid grid-cols-3 gap-4">
-                        {(skillList as SkillWithIcon[]).map((skill) => (
-                          <Tooltip key={skill.name}>
-                            <TooltipTrigger asChild>
-                              <div className="group flex items-center justify-center p-4 bg-secondary/50 border border-border rounded-xl hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
-                                <img
-                                  src={skill.icon}
-                                  alt={skill.name}
-                                  className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110"
-                                />
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent
-                              side="top"
-                              className="bg-foreground text-background px-3 py-1.5 text-sm font-medium rounded-lg"
-                            >
-                              {skill.name}
-                            </TooltipContent>
-                          </Tooltip>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Skills Section - Interactive Marquee */}
+            <SkillsMarquee />
 
             {/* Coding Profiles - Premium Design */}
             <div>
