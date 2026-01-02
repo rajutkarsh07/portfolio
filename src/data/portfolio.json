@@ -140,16 +140,36 @@
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                 },
                 {
+                    "name": "JavaScript",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "name": "Angular",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                },
+                {
+                    "name": "HTML5",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                },
+                {
+                    "name": "CSS3",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                },
+                {
+                    "name": "SCSS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                },
+                {
                     "name": "Tailwind CSS",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
                 },
                 {
-                    "name": "Redux",
-                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                    "name": "Material UI",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
                 },
                 {
-                    "name": "HTML/CSS",
-                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    "name": "Redux",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
                 }
             ],
             "Backend": [
@@ -162,16 +182,24 @@
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                 },
                 {
+                    "name": "NestJS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+                },
+                {
+                    "name": "FastAPI",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                },
+                {
+                    "name": "Spring Boot",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                },
+                {
                     "name": "MongoDB",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                 },
                 {
                     "name": "PostgreSQL",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                },
-                {
-                    "name": "REST APIs",
-                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
                 },
                 {
                     "name": "GraphQL",
@@ -188,20 +216,40 @@
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                 },
                 {
-                    "name": "AWS",
-                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                    "name": "Google Cloud",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
                 },
                 {
                     "name": "Firebase",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
                 },
                 {
+                    "name": "GitLab",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                },
+                {
                     "name": "Linux",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
                 },
                 {
-                    "name": "Burpsuite",
-                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                    "name": "Figma",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                },
+                {
+                    "name": "Photoshop",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+                },
+                {
+                    "name": "Illustrator",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                },
+                {
+                    "name": "Premiere Pro",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg"
+                },
+                {
+                    "name": "After Effects",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg"
                 }
             ]
         },

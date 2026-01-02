@@ -54,9 +54,14 @@ export interface Skill {
     category: string;
 }
 
+export interface SkillWithIcon {
+    name: string;
+    icon: string;
+}
+
 export interface Skills {
-    categories: Record<string, string[]>;
-    simple: Skill[];
+    categories: Record<string, SkillWithIcon[]>;
+    simple: (Skill & { icon?: string })[];
 }
 
 export interface CodingProfile {
