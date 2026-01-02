@@ -60,16 +60,25 @@
     "experiences": [
         {
             "company": "Palo Alto Networks",
-            "role": "Software Engineer Intern",
-            "duration": "Mar 2025 - Present",
-            "location": "Remote",
+            "role": "Software Engineer",
+            "duration": "Aug 2025 - Present",
+            "location": "Bengaluru, India",
             "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
             "current": true,
             "url": "https://www.paloaltonetworks.com/",
             "description": [
-                "Working on enterprise security solutions",
-                "Contributing to core product development"
+                "Working on pandaAI and novascribe"
             ]
+        },
+        {
+            "company": "Palo Alto Networks",
+            "role": "Software Engineer Intern",
+            "duration": "Mar 2025 - Aug 2025",
+            "location": "Bengaluru, India",
+            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "current": false,
+            "url": "https://www.paloaltonetworks.com/",
+            "description": []
         },
         {
             "company": "Oxyzo",
@@ -79,10 +88,7 @@
             "logo": "https://play-lh.googleusercontent.com/Qln4yru4U2TQWalgWZ-6YW4OXebWPzLr121AWKjYq629TmPaloazDyRE7H_D0vzoX_0=w240-h480-rw",
             "current": false,
             "url": "https://www.oxyzo.in/",
-            "description": [
-                "Developed and maintained fintech web applications",
-                "Collaborated with cross-functional teams"
-            ]
+            "description": []
         },
         {
             "company": "Google Summer of Code 2024",
@@ -92,10 +98,7 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/768px-GSoC-icon.svg.png",
             "current": false,
             "url": "https://summerofcode.withgoogle.com/",
-            "description": [
-                "Contributed to Webiu - a website builder project",
-                "Implemented new features and improved documentation"
-            ]
+            "description": []
         },
         {
             "company": "Deepvue.tech",
@@ -105,10 +108,7 @@
             "logo": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/deepvue.png?alt=media&token=554954e0-d115-4635-b868-0e32b8ec2d3b",
             "current": false,
             "url": "https://deepvue.tech/",
-            "description": [
-                "Built responsive UI components using React",
-                "Improved user experience and performance"
-            ]
+            "description": []
         },
         {
             "company": "The Linux Foundation",
@@ -118,10 +118,17 @@
             "logo": "https://pbs.twimg.com/profile_images/1546569468473745411/e-ZDBesX_400x400.jpg",
             "current": false,
             "url": "https://www.linuxfoundation.org/",
-            "description": [
-                "Worked on Hyperledger blockchain projects",
-                "Contributed to open-source development"
-            ]
+            "description": []
+        },
+        {
+            "company": "e-pocket, Australia",
+            "role": "Full Stack Developer",
+            "duration": "",
+            "location": "Remote",
+            "logo": "https://play-lh.googleusercontent.com/1IXg46X4JahLhv1Ccw-LAlFPxQk5X1qy_l0CGtTjrn7FMbk-t0AZcz8ISSsbfyif_EK7",
+            "current": false,
+            "url": "",
+            "description": []
         }
     ],
     "skills": {
@@ -250,6 +257,10 @@
                 {
                     "name": "After Effects",
                     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg"
+                },
+                {
+                    "name": "Opsera",
+                    "icon": "https://media.licdn.com/dms/image/v2/D560BAQHk2tDEBDy3vQ/company-logo_200_200/company-logo_200_200/0/1708701483864/opsera_logo?e=2147483647&v=beta&t=nEA0qZMpDdJ40z8haKV7I5P4VgG8njEJAoYGArwQXn8"
                 }
             ]
         },
