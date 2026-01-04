@@ -66,7 +66,7 @@ export function ExperienceSection() {
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <div
-                  key={`${exp.company}-${exp.role}-${index}`}
+                  key={`${exp.company}-${exp.role}-${exp.duration}-${index}`}
                   className="relative pl-24 group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
