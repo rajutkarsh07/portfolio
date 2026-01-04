@@ -90,7 +90,7 @@ export default function Experience() {
                             <div className="space-y-6">
                                 {experiences.map((exp, index) => (
                                     <div
-                                        key={exp.company}
+                                        key={`${exp.company}-${exp.role}-${exp.duration}-${index}`}
                                         className="relative md:pl-24 group"
                                     >
                                         {/* Timeline dot */}
