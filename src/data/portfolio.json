@@ -70,7 +70,7 @@
             "role": "Software Engineer",
             "duration": "Aug 2025 - Present",
             "location": "Bengaluru, India",
-            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "logo": "/assets/panw.png",
             "current": true,
             "url": "https://www.paloaltonetworks.com/",
             "description": [
@@ -82,7 +82,7 @@
             "role": "Software Engineer Intern",
             "duration": "Mar 2025 - Aug 2025",
             "location": "Bengaluru, India",
-            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "logo": "/assets/panw.png",
             "current": false,
             "url": "https://www.paloaltonetworks.com/",
             "description": []
@@ -92,7 +92,7 @@
             "role": "Software Developer Intern",
             "duration": "Dec 2024 - Feb 2025",
             "location": "Gurugram, India",
-            "logo": "https://play-lh.googleusercontent.com/Qln4yru4U2TQWalgWZ-6YW4OXebWPzLr121AWKjYq629TmPaloazDyRE7H_D0vzoX_0=w240-h480-rw",
+            "logo": "/assets/oxyzo.png",
             "current": false,
             "url": "https://www.oxyzo.in/",
             "description": []
@@ -102,7 +102,7 @@
             "role": "Open Source Contributor @C2SI",
             "duration": "May 2024 - Aug 2024",
             "location": "Remote",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/768px-GSoC-icon.svg.png",
+            "logo": "/assets/gsoc.png",
             "current": false,
             "url": "https://summerofcode.withgoogle.com/",
             "description": []

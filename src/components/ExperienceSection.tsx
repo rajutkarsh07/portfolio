@@ -66,7 +66,7 @@ export function ExperienceSection() {
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <div
-                  key={exp.company}
+                  key={`${exp.company}-${exp.role}-${index}`}
                   className="relative pl-24 group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -74,8 +74,8 @@ export function ExperienceSection() {
                   <div className="absolute left-5 top-10 z-10">
                     <div
                       className={`w-7 h-7 rounded-full border-4 border-background ${exp.current
-                          ? "bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]"
-                          : "bg-muted-foreground/30"
+                        ? "bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]"
+                        : "bg-muted-foreground/30"
                         } group-hover:scale-125 transition-transform duration-300`}
                     />
                   </div>
