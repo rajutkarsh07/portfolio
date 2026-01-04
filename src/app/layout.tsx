@@ -36,6 +36,28 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
+                {/* Preload critical fonts */}
+                <link
+                    rel="preload"
+                    href="/cabinet-grotesk/CabinetGrotesk-Regular.otf"
+                    as="font"
+                    type="font/otf"
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    href="/cabinet-grotesk/CabinetGrotesk-Bold.otf"
+                    as="font"
+                    type="font/otf"
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    href="/cabinet-grotesk/CabinetGrotesk-Medium.otf"
+                    as="font"
+                    type="font/otf"
+                    crossOrigin="anonymous"
+                />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

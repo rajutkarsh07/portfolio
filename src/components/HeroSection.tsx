@@ -32,6 +32,7 @@ export function HeroSection() {
                 src={personal.profileImage}
                 alt={personal.name}
                 className="w-full h-full object-cover"
+                fetchPriority="high"
               />
             </div>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-4 border-background">

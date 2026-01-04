@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Github, ExternalLink, ArrowLeft, Star, GitFork, Folder, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -57,11 +58,14 @@ export default function Projects() {
                                 <div className="relative group">
                                     <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500" />
                                     <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-                                        <div className="aspect-[16/10] overflow-hidden">
-                                            <img
+                                        <div className="aspect-[16/10] relative overflow-hidden">
+                                            <Image
                                                 src={project.image}
                                                 alt={project.title}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                fill
+                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 688px"
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                                priority={index === 0}
                                             />
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -143,9 +147,9 @@ export default function Projects() {
                                                     <div className="p-2 rounded-lg bg-secondary">
                                                         <Folder className="h-5 w-5 text-primary" />
                                                     </div>
-                                                    <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
+                                                    <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
                                                         {project.title}
-                                                    </h4>
+                                                    </h3>
                                                 </div>
                                                 <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                                             </div>
@@ -210,9 +214,9 @@ export default function Projects() {
                                                             <Folder className="h-5 w-5 text-primary" />
                                                         </div>
                                                         <div>
-                                                            <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
+                                                            <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
                                                                 {repo.title}
-                                                            </h4>
+                                                            </h3>
                                                             {repo.isForked && (
                                                                 <p className="text-xs text-muted-foreground">Forked</p>
                                                             )}
