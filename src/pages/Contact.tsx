@@ -1,4 +1,4 @@
-import { ArrowLeft, Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram, Coffee, MessageCircle, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram, Coffee, MessageCircle, ArrowUpRight, Gamepad2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -11,6 +11,7 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
   Linkedin,
   Twitter,
   Instagram,
+  Gamepad2,
 };
 
 // Color mapping for social links
@@ -19,6 +20,7 @@ const socialColors: Record<string, string> = {
   LinkedIn: "hover:bg-[#0077b5] hover:text-white",
   Twitter: "hover:bg-[#1da1f2] hover:text-white",
   Instagram: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:text-white",
+  "Chess.com": "hover:bg-[#7fa650] hover:text-white",
 };
 
 const contactMethods = [
@@ -42,14 +44,14 @@ const contactMethods = [
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative flex flex-col">
       {/* Background grid - same as home */}
       <div className="fixed inset-0 bg-grid opacity-30 pointer-events-none" />
       <div className="fixed inset-0 bg-gradient-overlay pointer-events-none" />
 
       <Navbar />
 
-      <main className="pt-24 pb-16 relative z-10">
+      <main className="pt-24 pb-16 relative z-10 flex-1">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Header */}
           <div className="mb-16">

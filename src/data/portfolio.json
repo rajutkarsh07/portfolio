@@ -6,14 +6,15 @@
         "title": "Full Stack Web Developer",
         "tagline": "I build things for the web.",
         "roles": [
+            "Software Engineer",
             "Full Stack Web Developer",
             "UI/UX Designer",
             "Competitive Programmer"
         ],
         "bio": "I'm a Full Stack Web Developer and UI/UX Designer specialized in building exceptional websites.",
         "currentCompany": "Palo Alto Networks",
-        "profileImage": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarsh.png?alt=media&token=7f7cb8a0-5141-4be7-a4c0-e3e8127be433",
-        "aboutImage": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/utkarshimg.png?alt=media&token=a46b9e8b-c74d-4b2d-b010-d7a4dee585cc",
+        "profileImage": "/assets/utkarsh.jpg",
+        "aboutImage": "/assets/utkarsh_about.jpg",
         "funFact": "I sneeze whenever I see the sun! 🌞"
     },
     "contact": {
@@ -48,6 +49,12 @@
             "username": "utkarsh_raj.random",
             "url": "https://www.instagram.com/utkarsh_raj.random/",
             "icon": "Instagram"
+        },
+        {
+            "name": "Chess.com",
+            "username": "utkarsh_raj_13_06",
+            "url": "https://www.chess.com/member/utkarsh_raj_13_06",
+            "icon": "Gamepad2"
         }
     ],
     "education": {
@@ -127,7 +134,7 @@
             "location": "Remote",
             "logo": "https://play-lh.googleusercontent.com/1IXg46X4JahLhv1Ccw-LAlFPxQk5X1qy_l0CGtTjrn7FMbk-t0AZcz8ISSsbfyif_EK7",
             "current": false,
-            "url": "",
+            "url": "https://e-pocket.com/",
             "description": []
         }
     ],
@@ -347,46 +354,8 @@
             "logo": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
         }
     ],
-    "stats": {
-        "yearsOfExperience": "3+",
-        "projectsCompleted": "15+",
-        "leetCodeRating": "1850+",
-        "problemsSolved": "500+"
-    },
     "projects": {
         "major": [
-            {
-                "title": "CodeNova",
-                "description": "Social media platform exclusively designed for programmers, where users receive personalized problem recommendations based on their skill ratings and rankings. Users can also engage in stimulating discussions like Stack Overflow.",
-                "tech": [
-                    "React",
-                    "Express",
-                    "Node",
-                    "MongoDB",
-                    "Socket.io",
-                    "Chart.js"
-                ],
-                "image": "http://res.cloudinary.com/df4t1zu7e/image/upload/v1694023728/mawat7wvt0c3bwdacqel.jpg",
-                "github": "https://github.com/rajutkarsh07/CodeNova",
-                "live": "#",
-                "featured": true
-            },
-            {
-                "title": "Fiverr Clone",
-                "description": "Freelancing platform designed to connect talented freelancers with discerning clients seamlessly. Freelancers can showcase their unique skills and expertise by posting captivating gigs.",
-                "tech": [
-                    "React JS",
-                    "Node JS",
-                    "Express JS",
-                    "MongoDB",
-                    "React Query",
-                    "Firebase"
-                ],
-                "image": "https://firebasestorage.googleapis.com/v0/b/fiverr-clone-dfff6.appspot.com/o/fiverr-clone%2Fimages%2Ffiverr.png?alt=media&token=8c23436f-9a04-438d-a2ce-a9ddf13f9def",
-                "github": "https://github.com/rajutkarsh07/Fiverr-clone",
-                "live": "#",
-                "featured": true
-            },
             {
                 "title": "FlagRush",
                 "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages. Features community discussions and a leaderboard for top performers.",
@@ -395,12 +364,33 @@
                     "Node JS",
                     "Express JS",
                     "MongoDB",
-                    "Burpsuite"
+                    "Socket.io",
+                    "Material UI"
                 ],
-                "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800",
+                "image": "/assets/FlagRush.jpg",
                 "github": "https://github.com/rajutkarsh07/FlagRush",
-                "live": "#",
-                "featured": false
+                "live": "https://flagrush.netlify.app/",
+                "featured": true
+            },
+            {
+                "title": "AlignAI",
+                "description": "AI-powered product management platform that helps balance strategic goals with customer feedback using intelligent analysis and roadmap generation. Features include intelligent project management with document upload, advanced feedback analysis with AI categorization and sentiment analysis, multi-agent AI system for specialized tasks, smart roadmapping with various allocation strategies, interactive chat interface, and comprehensive analytics dashboard.",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Tailwind CSS",
+                    "Socket.io",
+                    "React Query",
+                    "AI Agents",
+                    "Recharts"
+                ],
+                "image": "/assets/AlignAi.jpg",
+                "github": "https://github.com/rajutkarsh07/AlignAI",
+                "live": "https://align-ai-eta.vercel.app/",
+                "featured": true
             }
         ],
         "pinned": [
@@ -443,7 +433,7 @@
                 "isForked": false
             },
             {
-                "title": "portfolio-updated",
+                "title": "portfolio",
                 "description": "My personal portfolio website showcasing my projects, skills, and experience as a developer.",
                 "language": "SCSS",
                 "github": "https://github.com/rajutkarsh07/portfolio-updated",
@@ -452,10 +442,10 @@
                 "isForked": false
             },
             {
-                "title": "Fiverr-clone",
-                "description": "Freelancing platform to connect freelancers with clients. Features gig posting and discovery.",
+                "title": "AlignAI",
+                "description": "AI-powered product management platform that helps balance strategic goals with customer feedback using intelligent analysis and roadmap generation. Features include intelligent project management with document upload, advanced feedback analysis with AI categorization and sentiment analysis, multi-agent AI system for specialized tasks, smart roadmapping with various allocation strategies, interactive chat interface, and comprehensive analytics dashboard.",
                 "language": "JavaScript",
-                "github": "https://github.com/rajutkarsh07/Fiverr-clone",
+                "github": "https://github.com/rajutkarsh07/AlignAI",
                 "stars": 0,
                 "forks": 0,
                 "isForked": false
@@ -463,13 +453,13 @@
         ]
     },
     "about": {
-        "intro": "Hi, I'm Utkarsh Raj from Indian Institute of Information Technology, Design and Manufacturing, Jabalpur.",
+        "intro": "Hi, I'm Utkarsh Raj, a Software Engineer at Palo Alto Networks.",
         "shortBio": "A Full Stack Web Developer, UI/UX Designer and Competitive Programmer with a passion for crafting beautiful, responsive websites that make a difference.",
-        "longBio": "With years of experience and a love for all things tech, I'm always looking for new and innovative ways to improve my skills and create cutting-edge designs. I understand that the key to a successful website is not just how it looks, but also how it functions.",
+        "longBio": "With a strong technical foundation and a love for design, I'm always looking for innovative ways to bridge the gap between engineering and user experience. I understand that the key to a successful product is not just how it functions, but also how it looks and feels.",
         "paragraphs": [
-            "I'm a final year student at IIITDM Jabalpur, pursuing a degree in Computer Science. I'm passionate about web development and enjoy creating elegant solutions to complex problems.",
+            "I currently work as a Software Engineer at Palo Alto Networks. I graduated from IIITDM Jabalpur with a degree in Computer Science. I'm passionate about web development and enjoy creating elegant solutions to complex problems.",
             "My journey in programming started with competitive programming, where I developed strong problem-solving skills. This foundation has been invaluable in my transition to full-stack development.",
-            "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or participating in hackathons."
+            "When I'm not coding, I have a keen interest in Design. You can also find me strategizing over a game of Chess or hitting the Gym to stay active."
         ]
     },
     "navigation": [

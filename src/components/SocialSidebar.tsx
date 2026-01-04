@@ -1,5 +1,6 @@
-import { Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Mail, Gamepad2 } from "lucide-react";
 import { socials, contact } from "@/data";
+import { useLocation } from "react-router-dom";
 
 // Map icon names to actual icon components
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -7,10 +8,18 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
   Linkedin,
   Twitter,
   Instagram,
+  Gamepad2,
   Mail,
 };
 
 export function SocialSidebar() {
+  const location = useLocation();
+
+  // Hide on contact page
+  if (location.pathname === "/contact") {
+    return null;
+  }
+
   // Create social links array with icon components
   const socialLinks = [
     ...socials.map(social => ({
@@ -22,7 +31,7 @@ export function SocialSidebar() {
   ];
 
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4">
+    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
       {socialLinks.map((link, index) => (
         <a
           key={link.label}

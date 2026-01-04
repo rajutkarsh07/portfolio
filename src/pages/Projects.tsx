@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { projects } from "@/data";
+import { projects, socials } from "@/data";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
 
 export default function Projects() {
@@ -125,7 +125,7 @@ export default function Projects() {
               </div>
             ) : reposError ? (
               <div className="text-center py-16">
-                <p className="text-muted-foreground">Failed to load repositories. Using cached data.</p>
+                {/* <p className="text-muted-foreground">Failed to load repositories. Using cached data.</p> */}
                 {/* Fallback to static data */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                   {projects.pinned.map((project) => (
@@ -265,6 +265,19 @@ export default function Projects() {
                 })}
               </div>
             )}
+          </div>
+
+          <div className="text-center mt-16">
+            <Button size="lg" variant="outline" asChild className="gap-2">
+              <a
+                href={socials.find(s => s.name === "GitHub")?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5" />
+                View All Repositories
+              </a>
+            </Button>
           </div>
         </div>
       </main>

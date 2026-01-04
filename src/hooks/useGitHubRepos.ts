@@ -46,41 +46,68 @@ export function useGitHubRepos(username: string, count: number = 6): UseGitHubRe
                 setLoading(true);
                 setError(null);
 
-                // Fetch user's public repositories sorted by updated time
-                const response = await fetch(
-                    `https://api.github.com/users/${username}/repos?sort=pushed&direction=desc&per_page=30&type=owner`
-                );
+                const response = await fetch('https://api.github.com/graphql', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: `
+                            query {
+                                user(login: "${username}") {
+                                    pinnedItems(first: ${count}, types: REPOSITORY) {
+                                        nodes {
+                                            ... on Repository {
+                                                name
+                                                description
+                                                url
+                                                homepageUrl
+                                                stargazerCount
+                                                forkCount
+                                                isFork
+                                                primaryLanguage {
+                                                    name
+                                                }
+                                                repositoryTopics(first: 3) {
+                                                    nodes {
+                                                        topic {
+                                                            name
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        `
+                    })
+                });
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch repositories');
                 }
 
-                const data: GitHubRepo[] = await response.json();
+                const json = await response.json();
 
-                // Filter and sort repos:
-                // 1. Exclude forks (unless they have significant stars)
-                // 2. Sort by stars + recent activity
-                const sortedRepos = data
-                    .filter(repo => !repo.fork || repo.stargazers_count > 5)
-                    .sort((a, b) => {
-                        // Prioritize by stars, then by recent push
-                        const scoreA = a.stargazers_count * 10 + (new Date(a.pushed_at).getTime() / 1e12);
-                        const scoreB = b.stargazers_count * 10 + (new Date(b.pushed_at).getTime() / 1e12);
-                        return scoreB - scoreA;
-                    })
-                    .slice(0, count);
+                if (json.errors) {
+                    throw new Error(json.errors[0].message);
+                }
+
+                const nodes = json.data?.user?.pinnedItems?.nodes || [];
 
                 // Transform to PinnedProject format
-                const pinnedProjects: PinnedProject[] = sortedRepos.map(repo => ({
+                const pinnedProjects: PinnedProject[] = nodes.map((repo: any) => ({
                     title: repo.name,
                     description: repo.description || 'No description available',
-                    language: repo.language || 'Unknown',
-                    github: repo.html_url,
-                    live: repo.homepage || '',
-                    stars: repo.stargazers_count,
-                    forks: repo.forks_count,
-                    isForked: repo.fork,
-                    topics: repo.topics || [],
+                    language: repo.primaryLanguage?.name || 'Unknown',
+                    github: repo.url,
+                    live: repo.homepageUrl || '',
+                    stars: repo.stargazerCount,
+                    forks: repo.forkCount,
+                    isForked: repo.isFork,
+                    topics: repo.repositoryTopics?.nodes?.map((node: any) => node.topic.name) || [],
                 }));
 
                 setRepos(pinnedProjects);

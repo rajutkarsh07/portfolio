@@ -13,6 +13,9 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+import { SocialSidebar } from "./components/SocialSidebar";
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
@@ -20,6 +23,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
+          <SocialSidebar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/projects" element={<Projects />} />
