@@ -13,7 +13,6 @@ export const education = data.education;
 export const experiences = data.experiences;
 export const skills = data.skills;
 export const codingProfiles = data.codingProfiles;
-export const stats = data.stats;
 export const projects = data.projects;
 export const about = data.about;
 export const navigation = data.navigation;

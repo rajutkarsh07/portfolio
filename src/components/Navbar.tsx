@@ -1,5 +1,7 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data";
@@ -7,7 +9,7 @@ import { navigation } from "@/data";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +19,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string) => pathname === href;
 
   return (
     <nav
@@ -29,7 +31,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
           </Link>
 
@@ -38,7 +40,7 @@ export function Navbar() {
             {navigation.map((item, index) => (
               <Link
                 key={item.label}
-                to={item.href}
+                href={item.href}
                 className={`relative px-4 py-2 text-sm transition-colors duration-200 group ${isActive(item.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
               >
@@ -53,7 +55,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-2">
             <Button size="sm" asChild>
-              <Link to="/contact">Let's Talk</Link>
+              <Link href="/contact">Let's Talk</Link>
             </Button>
           </div>
 
@@ -76,7 +78,7 @@ export function Navbar() {
             {navigation.map((item, index) => (
               <Link
                 key={item.label}
-                to={item.href}
+                href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`px-4 py-3 text-sm rounded-lg transition-all duration-200 ${isActive(item.href)
                   ? "text-foreground bg-secondary"
@@ -89,7 +91,7 @@ export function Navbar() {
             ))}
             <div className="pt-2">
               <Button className="w-full" asChild>
-                <Link to="/contact">Let's Talk</Link>
+                <Link href="/contact">Let's Talk</Link>
               </Button>
             </div>
           </div>

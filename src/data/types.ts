@@ -117,7 +117,6 @@ export interface PortfolioData {
     experiences: Experience[];
     skills: Skills;
     codingProfiles: CodingProfile[];
-    stats: Stats;
     projects: Projects;
     about: About;
     navigation: NavItem[];

@@ -1,86 +1,162 @@
-# Utkarsh Raj - Portfolio
+# Portfolio Website
 
-A modern, responsive personal portfolio website showcasing my projects, skills, and experience as a Full Stack Web Developer. Built with modern web technologies to ensure high performance and an excellent user experience.
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-## ✨ Features
+## 🚀 Tech Stack
 
--   **Modern UI/UX**: Clean, dark-themed design with glassmorphism effects and smooth transitions.
--   **Dynamic Projects**: Automatically fetches and displays "Pinned" repositories from GitHub using the GitHub GraphQL API.
--   **Interactive Elements**: 
-    -   Scroll-based animations.
-    -   Hover effects on project cards and social links.
--   **Fully Responsive**: optimized for all device sizes from mobile calls to large desktop screens.
--   **Portfolio Data**: Centralized JSON-based configuration for easy updates to bio, skills, experience, and projects.
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI
+- **Animations:** Tailwind CSS Animate
+- **Data Fetching:** TanStack Query (React Query)
+- **Theme:** next-themes (Dark/Light mode)
 
-## 🛠️ Tech Stack
+## 📋 Prerequisites
 
--   **Frontend**: React, TypeScript, Vite
--   **Styling**: Tailwind CSS
--   **Icons**: Lucide React, Devicon
--   **State/Data**: React Query (TanStack Query) — *used for efficient data fetching*
--   **Routing**: React Router DOM
+- Node.js 18+ 
+- npm or yarn
 
-## 🚀 Getting Started
+## 🛠️ Installation
 
-Follow these steps to set up the project locally on your machine.
+1. Clone the repository:
+```bash
+git clone https://github.com/rajutkarsh07/portfolio.git
+cd portfolio
+```
 
-### Prerequisites
+2. Install dependencies:
+```bash
+npm install --legacy-peer-deps
+```
 
--   Node.js (v18 or higher recommended)
--   npm or yarn
+3. Create a `.env` file in the root directory:
+```bash
+cp .env.example .env
+```
 
-### Installation
+4. Add your environment variables to `.env`:
+```env
+NEXT_PUBLIC_GITHUB_TOKEN=your_github_personal_access_token
+```
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/rajutkarsh07/portfolio-updated.git
-    cd portfolio-updated
-    ```
+## 🔑 Environment Variables
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+### GitHub Token Setup
 
-3.  **Environment Setup**
-    This project uses the GitHub GraphQL API to fetch your pinned projects. You need a GitHub Personal Access Token (PAT) with `read:user` and `public_repo` permissions.
+To fetch your GitHub repositories dynamically, you need a GitHub Personal Access Token:
 
-    Create a `.env` file in the root directory:
-    ```bash
-    touch .env
-    ```
+1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Click "Generate new token (classic)"
+3. Give it a name (e.g., "Portfolio Website")
+4. Select scopes: `public_repo` (or `repo` for private repos)
+5. Generate and copy the token
+6. Add it to your `.env` file as `NEXT_PUBLIC_GITHUB_TOKEN`
 
-    Add your token to the `.env` file:
-    ```env
-    VITE_GITHUB_TOKEN=your_github_pat_here
-    ```
+## 🏃‍♂️ Running the Project
 
-    > **Note:** Without this token, the "Pinned Projects" section will fail to load live data and may fall back to hardcoded placeholders or show an error.
+### Development Mode
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-4.  **Run the development server**
-    ```bash
-    npm run dev
-    ```
+### Production Build
+```bash
+npm run build
+npm start
+```
 
-    The site will be available at `http://localhost:8080` (or whatever port Vite assigns).
+### Linting
+```bash
+npm run lint
+```
 
 ## 📁 Project Structure
 
 ```
-src/
-├── assets/         # Static assets like images
-├── components/     # Reusable UI components (Hero, Navbar, Footer, etc.)
-├── data/           # Centralized data files (portfolio.json)
-├── hooks/          # Custom React hooks (useGitHubRepos)
-├── pages/          # Page components (Home, About, Projects, Contact)
-├── App.tsx         # Main application component with Routing
-└── main.tsx        # Entry point
+portfolio/
+├── public/              # Static assets (images, fonts, etc.)
+├── src/
+│   ├── app/            # Next.js app directory
+│   │   ├── layout.tsx  # Root layout
+│   │   ├── page.tsx    # Home page
+│   │   ├── about/      # About page
+│   │   ├── projects/   # Projects page
+│   │   ├── experience/ # Experience page
+│   │   └── contact/    # Contact page
+│   ├── components/     # React components
+│   │   ├── ui/        # UI components (shadcn/ui)
+│   │   └── ...        # Feature components
+│   ├── data/          # Data files and types
+│   │   ├── portfolio.json
+│   │   ├── types.ts
+│   │   └── index.ts
+│   ├── hooks/         # Custom React hooks
+│   └── lib/           # Utility functions
+├── .env               # Environment variables (not committed)
+├── .env.example       # Example environment variables
+├── next.config.mjs    # Next.js configuration
+├── tailwind.config.ts # Tailwind CSS configuration
+└── tsconfig.json      # TypeScript configuration
 ```
 
-## 📝 Configuration
+## 🎨 Customization
 
-Most of the content (Bio, Experience, Skills, Social Links) is managed in `src/data/portfolio.json`. You can update this file to instantly reflect changes across the website without modifying the React components.
+### Update Portfolio Data
 
-## 📄 License
+Edit `src/data/portfolio.json` to customize:
+- Personal information
+- Projects
+- Skills
+- Experience
+- Education
+- Social links
+- Contact information
+
+### Update Styling
+
+- Global styles: `src/app/globals.css`
+- Tailwind config: `tailwind.config.ts`
+- Theme colors: CSS variables in `globals.css`
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Add environment variables in Vercel dashboard
+4. Deploy!
+
+### Netlify
+
+1. Build command: `npm run build`
+2. Publish directory: `.next`
+3. Add environment variables in Netlify dashboard
+
+### Other Platforms
+
+The project can be deployed to any platform that supports Next.js:
+- AWS Amplify
+- Railway
+- Render
+- etc.
+
+## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 👤 Author
+
+**Utkarsh Raj**
+- GitHub: [@rajutkarsh07](https://github.com/rajutkarsh07)
+- LinkedIn: [utkarshraj1306](https://www.linkedin.com/in/utkarshraj1306/)
+
+## ⭐ Show your support
+
+Give a ⭐️ if you like this project!

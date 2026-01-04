@@ -1,6 +1,8 @@
+"use client";
+
 import { Github, Linkedin, Twitter, Instagram, Mail, Gamepad2 } from "lucide-react";
 import { socials, contact } from "@/data";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 // Map icon names to actual icon components
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -13,10 +15,10 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
 };
 
 export function SocialSidebar() {
-  const location = useLocation();
+  const pathname = usePathname();
 
   // Hide on contact page
-  if (location.pathname === "/contact") {
+  if (pathname === "/contact") {
     return null;
   }
 

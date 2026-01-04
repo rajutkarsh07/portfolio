@@ -1,5 +1,6 @@
+"use client";
 import { Github, ExternalLink, ArrowRight, Star, GitFork, Folder, Loader2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
@@ -239,7 +240,7 @@ export function ProjectsSection() {
         {/* View All Projects Link */}
         <div className="text-center">
           <Button variant="outline" size="lg" asChild className="gap-2">
-            <Link to="/projects">
+            <Link href="/projects">
               View All Projects
               <ArrowRight className="h-4 w-4" />
             </Link>

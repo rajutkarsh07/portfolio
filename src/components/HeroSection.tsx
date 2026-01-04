@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee } from "lucide-react";
 import { personal, contact } from "@/data";
@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto stagger-children">
           {/* Announcement pill */}
           <Link
-            to="/experience"
+            href="/experience"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground hover:bg-secondary/80 transition-colors duration-200 mb-8 group"
           >
             <span className="text-primary">✨</span>
@@ -58,7 +58,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <Button size="lg" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 Hire Me
                 <ArrowRight className="h-4 w-4" />
               </Link>

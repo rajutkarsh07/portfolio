@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, ArrowUpRight, ArrowRight } from "lucide-react";
 import { contact } from "@/data";
@@ -40,7 +40,7 @@ export function ContactSection() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 Contact Page
                 <ArrowRight className="h-4 w-4" />
               </Link>

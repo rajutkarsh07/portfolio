@@ -49,7 +49,7 @@ export function useGitHubRepos(username: string, count: number = 6): UseGitHubRe
                 const response = await fetch('https://api.github.com/graphql', {
                     method: 'POST',
                     headers: {
-                        'Authorization': `bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+                        'Authorization': `bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({

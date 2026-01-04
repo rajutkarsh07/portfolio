@@ -1,3 +1,4 @@
+"use client";
 import { personal, about, skills, codingProfiles } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useCodingProfiles } from "@/hooks/useCodingRatings";
