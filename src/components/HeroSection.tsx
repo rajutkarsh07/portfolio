@@ -27,7 +27,7 @@ export function HeroSection() {
 
           {/* Profile Image */}
           <div className="relative mb-8">
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-background shadow-elevated">
+            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-background shadow-elevated">
               <img
                 src={personal.profileImage}
                 alt={personal.name}
@@ -70,14 +70,6 @@ export function HeroSection() {
               </a>
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground animate-float">
-        <span className="text-xs">Scroll</span>
-        <div className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-muted-foreground animate-bounce" />
         </div>
       </div>
     </section>

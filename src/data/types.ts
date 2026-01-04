@@ -71,13 +71,6 @@ export interface CodingProfile {
     logo?: string;
 }
 
-export interface Stats {
-    yearsOfExperience: string;
-    projectsCompleted: string;
-    leetCodeRating: string;
-    problemsSolved: string;
-}
-
 export interface MajorProject {
     title: string;
     description: string;

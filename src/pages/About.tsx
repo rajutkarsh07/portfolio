@@ -80,7 +80,7 @@ export default function About() {
               <div className="lg:col-span-2 relative">
                 <div className="relative rounded-2xl overflow-hidden border border-border shadow-elevated group">
                   <img
-                    src={personal.profileImage}
+                    src={personal.aboutImage}
                     alt={personal.name}
                     className="w-full aspect-[3/4] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />

@@ -10,7 +10,6 @@ import { SocialSidebar } from "@/components/SocialSidebar";
 const Index = () => {
   return (
     <div className="relative">
-      <SocialSidebar />
       <Navbar />
       <main>
         <HeroSection />
