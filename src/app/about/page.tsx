@@ -8,6 +8,10 @@ import { SkillsMarquee } from "@/components/SkillsMarquee";
 import { codingProfiles, about, personal } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useCodingProfiles } from "@/hooks/useCodingRatings";
+import { useEffect } from "react";
+
+// SEO metadata is handled in layout.tsx for client components
+// We'll add structured data via script tag
 
 export default function About() {
     // Fetch real-time data from APIs

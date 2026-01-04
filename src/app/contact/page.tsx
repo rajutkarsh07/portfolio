@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { socials, contact, personal } from "@/data";
+import { metadata as pageMetadata } from "./metadata";
+
+export const metadata = pageMetadata;
 
 // Map icon names to actual icon components
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {

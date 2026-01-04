@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { education, experiences } from "@/data";
+import { metadata as pageMetadata } from "./metadata";
+
+export const metadata = pageMetadata;
 
 export default function Experience() {
     return (

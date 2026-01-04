@@ -5,19 +5,46 @@ import { SocialSidebar } from "@/components/SocialSidebar";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { generateMetadata, generateStructuredData, generateWebsiteStructuredData } from '@/lib/seo';
+import portfolioData from '@/data/portfolio.json';
 
-export const metadata: Metadata = {
-    title: 'Portfolio',
-    description: 'My Portfolio',
-}
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://utkarshraj.dev';
+
+export const metadata: Metadata = generateMetadata({
+    title: portfolioData.personal.name,
+    description: `${portfolioData.personal.bio} Explore my portfolio featuring projects in ${portfolioData.skills.simple.slice(0, 5).map(s => s.name).join(', ')} and more.`,
+    keywords: [
+        'Portfolio',
+        'Web Development',
+        'Software Engineering',
+        'UI/UX Design',
+        'Competitive Programming',
+        portfolioData.education.institution,
+        portfolioData.personal.currentCompany,
+    ],
+    canonicalUrl: siteUrl,
+});
 
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
+    const personSchema = generateStructuredData();
+    const websiteSchema = generateWebsiteStructuredData();
+
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+                />
+            </head>
             <body className="bg-background text-foreground font-sans antialiased">
                 <Providers>
                     <ScrollToTop />
