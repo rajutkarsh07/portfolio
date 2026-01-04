@@ -13,8 +13,8 @@
         ],
         "bio": "I'm a Full Stack Web Developer and UI/UX Designer specialized in building exceptional websites.",
         "currentCompany": "Palo Alto Networks",
-        "profileImage": "/assets/utkarsh.jpg",
-        "aboutImage": "/assets/utkarsh_about.jpg",
+        "profileImage": "/assets/utkarsh.webp",
+        "aboutImage": "/assets/utkarsh_about.webp",
         "funFact": "I sneeze whenever I see the sun! 🌞"
     },
     "contact": {
@@ -367,7 +367,7 @@
                     "Socket.io",
                     "Material UI"
                 ],
-                "image": "/assets/FlagRush.jpg",
+                "image": "/assets/FlagRush.webp",
                 "github": "https://github.com/rajutkarsh07/FlagRush",
                 "live": "https://flagrush.netlify.app/",
                 "featured": true
@@ -387,7 +387,7 @@
                     "AI Agents",
                     "Recharts"
                 ],
-                "image": "/assets/AlignAi.jpg",
+                "image": "/assets/AlignAi.webp",
                 "github": "https://github.com/rajutkarsh07/AlignAI",
                 "live": "https://align-ai-eta.vercel.app/",
                 "featured": true
