@@ -30,10 +30,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold">
-              <span className="text-primary">U</span>
-              <span className="text-foreground">R</span>
-            </span>
+            <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
           </Link>
 
           {/* Desktop Navigation */}
