@@ -1,0 +1,487 @@
+{
+    "personal": {
+        "name": "Utkarsh Raj",
+        "firstName": "Utkarsh",
+        "lastName": "Raj",
+        "title": "Full Stack Web Developer",
+        "tagline": "I build things for the web.",
+        "roles": [
+            "Software Engineer",
+            "Full Stack Web Developer",
+            "UI/UX Designer",
+            "Competitive Programmer"
+        ],
+        "bio": "I'm a Full Stack Web Developer and UI/UX Designer specialized in building exceptional websites.",
+        "currentCompany": "Palo Alto Networks",
+        "profileImage": "/assets/utkarsh.jpg",
+        "aboutImage": "/assets/utkarsh_about.jpg",
+        "funFact": "I sneeze whenever I see the sun! 🌞"
+    },
+    "contact": {
+        "email": "utkarshraj1306@gmail.com",
+        "emailSecondary": "utkarshraj.work@gmail.com",
+        "location": "India",
+        "locationDescription": "Based in India, working remotely worldwide",
+        "openToRelocate": true,
+        "buyMeCoffee": "https://buymeacoffee.com/utkarshraja"
+    },
+    "socials": [
+        {
+            "name": "GitHub",
+            "username": "rajutkarsh07",
+            "url": "https://github.com/rajutkarsh07",
+            "icon": "Github"
+        },
+        {
+            "name": "LinkedIn",
+            "username": "utkarshraj1306",
+            "url": "https://www.linkedin.com/in/utkarshraj1306/",
+            "icon": "Linkedin"
+        },
+        {
+            "name": "Twitter",
+            "username": "Utkarsh_raj_13",
+            "url": "https://x.com/Utkarsh_raj_13",
+            "icon": "Twitter"
+        },
+        {
+            "name": "Instagram",
+            "username": "utkarsh_raj.random",
+            "url": "https://www.instagram.com/utkarsh_raj.random/",
+            "icon": "Instagram"
+        },
+        {
+            "name": "Chess.com",
+            "username": "utkarsh_raj_13_06",
+            "url": "https://www.chess.com/member/utkarsh_raj_13_06",
+            "icon": "Gamepad2"
+        }
+    ],
+    "education": {
+        "institution": "Indian Institute of Information Technology, Design and Manufacturing, Jabalpur",
+        "degree": "B.Tech in Computer Science and Engineering",
+        "duration": "Dec 2021 - June 2025",
+        "location": "Jabalpur, India",
+        "description": "Focusing on Data Structures, Algorithms, Web Development, and Software Engineering principles."
+    },
+    "experiences": [
+        {
+            "company": "Palo Alto Networks",
+            "role": "Software Engineer",
+            "duration": "Aug 2025 - Present",
+            "location": "Bengaluru, India",
+            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "current": true,
+            "url": "https://www.paloaltonetworks.com/",
+            "description": [
+                "Working on pandaAI and novascribe"
+            ]
+        },
+        {
+            "company": "Palo Alto Networks",
+            "role": "Software Engineer Intern",
+            "duration": "Mar 2025 - Aug 2025",
+            "location": "Bengaluru, India",
+            "logo": "https://images.ctfassets.net/ajuyecyagjo7/4A23Wo3eqKrcd0HEN3uFNe/e811019b19915946e917e64be946b504/eyJidWNrZXQiOiJnZHAtc2l0ZSIsImtleSI6ImF0dGFjaG1lbnRzL2Nra2Q1NzV4bjAwMmJ1OGI0NWI0cTM4YTctcGFudy1sb2dvLTJ1cC0wMS5wbmciLCJlZGl.webp",
+            "current": false,
+            "url": "https://www.paloaltonetworks.com/",
+            "description": []
+        },
+        {
+            "company": "Oxyzo",
+            "role": "Software Developer Intern",
+            "duration": "Dec 2024 - Feb 2025",
+            "location": "Gurugram, India",
+            "logo": "https://play-lh.googleusercontent.com/Qln4yru4U2TQWalgWZ-6YW4OXebWPzLr121AWKjYq629TmPaloazDyRE7H_D0vzoX_0=w240-h480-rw",
+            "current": false,
+            "url": "https://www.oxyzo.in/",
+            "description": []
+        },
+        {
+            "company": "Google Summer of Code 2024",
+            "role": "Open Source Contributor @C2SI",
+            "duration": "May 2024 - Aug 2024",
+            "location": "Remote",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/768px-GSoC-icon.svg.png",
+            "current": false,
+            "url": "https://summerofcode.withgoogle.com/",
+            "description": []
+        },
+        {
+            "company": "Deepvue.tech",
+            "role": "Frontend Developer Intern",
+            "duration": "May 2024 - July 2024",
+            "location": "Remote",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/deepvue.png?alt=media&token=554954e0-d115-4635-b868-0e32b8ec2d3b",
+            "current": false,
+            "url": "https://deepvue.tech/",
+            "description": []
+        },
+        {
+            "company": "The Linux Foundation",
+            "role": "LFX Mentee'23 @Hyperledger",
+            "duration": "Oct 2023 - Dec 2023",
+            "location": "Remote",
+            "logo": "https://pbs.twimg.com/profile_images/1546569468473745411/e-ZDBesX_400x400.jpg",
+            "current": false,
+            "url": "https://www.linuxfoundation.org/",
+            "description": []
+        },
+        {
+            "company": "e-pocket, Australia",
+            "role": "Full Stack Developer",
+            "duration": "",
+            "location": "Remote",
+            "logo": "https://play-lh.googleusercontent.com/1IXg46X4JahLhv1Ccw-LAlFPxQk5X1qy_l0CGtTjrn7FMbk-t0AZcz8ISSsbfyif_EK7",
+            "current": false,
+            "url": "https://e-pocket.com/",
+            "description": []
+        }
+    ],
+    "skills": {
+        "categories": {
+            "Frontend": [
+                {
+                    "name": "React JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Next JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                },
+                {
+                    "name": "TypeScript",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "JavaScript",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "name": "Angular",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                },
+                {
+                    "name": "HTML5",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                },
+                {
+                    "name": "CSS3",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                },
+                {
+                    "name": "SCSS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                },
+                {
+                    "name": "Material UI",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                },
+                {
+                    "name": "Redux",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                }
+            ],
+            "Backend": [
+                {
+                    "name": "Node JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                },
+                {
+                    "name": "Express JS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                },
+                {
+                    "name": "NestJS",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+                },
+                {
+                    "name": "FastAPI",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                },
+                {
+                    "name": "Spring Boot",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                },
+                {
+                    "name": "MongoDB",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                },
+                {
+                    "name": "GraphQL",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                }
+            ],
+            "Tools & Others": [
+                {
+                    "name": "Git",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                },
+                {
+                    "name": "Docker",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                },
+                {
+                    "name": "Google Cloud",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                },
+                {
+                    "name": "Firebase",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                },
+                {
+                    "name": "GitLab",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                },
+                {
+                    "name": "Linux",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                },
+                {
+                    "name": "Figma",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                },
+                {
+                    "name": "Photoshop",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+                },
+                {
+                    "name": "Illustrator",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                },
+                {
+                    "name": "Premiere Pro",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg"
+                },
+                {
+                    "name": "After Effects",
+                    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg"
+                },
+                {
+                    "name": "Opsera",
+                    "icon": "https://media.licdn.com/dms/image/v2/D560BAQHk2tDEBDy3vQ/company-logo_200_200/company-logo_200_200/0/1708701483864/opsera_logo?e=2147483647&v=beta&t=nEA0qZMpDdJ40z8haKV7I5P4VgG8njEJAoYGArwQXn8"
+                }
+            ]
+        },
+        "simple": [
+            {
+                "name": "React",
+                "category": "Frontend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            },
+            {
+                "name": "TypeScript",
+                "category": "Language",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            },
+            {
+                "name": "Node.js",
+                "category": "Backend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            },
+            {
+                "name": "Express",
+                "category": "Backend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            },
+            {
+                "name": "MongoDB",
+                "category": "Database",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            },
+            {
+                "name": "PostgreSQL",
+                "category": "Database",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            },
+            {
+                "name": "Redux",
+                "category": "Frontend",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+            },
+            {
+                "name": "Next.js",
+                "category": "Framework",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            },
+            {
+                "name": "Tailwind CSS",
+                "category": "Styling",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+            },
+            {
+                "name": "Figma",
+                "category": "Design",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+            },
+            {
+                "name": "Git",
+                "category": "Tools",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            },
+            {
+                "name": "Docker",
+                "category": "DevOps",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            }
+        ]
+    },
+    "codingProfiles": [
+        {
+            "name": "Codeforces",
+            "username": "utkarsh_raj_13",
+            "url": "https://codeforces.com/profile/utkarsh_raj_13",
+            "logo": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcer3l19eex0wy900b101.jpg"
+        },
+        {
+            "name": "LeetCode",
+            "username": "utkarsh_raj_13",
+            "url": "https://leetcode.com/utkarsh_raj_13/",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+        },
+        {
+            "name": "GitHub",
+            "username": "rajutkarsh07",
+            "url": "https://github.com/rajutkarsh07",
+            "logo": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        }
+    ],
+    "projects": {
+        "major": [
+            {
+                "title": "FlagRush",
+                "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages. Features community discussions and a leaderboard for top performers.",
+                "tech": [
+                    "React JS",
+                    "Node JS",
+                    "Express JS",
+                    "MongoDB",
+                    "Socket.io",
+                    "Material UI"
+                ],
+                "image": "/assets/FlagRush.jpg",
+                "github": "https://github.com/rajutkarsh07/FlagRush",
+                "live": "https://flagrush.netlify.app/",
+                "featured": true
+            },
+            {
+                "title": "AlignAI",
+                "description": "AI-powered product management platform that helps balance strategic goals with customer feedback using intelligent analysis and roadmap generation. Features include intelligent project management with document upload, advanced feedback analysis with AI categorization and sentiment analysis, multi-agent AI system for specialized tasks, smart roadmapping with various allocation strategies, interactive chat interface, and comprehensive analytics dashboard.",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Tailwind CSS",
+                    "Socket.io",
+                    "React Query",
+                    "AI Agents",
+                    "Recharts"
+                ],
+                "image": "/assets/AlignAi.jpg",
+                "github": "https://github.com/rajutkarsh07/AlignAI",
+                "live": "https://align-ai-eta.vercel.app/",
+                "featured": true
+            }
+        ],
+        "pinned": [
+            {
+                "title": "Webiu",
+                "description": "Building and maintaining a website is an essential task for any business or organization. This project aims to ease the workflow of getting a website up and running by developing a generalized web component library.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/Webiu",
+                "stars": 0,
+                "forks": 0,
+                "isForked": true,
+                "forkedFrom": "c2siorg/Webiu"
+            },
+            {
+                "title": "FlagRush",
+                "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/FlagRush",
+                "stars": 0,
+                "forks": 4,
+                "isForked": false
+            },
+            {
+                "title": "stdlib",
+                "description": "Standard library for JavaScript and Node.js. A comprehensive library for numerical computing.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/stdlib",
+                "stars": 0,
+                "forks": 0,
+                "isForked": true,
+                "forkedFrom": "stdlib-js/stdlib"
+            },
+            {
+                "title": "CodeNova",
+                "description": "Social media platform for programmers with personalized problem recommendations based on skill ratings.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/CodeNova",
+                "stars": 0,
+                "forks": 0,
+                "isForked": false
+            },
+            {
+                "title": "portfolio",
+                "description": "My personal portfolio website showcasing my projects, skills, and experience as a developer.",
+                "language": "SCSS",
+                "github": "https://github.com/rajutkarsh07/portfolio-updated",
+                "stars": 4,
+                "forks": 4,
+                "isForked": false
+            },
+            {
+                "title": "AlignAI",
+                "description": "AI-powered product management platform that helps balance strategic goals with customer feedback using intelligent analysis and roadmap generation. Features include intelligent project management with document upload, advanced feedback analysis with AI categorization and sentiment analysis, multi-agent AI system for specialized tasks, smart roadmapping with various allocation strategies, interactive chat interface, and comprehensive analytics dashboard.",
+                "language": "JavaScript",
+                "github": "https://github.com/rajutkarsh07/AlignAI",
+                "stars": 0,
+                "forks": 0,
+                "isForked": false
+            }
+        ]
+    },
+    "about": {
+        "intro": "Hi, I'm Utkarsh Raj, a Software Engineer at Palo Alto Networks.",
+        "shortBio": "A Full Stack Web Developer, UI/UX Designer and Competitive Programmer with a passion for crafting beautiful, responsive websites that make a difference.",
+        "longBio": "With a strong technical foundation and a love for design, I'm always looking for innovative ways to bridge the gap between engineering and user experience. I understand that the key to a successful product is not just how it functions, but also how it looks and feels.",
+        "paragraphs": [
+            "I currently work as a Software Engineer at Palo Alto Networks. I graduated from IIITDM Jabalpur with a degree in Computer Science. I'm passionate about web development and enjoy creating elegant solutions to complex problems.",
+            "My journey in programming started with competitive programming, where I developed strong problem-solving skills. This foundation has been invaluable in my transition to full-stack development.",
+            "When I'm not coding, I have a keen interest in Design. You can also find me strategizing over a game of Chess or hitting the Gym to stay active."
+        ]
+    },
+    "navigation": [
+        {
+            "label": "Home",
+            "href": "/"
+        },
+        {
+            "label": "Projects",
+            "href": "/projects"
+        },
+        {
+            "label": "About",
+            "href": "/about"
+        },
+        {
+            "label": "Experience",
+            "href": "/experience"
+        },
+        {
+            "label": "Contact",
+            "href": "/contact"
+        }
+    ]
+}

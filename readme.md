@@ -1,57 +1,86 @@
-<div align="center">
-  <img alt="Logo" src="https://utkarsh-raj13.netlify.app/assets/logo-dc4cdf8b.svg" width="50" />
-</div>
+# Utkarsh Raj - Portfolio
 
-<h1 align="center">
-  Utkarsh Raj
-</h1>
+A modern, responsive personal portfolio website showcasing my projects, skills, and experience as a Full Stack Web Developer. Built with modern web technologies to ensure high performance and an excellent user experience.
 
-<p align="center">
-  The first iteration of <a href="https://utkarsh-raj13.netlify.app/" target="_blank">utkarshraj.in</a> built with <a href="https://react.dev/" target="_blank">React</a>, <a href="https://firebase.google.com/" target="_blank">Firebase</a>, <a href="https://vitejs.dev/guide/" target="_blank">Vite</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
+## ✨ Features
 
-![alt text](image-1.png)
+-   **Modern UI/UX**: Clean, dark-themed design with glassmorphism effects and smooth transitions.
+-   **Dynamic Projects**: Automatically fetches and displays "Pinned" repositories from GitHub using the GitHub GraphQL API.
+-   **Interactive Elements**: 
+    -   Scroll-based animations.
+    -   Hover effects on project cards and social links.
+-   **Fully Responsive**: optimized for all device sizes from mobile calls to large desktop screens.
+-   **Portfolio Data**: Centralized JSON-based configuration for easy updates to bio, skills, experience, and projects.
 
-## 🚨 Forking this repository
+## 🛠️ Tech Stack
 
-I appreciate the interest many of you have shown in using my code for your own websites. Generally, my answer is **yes, you can use it, with proper attribution**.
+-   **Frontend**: React, TypeScript, Vite
+-   **Styling**: Tailwind CSS
+-   **Icons**: Lucide React, Devicon
+-   **State/Data**: React Query (TanStack Query) — *used for efficient data fetching*
+-   **Routing**: React Router DOM
 
-Keeping my site open source is important to me, but as we all know, _**plagiarism is unacceptable**_. It’s disheartening to see my work copied without any credit. I’ve put significant effort into building and designing this version of my website, and I take pride in it.
+## 🚀 Getting Started
 
-All I ask is that you acknowledge my work and not present it as your own. Thank you for respecting this request.
+Follow these steps to set up the project locally on your machine.
 
-Yes, you can fork this repo. Please give me proper credit by linking back to [https://utkarsh-raj13.netlify.app/](https://utkarsh-raj13.netlify.app/). Thanks!
+### Prerequisites
 
-## 🍴 Forking and Cloning Repo
+-   Node.js (v18 or higher recommended)
+-   npm or yarn
 
-First fork this repo and then clone it to your local system
+### Installation
 
-```sh
-git clone https://github.com/{your_github_username}/portfolio-updated.git
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/rajutkarsh07/portfolio-updated.git
+    cd portfolio-updated
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup**
+    This project uses the GitHub GraphQL API to fetch your pinned projects. You need a GitHub Personal Access Token (PAT) with `read:user` and `public_repo` permissions.
+
+    Create a `.env` file in the root directory:
+    ```bash
+    touch .env
+    ```
+
+    Add your token to the `.env` file:
+    ```env
+    VITE_GITHUB_TOKEN=your_github_pat_here
+    ```
+
+    > **Note:** Without this token, the "Pinned Projects" section will fail to load live data and may fall back to hardcoded placeholders or show an error.
+
+4.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+    The site will be available at `http://localhost:8080` (or whatever port Vite assigns).
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/         # Static assets like images
+├── components/     # Reusable UI components (Hero, Navbar, Footer, etc.)
+├── data/           # Centralized data files (portfolio.json)
+├── hooks/          # Custom React hooks (useGitHubRepos)
+├── pages/          # Page components (Home, About, Projects, Contact)
+├── App.tsx         # Main application component with Routing
+└── main.tsx        # Entry point
 ```
 
-## 🛠 Installation & Set Up
+## 📝 Configuration
 
-1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+Most of the content (Bio, Experience, Skills, Social Links) is managed in `src/data/portfolio.json`. You can update this file to instantly reflect changes across the website without modifying the React components.
 
-   ```sh
-   nvm install
-   ```
+## 📄 License
 
-2. Install dependencies
-
-   ```sh
-   npm i
-   ```
-
-3. Start the development server
-
-   ```sh
-   npm run dev
-   ```
-
-## ⚙️ Update changes
-
-- Go to the `src/data.js` and change the data according to your profile
-
-- Setup you own [Firebase](https://console.firebase.google.com/u/0/) in `src/firebaseConfig.js`
+This project is open source and available under the [MIT License](LICENSE).

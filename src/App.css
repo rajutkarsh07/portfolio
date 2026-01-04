@@ -1,48 +1,42 @@
-.App {
-  font-family: 'Bai Jamjuree', sans-serif;
-  display: flex;
-  /* justify-content: center;
-  height: 95vh;
-  align-items: center; */
-  /* font-size: 50px; */
-  cursor: url(assets/cursor.png), auto;
-  position: relative;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-.gradient__text {
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.cta-btn {
-  padding: 12px 25px;
-  background: linear-gradient(
-    89.98deg,
-    #b16cea 0.02%,
-    #fe5f68 51.52%,
-    #ff9452 99.98%
-  );
-  border-radius: 120px;
-  font-size: 18px;
-  color: #fff;
-  font-family: inherit;
-  transition: all 0.2s;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.cta-btn:hover {
-  cursor: url(assets/whitepointer.png), pointer;
-  box-shadow: 0px -4px 4px rgba(255, 255, 255, 0.25),
-    0px 4px 4px rgba(255, 255, 255, 0.2);
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-Link,
-a {
-  text-decoration: none;
-  cursor: url(assets/pointer.png), pointer;
+.card {
+  padding: 2em;
 }
 
-input:hover {
-  cursor: url(assets/cursortext.png), text;
+.read-the-docs {
+  color: #888;
 }

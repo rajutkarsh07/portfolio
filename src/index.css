@@ -1,55 +1,380 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3%;
+
+    --primary: 24 100% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 24 100% 42%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 42%), hsl(30 100% 48%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+    --shadow-elevated: 0 10px 40px -10px rgb(0 0 0 / 0.15), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 24 100% 55%;
+
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 4%));
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --shadow-elevated: 0 10px 40px -10px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+    color-scheme: dark;
+  }
 }
 
-body {
-  background: #161513;
-  color: #fff;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
 }
 
-:root {
-  --gradient-text: linear-gradient(
-    89.98deg,
-    #b16cea 0.02%,
-    #fe5f68 51.52%,
-    #ff9452 99.98%
-  );
-
-  --color-bg: #040c18;
-  --color-footer: #031b34;
-  --color-blog: #042c54;
-  --color-text: #81afdd;
-  --color-subtext: #ff8a71;
+/* Dub.co-style grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.gradient__text {
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Dub.co-style gradient overlay */
+.gradient-overlay {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.15), transparent);
 }
 
-html {
-  --scrollbarBG: #cfd8dc;
-  --thumbBG: #272d3d;
-  --scrollbarBlueBG: rgba(3, 137, 255, 0.7);
-  --scrollbarOrangeBG: rgba(250, 145, 54, 0.7);
+/* Smooth animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-body::-webkit-scrollbar {
-  width: 11px;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
-body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stagger children animations */
+.stagger-children>* {
+  opacity: 0;
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.stagger-children>*:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.stagger-children>*:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.stagger-children>*:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.stagger-children>*:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.stagger-children>*:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.stagger-children>*:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+/* Dub.co-style link hover effect */
+.link-hover {
+  @apply relative inline-block;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-foreground scale-x-0 origin-right transition-transform duration-300;
+}
+
+.link-hover:hover::after {
+  @apply scale-x-100 origin-left;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  @apply shadow-lg -translate-y-1;
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Button glow effect */
+.btn-glow {
+  @apply relative overflow-hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.1));
+}
+
+.btn-glow:hover::before {
+  @apply opacity-100;
+}
+
+/* ========================================
+   Skills Marquee Styles - Fullscreen
+   ======================================== */
+
+.skills-marquee-section-fullscreen {
+  @apply relative py-24 -mx-6 lg:-mx-12;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.skills-rows-fullscreen {
+  @apply space-y-8;
+}
+
+.skills-row-container {
+  @apply relative w-full;
+}
+
+.skills-marquee-wrapper {
+  @apply relative py-4 pt-12;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* Gradient fade edges */
+.skills-marquee-fade-left,
+.skills-marquee-fade-right {
+  @apply absolute top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none;
+}
+
+.skills-marquee-fade-left {
+  @apply left-0;
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.skills-marquee-fade-right {
+  @apply right-0;
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.dark .skills-marquee-fade-left {
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.dark .skills-marquee-fade-right {
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.skills-marquee-track {
+  @apply flex items-center gap-6 md:gap-8 px-8;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.skill-item {
+  @apply flex-shrink-0 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-2xl bg-secondary/30 border border-border/30 cursor-pointer transition-all duration-300 ease-out;
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item:hover {
+  @apply border-primary/50 bg-primary/10 scale-110;
+  box-shadow:
+    0 0 30px hsl(var(--primary) / 0.25),
+    0 0 60px hsl(var(--primary) / 0.15);
+  z-index: 20;
+}
+
+.skill-item-icon {
+  @apply w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain transition-transform duration-300;
+}
+
+.skill-item:hover .skill-item-icon {
+  @apply scale-110;
+}
+
+/* Auto-scroll animation when not scrolling */
+@keyframes skills-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes skills-scroll-right {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.skills-marquee-track.animate-left {
+  animation: skills-scroll-left 30s linear infinite;
+}
+
+.skills-marquee-track.animate-right {
+  animation: skills-scroll-right 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.skills-marquee-wrapper:hover .skills-marquee-track.animate-left,
+.skills-marquee-wrapper:hover .skills-marquee-track.animate-right {
+  animation-play-state: paused;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .skills-marquee-section-fullscreen {
+    @apply py-16;
+  }
+
+  .skills-marquee-fade-left,
+  .skills-marquee-fade-right {
+    @apply w-16;
+  }
+
+  .skills-marquee-track {
+    @apply gap-4 px-4;
+  }
+
+  .skills-rows-fullscreen {
+    @apply space-y-6;
+  }
 }
