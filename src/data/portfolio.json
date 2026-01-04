@@ -112,7 +112,7 @@
             "role": "Frontend Developer Intern",
             "duration": "May 2024 - July 2024",
             "location": "Remote",
-            "logo": "https://firebasestorage.googleapis.com/v0/b/portfolio-cedc2.appspot.com/o/deepvue.png?alt=media&token=554954e0-d115-4635-b868-0e32b8ec2d3b",
+            "logo": "/assets/deepvue.png",
             "current": false,
             "url": "https://deepvue.tech/",
             "description": []

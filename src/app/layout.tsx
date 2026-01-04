@@ -67,7 +67,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
                 />
             </head>
-            <body className="bg-background text-foreground font-sans antialiased">
+            <body className="bg-background text-foreground font-sans antialiased" suppressHydrationWarning>
                 <Providers>
                     <ScrollToTop />
                     <SocialSidebar />
