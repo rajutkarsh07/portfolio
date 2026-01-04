@@ -33,7 +33,7 @@ export function SocialSidebar() {
   ];
 
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+    <div className="hidden lg:flex fixed left-6 top-1/2 -translate-y-1/2 z-50 flex-col gap-4">
       {socialLinks.map((link, index) => (
         <a
           key={link.label}
