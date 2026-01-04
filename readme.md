@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Utkarsh Raj - Portfolio
 
-## Project info
+A modern, responsive personal portfolio website showcasing my projects, skills, and experience as a Full Stack Web Developer. Built with modern web technologies to ensure high performance and an excellent user experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## ✨ Features
 
-## How can I edit this code?
+-   **Modern UI/UX**: Clean, dark-themed design with glassmorphism effects and smooth transitions.
+-   **Dynamic Projects**: Automatically fetches and displays "Pinned" repositories from GitHub using the GitHub GraphQL API.
+-   **Interactive Elements**: 
+    -   Scroll-based animations.
+    -   Hover effects on project cards and social links.
+-   **Fully Responsive**: optimized for all device sizes from mobile calls to large desktop screens.
+-   **Portfolio Data**: Centralized JSON-based configuration for easy updates to bio, skills, experience, and projects.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+-   **Frontend**: React, TypeScript, Vite
+-   **Styling**: Tailwind CSS
+-   **Icons**: Lucide React, Devicon
+-   **State/Data**: React Query (TanStack Query) — *used for efficient data fetching*
+-   **Routing**: React Router DOM
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+Follow these steps to set up the project locally on your machine.
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+-   Node.js (v18 or higher recommended)
+-   npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/rajutkarsh07/portfolio-updated.git
+    cd portfolio-updated
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Environment Setup**
+    This project uses the GitHub GraphQL API to fetch your pinned projects. You need a GitHub Personal Access Token (PAT) with `read:user` and `public_repo` permissions.
 
-# Step 3: Install the necessary dependencies.
-npm i
+    Create a `.env` file in the root directory:
+    ```bash
+    touch .env
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+    Add your token to the `.env` file:
+    ```env
+    VITE_GITHUB_TOKEN=your_github_pat_here
+    ```
+
+    > **Note:** Without this token, the "Pinned Projects" section will fail to load live data and may fall back to hardcoded placeholders or show an error.
+
+4.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+    The site will be available at `http://localhost:8080` (or whatever port Vite assigns).
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/         # Static assets like images
+├── components/     # Reusable UI components (Hero, Navbar, Footer, etc.)
+├── data/           # Centralized data files (portfolio.json)
+├── hooks/          # Custom React hooks (useGitHubRepos)
+├── pages/          # Page components (Home, About, Projects, Contact)
+├── App.tsx         # Main application component with Routing
+└── main.tsx        # Entry point
 ```
 
-**Edit a file directly in GitHub**
+## 📝 Configuration
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Most of the content (Bio, Experience, Skills, Social Links) is managed in `src/data/portfolio.json`. You can update this file to instantly reflect changes across the website without modifying the React components.
 
-**Use GitHub Codespaces**
+## 📄 License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is open source and available under the [MIT License](LICENSE).
