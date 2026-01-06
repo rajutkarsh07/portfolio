@@ -11,20 +11,30 @@ import { LayoutContent } from '@/components/LayoutContent';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://utkarshraj.dev';
 
-export const metadata: Metadata = generateMetadata({
-    title: portfolioData.personal.name,
-    description: `${portfolioData.personal.bio} Explore my portfolio featuring projects in ${portfolioData.skills.simple.slice(0, 5).map(s => s.name).join(', ')} and more.`,
-    keywords: [
-        'Portfolio',
-        'Web Development',
-        'Software Engineering',
-        'UI/UX Design',
-        'Competitive Programming',
-        portfolioData.education.institution,
-        portfolioData.personal.currentCompany,
-    ],
-    canonicalUrl: siteUrl,
-});
+export const metadata: Metadata = {
+    ...generateMetadata({
+        title: portfolioData.personal.name,
+        description: `${portfolioData.personal.bio} Explore my portfolio featuring projects in ${portfolioData.skills.simple.slice(0, 5).map(s => s.name).join(', ')} and more.`,
+        keywords: [
+            'Portfolio',
+            'Web Development',
+            'Software Engineering',
+            'UI/UX Design',
+            'Competitive Programming',
+            portfolioData.education.institution,
+            portfolioData.personal.currentCompany,
+        ],
+        canonicalUrl: siteUrl,
+    }),
+    icons: {
+        icon: [
+            { url: '/logo.svg', type: 'image/svg+xml' },
+        ],
+        apple: [
+            { url: '/logo.svg', type: 'image/svg+xml' },
+        ],
+    },
+};
 
 export default function RootLayout({
     children,
