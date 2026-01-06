@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data";
+import { TerminalToggle } from "@/components/TerminalToggle";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,6 +55,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-2">
+            <TerminalToggle />
             <Button size="sm" asChild>
               <Link href="/contact">Let's Talk</Link>
             </Button>
@@ -91,7 +93,10 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
+              <div className="flex justify-center pb-2">
+                <TerminalToggle />
+              </div>
               <Button className="w-full" asChild>
                 <Link href="/contact">Let's Talk</Link>
               </Button>

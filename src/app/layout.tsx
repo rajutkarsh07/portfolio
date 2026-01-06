@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { generateMetadata, generateStructuredData, generateWebsiteStructuredData } from '@/lib/seo';
 import portfolioData from '@/data/portfolio.json';
+import { LayoutContent } from '@/components/LayoutContent';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://utkarshraj.dev';
 
@@ -69,15 +70,18 @@ export default function RootLayout({
             </head>
             <body className="bg-background text-foreground font-sans antialiased" suppressHydrationWarning>
                 <Providers>
-                    <ScrollToTop />
-                    <SocialSidebar />
-                    <div className="flex-grow w-full">
-                        {children}
-                    </div>
-                    <Toaster />
-                    <Sonner />
+                    <LayoutContent>
+                        <ScrollToTop />
+                        <SocialSidebar />
+                        <div className="flex-grow w-full">
+                            {children}
+                        </div>
+                        <Toaster />
+                        <Sonner />
+                    </LayoutContent>
                 </Providers>
             </body>
         </html>
     )
 }
+
