@@ -550,7 +550,7 @@ export function Terminal() {
                 output: (
                     <div className="space-y-2">
                         <div className="text-primary text-lg font-bold">
-                            {portfolioData.personal.name}'s
+                            {portfolioData.personal.name}
                         </div>
                         <div className="text-muted-foreground">
                             Type 'help' to see available commands
