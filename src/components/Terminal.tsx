@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import portfolioData from "@/data/portfolio.json";
 import { useTerminal } from "@/contexts/TerminalContext";
+import { PacManGame } from "@/components/PacManGame";
 
 interface CommandOutput {
     command: string;
@@ -26,6 +27,7 @@ export function Terminal() {
     const [commandHistory, setCommandHistory] = useState<string[]>([]);
     const [historyIndex, setHistoryIndex] = useState(-1);
     const [suggestions, setSuggestions] = useState<string[]>([]);
+    const [showPacMan, setShowPacMan] = useState(false);
     const terminalRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
     const { toggleTerminalMode } = useTerminal();
@@ -181,6 +183,9 @@ export function Terminal() {
                         </div>
                         <div>
                             <span className="text-green-400">help</span> - Show this help message
+                        </div>
+                        <div>
+                            <span className="text-green-400">pacman</span> - 🎮 Play Pac-Man game
                         </div>
                     </div>
                     <div className="mt-4 text-muted-foreground text-xs">
@@ -363,6 +368,18 @@ export function Terminal() {
 
         resume: () => {
             return "Resume download functionality - Add your resume link here";
+        },
+
+        pacman: () => {
+            setShowPacMan(true);
+            return (
+                <div className="text-green-400">
+                    🎮 Loading Pac-Man...
+                    <div className="text-sm text-muted-foreground mt-1">
+                        Get ready to play! Use arrow keys or WASD to move.
+                    </div>
+                </div>
+            );
         },
     };
 
@@ -566,82 +583,85 @@ export function Terminal() {
     }, []);
 
     return (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="w-full max-w-4xl h-[600px] bg-[#1e1e1e] text-[#d4d4d4] font-mono flex flex-col rounded-lg shadow-2xl overflow-hidden">
-                {/* Terminal Header (Mac-like) */}
-                <div className="bg-[#323233] border-b border-[#1e1e1e] px-4 py-2 flex items-center gap-2">
-                    <div className="flex gap-2">
-                        <button
-                            onClick={toggleTerminalMode}
-                            className="w-3 h-3 rounded-full bg-[#ff5f56] hover:bg-[#ff5f56]/80 transition-colors"
-                            aria-label="Close terminal"
-                            title="Close terminal"
-                        ></button>
-                        <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                        <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+        <>
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+                <div className="w-full max-w-4xl h-[600px] bg-[#1e1e1e] text-[#d4d4d4] font-mono flex flex-col rounded-lg shadow-2xl overflow-hidden">
+                    {/* Terminal Header (Mac-like) */}
+                    <div className="bg-[#323233] border-b border-[#1e1e1e] px-4 py-2 flex items-center gap-2">
+                        <div className="flex gap-2">
+                            <button
+                                onClick={toggleTerminalMode}
+                                className="w-3 h-3 rounded-full bg-[#ff5f56] hover:bg-[#ff5f56]/80 transition-colors"
+                                aria-label="Close terminal"
+                                title="Close terminal"
+                            ></button>
+                            <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                            <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                        </div>
+                        <div className="flex-1 text-center text-sm text-[#d4d4d4]/60">
+                            {portfolioData.personal.firstName.toLowerCase()} — zsh — 100×30
+                        </div>
                     </div>
-                    <div className="flex-1 text-center text-sm text-[#d4d4d4]/60">
-                        {portfolioData.personal.firstName.toLowerCase()} — zsh — 100×30
-                    </div>
-                </div>
 
-                {/* Terminal Content */}
-                <div
-                    ref={terminalRef}
-                    className="flex-1 overflow-y-auto p-4 space-y-2"
-                    onClick={() => inputRef.current?.focus()}
-                >
-                    {history.map((item, idx) => (
-                        <div key={idx} className="space-y-1">
-                            {item.command && (
-                                <div className="flex items-center gap-2">
-                                    <span className="text-[#4ec9b0]">
-                                        {portfolioData.personal.firstName.toLowerCase()}@portfolio
-                                    </span>
-                                    <span className="text-[#d4d4d4]">:</span>
-                                    <span className="text-[#569cd6]">{currentPath}</span>
-                                    <span className="text-[#d4d4d4]">$</span>
-                                    <span className="text-[#d4d4d4]">{item.command}</span>
+                    {/* Terminal Content */}
+                    <div
+                        ref={terminalRef}
+                        className="flex-1 overflow-y-auto p-4 space-y-2"
+                        onClick={() => inputRef.current?.focus()}
+                    >
+                        {history.map((item, idx) => (
+                            <div key={idx} className="space-y-1">
+                                {item.command && (
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[#4ec9b0]">
+                                            {portfolioData.personal.firstName.toLowerCase()}@portfolio
+                                        </span>
+                                        <span className="text-[#d4d4d4]">:</span>
+                                        <span className="text-[#569cd6]">{currentPath}</span>
+                                        <span className="text-[#d4d4d4]">$</span>
+                                        <span className="text-[#d4d4d4]">{item.command}</span>
+                                    </div>
+                                )}
+                                {item.output && (
+                                    <div className="pl-0 text-[#d4d4d4]/90">{item.output}</div>
+                                )}
+                            </div>
+                        ))}
+
+                        {/* Input Line */}
+                        <div className="space-y-1">
+                            <div className="flex items-center gap-2">
+                                <span className="text-[#4ec9b0]">
+                                    {portfolioData.personal.firstName.toLowerCase()}@portfolio
+                                </span>
+                                <span className="text-[#d4d4d4]">:</span>
+                                <span className="text-[#569cd6]">{currentPath}</span>
+                                <span className="text-[#d4d4d4]">$</span>
+                                <input
+                                    ref={inputRef}
+                                    type="text"
+                                    value={currentInput}
+                                    onChange={(e) => setCurrentInput(e.target.value)}
+                                    onKeyDown={handleKeyDown}
+                                    className="flex-1 bg-transparent outline-none text-[#d4d4d4] caret-[#d4d4d4]"
+                                    autoFocus
+                                    spellCheck={false}
+                                />
+                            </div>
+
+                            {/* Autocomplete Suggestions */}
+                            {suggestions.length > 0 && (
+                                <div className="text-blue-400 flex flex-wrap gap-3 pl-0">
+                                    {suggestions.map((suggestion, idx) => (
+                                        <span key={idx}>{suggestion}</span>
+                                    ))}
                                 </div>
                             )}
-                            {item.output && (
-                                <div className="pl-0 text-[#d4d4d4]/90">{item.output}</div>
-                            )}
                         </div>
-                    ))}
-
-                    {/* Input Line */}
-                    <div className="space-y-1">
-                        <div className="flex items-center gap-2">
-                            <span className="text-[#4ec9b0]">
-                                {portfolioData.personal.firstName.toLowerCase()}@portfolio
-                            </span>
-                            <span className="text-[#d4d4d4]">:</span>
-                            <span className="text-[#569cd6]">{currentPath}</span>
-                            <span className="text-[#d4d4d4]">$</span>
-                            <input
-                                ref={inputRef}
-                                type="text"
-                                value={currentInput}
-                                onChange={(e) => setCurrentInput(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                className="flex-1 bg-transparent outline-none text-[#d4d4d4] caret-[#d4d4d4]"
-                                autoFocus
-                                spellCheck={false}
-                            />
-                        </div>
-
-                        {/* Autocomplete Suggestions */}
-                        {suggestions.length > 0 && (
-                            <div className="text-blue-400 flex flex-wrap gap-3 pl-0">
-                                {suggestions.map((suggestion, idx) => (
-                                    <span key={idx}>{suggestion}</span>
-                                ))}
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
-        </div>
+            {showPacMan && <PacManGame onClose={() => setShowPacMan(false)} />}
+        </>
     );
 }

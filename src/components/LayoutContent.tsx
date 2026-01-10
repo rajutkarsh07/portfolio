@@ -2,6 +2,7 @@
 import { useTerminal } from "@/contexts/TerminalContext";
 import { Terminal } from "@/components/Terminal";
 import { Navbar } from "@/components/Navbar";
+import { EasterEgg } from "@/components/EasterEgg";
 
 export function LayoutContent({ children }: { children: React.ReactNode }) {
     const { isTerminalMode } = useTerminal();
@@ -14,6 +15,7 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
         <>
             <Navbar />
             {children}
+            <EasterEgg />
         </>
     );
 }
