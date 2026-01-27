@@ -371,6 +371,26 @@
                 "github": "https://github.com/rajutkarsh07/FlagRush",
                 "live": "https://flagrush.netlify.app/",
                 "featured": true
+            },
+            {
+                "title": "AlignAI",
+                "description": "AI-powered product management platform that helps balance strategic goals with customer feedback using intelligent analysis and roadmap generation. Features include intelligent project management with document upload, advanced feedback analysis with AI categorization and sentiment analysis, multi-agent AI system for specialized tasks, smart roadmapping with various allocation strategies, interactive chat interface, and comprehensive analytics dashboard.",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Tailwind CSS",
+                    "Socket.io",
+                    "React Query",
+                    "AI Agents",
+                    "Recharts"
+                ],
+                "image": "/assets/AlignAi.jpg",
+                "github": "https://github.com/rajutkarsh07/AlignAI",
+                "live": "https://align-ai-eta.vercel.app/",
+                "featured": true
             }
         ],
         "pinned": [
