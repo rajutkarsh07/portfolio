@@ -74,9 +74,17 @@
             "logo": "/assets/panw.png",
             "current": true,
             "url": "https://www.paloaltonetworks.com/",
-            "description": [
-                "Working on pandaAI and novascribe"
-            ]
+            "description": []
+        },
+        {
+            "company": "Google Summer of Code Mentor",
+            "role": "Mentor @C2SI",
+            "duration": "Feb 2026 - Present",
+            "location": "Remote",
+            "logo": "/assets/gsoc.png",
+            "current": true,
+            "url": "https://summerofcode.withgoogle.com/",
+            "description": []
         },
         {
             "company": "Palo Alto Networks",
@@ -133,7 +141,7 @@
             "role": "Full Stack Developer",
             "duration": "",
             "location": "Remote",
-            "logo": "https://play-lh.googleusercontent.com/1IXg46X4JahLhv1Ccw-LAlFPxQk5X1qy_l0CGtTjrn7FMbk-t0AZcz8ISSsbfyif_EK7",
+            "logo": "https://play-lh.googleusercontent.com/1IXg46X4JahLhv1Ccw-LAlFPxQk5X1qy_l0CGtTjrn7FMbk-t0AZcz8ISSsbfyif_EK7=w240-h480-rw",
             "current": false,
             "url": "https://e-pocket.com/",
             "description": []
