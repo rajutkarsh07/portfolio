@@ -173,13 +173,10 @@ export function Terminal() {
                             <span className="text-green-400">chess</span> - Open Chess.com profile
                         </div>
                         <div>
-                            <span className="text-green-400">resume</span> - Download resume
-                        </div>
-                        <div>
                             <span className="text-green-400">email</span> - Send me an email
                         </div>
                         <div>
-                            <span className="text-green-400">quit</span> - Exit terminal and return to GUI
+                            <span className="text-green-400">quit or exit</span> - Exit terminal and return to GUI
                         </div>
                         <div>
                             <span className="text-green-400">help</span> - Show this help message
@@ -266,6 +263,11 @@ export function Terminal() {
         },
 
         quit: () => {
+            toggleTerminalMode();
+            return "";
+        },
+
+        exit: () => {
             toggleTerminalMode();
             return "";
         },
@@ -364,10 +366,6 @@ export function Terminal() {
         email: () => {
             window.location.href = `mailto:${portfolioData.contact.email}`;
             return `Opening email client to: ${portfolioData.contact.email}`;
-        },
-
-        resume: () => {
-            return "Resume download functionality - Add your resume link here";
         },
 
         pacman: () => {
