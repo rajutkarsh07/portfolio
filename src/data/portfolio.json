@@ -366,6 +366,24 @@
     "projects": {
         "major": [
             {
+                "title": "EloInsight",
+                "description": "EloInsight democratizes chess game analysis by providing a completely free, open-source platform that rivals premium chess tools. It features multi-platform integration (Chess.com, Lichess), automatic game synchronization, and free Stockfish engine analysis (depth 20) with interactive evaluation graphs, auto-detected key moments.",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "NestJS",
+                    "Go",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker"
+                ],
+                "image": "/assets/eloinsights.webp",
+                "github": "https://github.com/rajutkarsh07/EloInsight",
+                "live": "https://github.com/rajutkarsh07/EloInsight",
+                "featured": true
+            },
+            {
                 "title": "FlagRush",
                 "description": "A website where users can practice their bug-finding skills and capture flags from intentionally vulnerable pages. Features community discussions and a leaderboard for top performers.",
                 "tech": [
