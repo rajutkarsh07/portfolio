@@ -12,6 +12,7 @@ export interface Personal {
     profileImage: string;
     aboutImage: string;
     funFact: string;
+    mediumUsername?: string;
 }
 
 export interface Contact {

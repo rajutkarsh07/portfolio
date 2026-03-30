@@ -3,7 +3,7 @@
         "name": "Utkarsh Raj",
         "firstName": "Utkarsh",
         "lastName": "Raj",
-        "title": "Full Stack Web Developer",
+        "title": "Software Engineer",
         "tagline": "I build things for the web.",
         "roles": [
             "Software Engineer",
@@ -15,7 +15,8 @@
         "currentCompany": "Palo Alto Networks",
         "profileImage": "/assets/utkarsh.webp",
         "aboutImage": "/assets/utkarsh_about.webp",
-        "funFact": "I sneeze whenever I see the sun! 🌞"
+        "funFact": "I sneeze whenever I see the sun! 🌞",
+        "mediumUsername": "@utkarshraj1306"
     },
     "contact": {
         "email": "utkarshraj1306@gmail.com",
@@ -478,6 +479,10 @@
         {
             "label": "Experience",
             "href": "/experience"
+        },
+        {
+            "label": "Blogs",
+            "href": "/blogs"
         },
         {
             "label": "Contact",
