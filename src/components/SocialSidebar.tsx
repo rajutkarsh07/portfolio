@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Instagram, Mail, Gamepad2 } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Mail, Gamepad2, Calendar } from "lucide-react";
 import { socials, contact } from "@/data";
 import { usePathname } from "next/navigation";
 
@@ -12,6 +12,7 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
   Instagram,
   Gamepad2,
   Mail,
+  Calendar,
 };
 
 export function SocialSidebar() {

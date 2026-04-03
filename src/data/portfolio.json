@@ -24,7 +24,8 @@
         "location": "India",
         "locationDescription": "Based in India, working remotely worldwide",
         "openToRelocate": true,
-        "buyMeCoffee": "https://buymeacoffee.com/utkarshraja"
+        "buyMeCoffee": "https://buymeacoffee.com/utkarshraja",
+        "topmate": "https://topmate.io/utkarsh_raj_13"
     },
     "socials": [
         {
@@ -56,6 +57,12 @@
             "username": "utkarsh_raj_13_06",
             "url": "https://www.chess.com/member/utkarsh_raj_13_06",
             "icon": "Gamepad2"
+        },
+        {
+            "name": "Topmate",
+            "username": "utkarsh_raj_13",
+            "url": "https://topmate.io/utkarsh_raj_13",
+            "icon": "Calendar"
         }
     ],
     "education": {

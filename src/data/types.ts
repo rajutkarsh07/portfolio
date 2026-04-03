@@ -22,6 +22,7 @@ export interface Contact {
     locationDescription: string;
     openToRelocate: boolean;
     buyMeCoffee: string;
+    topmate: string;
 }
 
 export interface Social {

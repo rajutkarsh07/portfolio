@@ -1,4 +1,4 @@
-import { ArrowLeft, Mail, MapPin, Send, MessageCircle, ArrowUpRight, Github, Linkedin, Twitter, Instagram, Gamepad2, Coffee } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Send, MessageCircle, ArrowUpRight, Github, Linkedin, Twitter, Instagram, Gamepad2, Coffee, Calendar } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -15,6 +15,7 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
     Twitter,
     Instagram,
     Gamepad2,
+    Calendar,
 };
 
 // Color mapping for social links
@@ -24,6 +25,7 @@ const socialColors: Record<string, string> = {
     Twitter: "hover:bg-[#1da1f2] hover:text-white",
     Instagram: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:text-white",
     "Chess.com": "hover:bg-[#7fa650] hover:text-white",
+    Topmate: "hover:bg-[#ff4e4e] hover:text-white",
 };
 
 const contactMethods = [
@@ -34,6 +36,14 @@ const contactMethods = [
         description: "Drop me an email anytime",
         link: `mailto:${contact.email}`,
         action: "Send Email",
+    },
+    {
+        icon: Calendar,
+        title: "Topmate",
+        value: "Book a 1:1 call",
+        description: "Let's connect and chat",
+        link: contact.topmate,
+        action: "Book Call",
     },
     {
         icon: Coffee,
