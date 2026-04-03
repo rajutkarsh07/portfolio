@@ -9,6 +9,7 @@ import { codingProfiles, about, personal } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useCodingProfiles } from "@/hooks/useCodingRatings";
 import { useEffect } from "react";
+import Image from "next/image";
 
 // SEO metadata is handled in layout.tsx for client components
 // We'll add structured data via script tag
@@ -81,10 +82,13 @@ export default function About() {
                         {/* Profile Photo */}
                         <div className="lg:col-span-2 relative">
                             <div className="relative rounded-2xl overflow-hidden border border-border shadow-elevated group">
-                                <img
+                                <Image
                                     src={personal.aboutImage}
                                     alt={personal.name}
+                                    width={400}
+                                    height={533}
                                     className="w-full aspect-[3/4] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                    priority
                                 />
                                 {/* Gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />

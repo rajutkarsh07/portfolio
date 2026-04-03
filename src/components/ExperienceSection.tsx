@@ -1,5 +1,6 @@
 import { GraduationCap, Briefcase, Calendar, MapPin, ExternalLink } from "lucide-react";
 import { education, experiences } from "@/data";
+import Image from "next/image";
 
 export function ExperienceSection() {
   return (
@@ -88,11 +89,12 @@ export function ExperienceSection() {
                     className="block bg-card border border-border rounded-2xl p-6 md:p-8 shadow-card card-hover group/card"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                      {/* Company Logo */}
                       <div className="w-16 h-16 rounded-xl overflow-hidden bg-secondary flex-shrink-0 border border-border">
-                        <img
+                        <Image
                           src={exp.logo}
                           alt={exp.company}
+                          width={64}
+                          height={64}
                           className="w-full h-full object-contain p-2"
                         />
                       </div>

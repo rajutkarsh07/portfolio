@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
+import Image from "next/image";
 
 // Language color mapping
 const languageColors: Record<string, string> = {
@@ -55,9 +56,11 @@ export function ProjectsSection() {
               {/* Project Image */}
               <div className="relative aspect-[16/10] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10" />
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={600}
+                  height={375}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Hover overlay with buttons */}

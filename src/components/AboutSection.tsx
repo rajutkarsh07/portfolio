@@ -3,6 +3,7 @@ import { personal, about, skills, codingProfiles } from "@/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useCodingProfiles } from "@/hooks/useCodingRatings";
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
 
 // Type for skill with icon
 interface SkillWithIcon {
@@ -37,9 +38,11 @@ export function AboutSection() {
             {/* Image */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border border-border shadow-elevated">
-                <img
+                <Image
                   src={personal.aboutImage}
                   alt={personal.name}
+                  width={400}
+                  height={500}
                   className="w-full aspect-[4/5] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

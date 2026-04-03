@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee } from "lucide-react";
 import { personal, contact } from "@/data";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -27,12 +28,13 @@ export function HeroSection() {
 
           {/* Profile Image */}
           <div className="relative mb-8">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-background shadow-elevated">
-              <img
+            <div className="w-48 h-48 relative rounded-full overflow-hidden border-4 border-background shadow-elevated">
+              <Image
                 src={personal.profileImage}
                 alt={personal.name}
-                className="w-full h-full object-cover"
-                fetchPriority="high"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-4 border-background">
