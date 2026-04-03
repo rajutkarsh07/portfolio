@@ -32,8 +32,11 @@ export function Navbar() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity h-8">
+            <div className="font-sans font-semibold text-3xl leading-none flex items-center">
+              <span className="text-foreground">U</span>
+              <span className="text-primary">R</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,9 +97,6 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-2 space-y-2">
-              <div className="flex justify-center pb-2">
-                <TerminalToggle />
-              </div>
               <Button className="w-full" asChild>
                 <Link href="/contact">Let's Talk</Link>
               </Button>
